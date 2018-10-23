@@ -1,0 +1,304 @@
+{
+       "definitions": {},
+       "$schema": "http://json-schema.org/draft-07/schema#",
+       "$id": "http://example.com/root.json",
+       "type": "object",
+       "title": "The Root Schema",
+       "required": [
+         "CottonBale"
+       ],
+      "properties": {
+        "CottonBale": {
+          "$id": "#/properties/CottonBale",
+          "type": "object",
+          "title": "The Cottonbale Schema",
+          "required": [
+            "ginCode",
+            "ginBale",
+            "cropYear",
+            "dateClassed",
+            "baleModule",
+            "moduleTrailerNumber",
+            "numberBales",
+            "officialColorGrade",
+            "length",
+            "lengthIn100",
+            "micronaire",
+            "strength",
+            "leafGrade",
+            "extraneousMatter",
+            "remarks",
+            "instrumetColorGrade",
+            "colorQuadrant",
+            "colorRd",
+            "colorPlusB",
+            "trashPercentArea",
+            "lengthUniformityIndex",
+            "uplandOrPima",
+            "recordType",
+            "recordStatus",
+            "cCCLoan Premium"
+          ],
+          "properties": {
+            "ginCode": {
+              "$id": "#/properties/CottonBale/properties/ginCode",
+              "type": "string",
+              "title": "The Gin Code Schema",
+              "description": "The gin code number is composed of the first five digits of the PBI. The first two digits denote the Classing Office, and the last three digits identify the gin. The local Classing Office assigns this code number.",
+              "default": "",
+              "examples": [
+                "00000"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "ginBale": {
+              "$id": "#/properties/CottonBale/properties/ginBale",
+              "type": "string",
+              "title": "The Gin Bale Schema",
+              "description": "The gin bale number is composed of the last seven-digits of the PBI and is assigned by the gin.",
+              "default": "",
+              "examples": [
+                "0000000"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "cropYear": {
+              "$id": "#/properties/CottonBale/properties/cropYear",
+              "type": "integer",
+              "title": "The Crop Year Schema",
+              "description": "The crop year.",
+              "default": 0,
+              "examples": [
+                 2018
+              ]
+            },
+            "dateClassed": {
+              "$id": "#/properties/CottonBale/properties/dateClassed",
+              "type": "string",
+              "title": "The Date Classed Schema",
+              "description": "This is the date the classification data for the bale was released by the Classing Office.",
+              "default": "",
+              "examples": [
+                "2012-04-23:25:43.511"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "baleModule": {
+              "$id": "#/properties/CottonBale/properties/baleModule",
+              "type": "integer",
+              "title": "The Bale Module Schema",
+              "description": "This one-digit code indicates whether the sample was outturned as a single bale or as a bale that was module/trailer averaged.",
+              "default": 0,
+              "examples": [
+                1
+              ]
+            },
+            "moduleTrailerNumber": {
+              "$id": "#/properties/CottonBale/properties/moduleTrailerNumber",
+              "type": "integer",
+              "title": "The Module Trailer Number Schema",
+              "description": "This five-digit number identifies the module/trailer number assigned at the gin.",
+              "default": 0,
+              "examples": [
+                10
+              ]
+            },
+           "numberBales": {
+             "$id": "#/properties/CottonBale/properties/numberBales",
+             "type": "integer",
+             "title": "The Number Bales Schema",
+             "description": "This two-digit number identifies the number of bales in the module/trailer that were released with the module average calculations.",
+             "default": 0,
+             "examples": [
+               10
+             ]
+           },
+           "officialColorGrade": {
+             "$id": "#/properties/CottonBale/properties/officialColorGrade",
+             "type": "integer",
+             "title": "The Official Color Grade Schema",
+             "description": "The official Upland or Pima color grade that appears on the classification record is determined by instrument based measurements of Rd and +b. Color refers to the gradations of grayness and yellowness in the cotton.",
+             "default": 0,
+             "examples": [
+               95
+             ]
+           },
+           "length": {
+             "$id": "#/properties/CottonBale/properties/length",
+             "type": "integer",
+             "title": "The Length Schema",
+             "description": "Staple length measured in 32nds of an inch.",
+             "default": 0,
+             "examples": [
+               10
+             ]
+           },
+           "lengthIn100": {
+             "$id": "#/properties/CottonBale/properties/lengthIn100",
+             "type": "integer",
+             "title": "The Length in 100 Schema",
+             "description": "Staple length measured in 100ths of an inch.",
+             "default": 0,
+             "examples": [
+               20
+             ]
+           },
+           "micronaire": {
+             "$id": "#/properties/CottonBale/properties/micronaire",
+             "type": "integer",
+             "title": "The Micronaire Schema",
+             "description": "Micronaire is a measure of the cotton’s fineness and is reported to the nearest tenth.",
+             "default": 0,
+             "examples": [
+               1
+             ]
+           },
+           "strength": {
+             "$id": "#/properties/CottonBale/properties/strength",
+             "type": "integer",
+             "title": "The Strength Schema",
+             "description": "The force in grams required to break a bundle of fibers one tex unit in size.",
+             "default": 0,
+             "examples": [
+               1
+             ]
+           },
+           "leafGrade": {
+             "$id": "#/properties/CottonBale/properties/leafGrade",
+             "type": "integer",
+             "title": "The Leaf Grade Schema",
+             "description": "Leaf refers to particles of the cotton plant’s leaf which remain in the lint after the ginning process.",
+             "default": 0,
+             "examples": [
+               1
+             ]
+           },
+           "extraneousMatter": {
+             "$id": "#/properties/CottonBale/properties/extraneousMatter",
+             "type": "string",
+             "title": "The Extraneous Matter Schema",
+             "description": "Extraneous matter is any substance in the cotton other than fiber or leaf.",
+             "default": "",
+             "examples": [
+               "01-Prep Level 1"
+             ],
+             "pattern": "^(.*)$"
+           },
+           "remarks": {
+             "$id": "#/properties/CottonBale/properties/remarks",
+             "type": "string",
+             "title": "The Remarks Schema",
+             "description": "The instrument assigns the remarks code 75 where applicable. Classers identify other special conditions that may cause processing problems and lower yarn quality.",
+             "default": "",
+             "examples": [
+               "76-Reginned"
+             ],
+             "pattern": "^(.*)$"
+           },
+           "instrumetColorGrade": {
+             "$id": "#/properties/CottonBale/properties/instrumetColorGrade",
+             "type": "integer",
+             "title": "The Instrumet Color Grade Schema",
+             "description": "The official Upland or Pima color grade that appears on the classification record is determined by instrument based measurements of Rd and +b. Color refers to the gradations of grayness and yellowness in the cotton.",
+             "default": 0,
+             "examples": [
+               20
+             ]
+           },
+           "colorQuadrant": {
+             "$id": "#/properties/CottonBale/properties/colorQuadrant",
+             "type": "integer",
+             "title": "The Color Quadrant Schema",
+             "description": "The color quadrant.",
+             "default": 0,
+             "examples": [
+               1
+             ]
+           },
+           "colorRd": {
+             "$id": "#/properties/CottonBale/properties/colorRd",
+             "type": "integer",
+             "title": "The Color RD Schema",
+             "description": "Grayness indicates how light or dark the sample is.",
+             "default": 0,
+             "examples": [
+               40
+             ]
+           },
+           "colorPlusB": {
+             "$id": "#/properties/CottonBale/properties/colorPlusB",
+             "type": "integer",
+             "title": "The Color Plus B Schema",
+             "description": "Yellowness indicates how much yellow color is in the sample.",
+             "default": 0,
+             "examples": [
+               4
+             ]
+           },
+           "trashPercentArea": {
+             "$id": "#/properties/CottonBale/properties/trashPercentArea",
+             "type": "integer",
+             "title": "The Trash Percent Area Schema",
+             "description": "The two-digit trash percent area reported on the classification record is the percent of the sample surface covered by trash particles as determined by the instrument to the nearest tenth. Trash particles include extraneous matter such as grass, bark, etc., but these particles cannot be distinguished one from another by this measurement.",
+             "default": 0,
+             "examples": [
+               1
+             ]
+           },
+           "lengthUniformityIndex": {
+             "$id": "#/properties/CottonBale/properties/lengthUniformityIndex",
+             "type": "integer",
+             "title": "The Length Uniformity Index Schema",
+             "description": "Length uniformity index is a three-digit number that is a measure of the degree of uniformity of the fibers in a sample to the nearest tenth.",
+             "default": 0,
+             "examples": [
+               1
+             ]
+           },
+           "uplandOrPima": {
+             "$id": "#/properties/CottonBale/properties/uplandOrPima",
+             "type": "integer",
+             "title": "The Upland or Pima Schema",
+             "description": "This one-digit code indicates whether the sample is Upland or American Pima.",
+             "default": 0,
+             "examples": [
+               1
+             ]
+           },
+           "recordType": {
+             "$id": "#/properties/CottonBale/properties/recordType",
+             "type": "integer",
+             "title": "The Record Type Schema",
+             "description": "The type of record.",
+             "default": 0,
+             "examples": [
+               2
+             ]
+           },
+           "recordStatus": {
+             "$id": "#/properties/CottonBale/properties/recordStatus",
+             "type": "integer",
+             "title": "The Record Status Schema",
+             "description": "This one digit code indicates whether or not the manual classing information has been corrected.",
+             "default": 0,
+             "examples": [
+               1
+             ]
+           },
+           "cCCLoan Premium": {
+             "$id": "#/properties/CottonBale/properties/cCCLoan Premium",
+             "type": "string",
+             "title": "The CCC Loan Premium Schema",
+             "description": "This five-digit code gives the CCC loan premium and discount points for Upland cotton. The physical loan price for Pima cotton is shown in cents per pound.",
+             "default": "",
+             "examples": [
+               "1000"
+             ],
+             "pattern": "^(.*)$"
+           }
+         }
+       }
+     }
+   }
+  
+  
