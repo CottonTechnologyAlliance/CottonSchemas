@@ -1,0 +1,935 @@
+{
+       "$schema": "http://json-schema.org/draft-07/schema#",
+       "$id": "http://example.com/root.json",
+       "type": "object",
+       "title": "The Root Schema",
+       "required": [
+         "Recap"
+       ],
+      "definitions": {
+        "Recap": {
+          "$id": "#/definitions/Recap",
+          "type": "object",
+          "title": "The Recap Schema",
+          "required": [
+            "User",
+            "Totals",
+            "Other",
+            "Whse",
+            "Mic",
+            "Classing",
+            "Offer"
+          ],
+          "properties": {
+            "User": {
+              "$id": "#/definitions/Recap/properties/User",
+              "type": "object",
+              "title": "User",
+              "required": [
+                "UserIsBuyer"
+              ],
+              "properties": {
+                "UserIsBuyer": {
+                  "$id": "#/definitions/Recap/properties/User/properties/UserIsBuyer",
+                  "type": "string",
+                  "title": "User is Buyer",
+                  "default": "",
+                  "examples": [
+                    "0"
+                  ],
+                  "pattern": "^(.*)$"
+                }
+              }
+            },
+            "Totals": {
+              "$id": "#/definitions/Recap/properties/Totals",
+              "type": "object",
+              "title": "Totals",
+              "required": [
+                "NetWeight",
+                "TotalBales",
+                "AvgStr",
+                "AvgLeaf",
+                "AvgStpl",
+                "AvgMic",
+                "AvgUniformity",
+                "showActual",
+                "TareWeight",
+                "Tenderable",
+                "TenderableSD",
+                "NonTenderable",
+                "Decert",
+                "RainGrown"
+              ],
+              "properties": {
+                "NetWeight": {
+                  "$id": "#/definitions/Recap/properties/Totals/properties/NetWeight",
+                  "type": "string",
+                  "title": "Net Weight",
+                  "default": "",
+                  "examples": [
+                    "79025"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "TotalBales": {
+                  "$id": "#/definitions/Recap/properties/Totals/properties/TotalBales",
+                  "type": "string",
+                  "title": "Total Bales",
+                  "default": "",
+                  "examples": [
+                    "160"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "AvgStr": {
+                  "$id": "#/definitions/Recap/properties/Totals/properties/AvgStr",
+                  "type": "string",
+                  "title": "Avg Str",
+                  "default": "",
+                  "examples": [
+                    "30.5"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "AvgLeaf": {
+                  "$id": "#/definitions/Recap/properties/Totals/properties/AvgLeaf",
+                  "type": "string",
+                  "title": "Avg Leaf",
+                 "default": "",
+                 "examples": [
+                   "4.0"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "AvgStpl": {
+                 "$id": "#/definitions/Recap/properties/Totals/properties/AvgStpl",
+                 "type": "string",
+                 "title": "Avg Stpl",
+                 "default": "",
+                 "examples": [
+                   "35.8"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "AvgMic": {
+                 "$id": "#/definitions/Recap/properties/Totals/properties/AvgMic",
+                 "type": "string",
+                 "title": "Avg Mic",
+                 "default": "",
+                 "examples": [
+                   "46.0"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "AvgUniformity": {
+                 "$id": "#/definitions/Recap/properties/Totals/properties/AvgUniformity",
+                 "type": "string",
+                 "title": "Avg Uniformity",
+                 "default": "",
+                 "examples": [
+                   "81.4"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "showActual": {
+                 "$id": "#/definitions/Recap/properties/Totals/properties/showActual",
+                 "type": "string",
+                 "title": "Show Actual",
+                 "default": "",
+                 "examples": [
+                   "1"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "TareWeight": {
+                 "$id": "#/definitions/Recap/properties/Totals/properties/TareWeight",
+                 "type": "string",
+                 "title": "Tare Weight",
+                 "default": "",
+                 "examples": [
+                   "534"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "Tenderable": {
+                 "$id": "#/definitions/Recap/properties/Totals/properties/Tenderable",
+                 "type": "string",
+                 "title": "Tenderable",
+                 "default": "",
+                 "examples": [
+                   "0"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "TenderableSD": {
+                 "$id": "#/definitions/Recap/properties/Totals/properties/TenderableSD",
+                 "type": "string",
+                 "title": "Tenderable SD",
+                 "default": "",
+                 "examples": [
+                   "0"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "NonTenderable": {
+                 "$id": "#/definitions/Recap/properties/Totals/properties/NonTenderable",
+                 "type": "string",
+                 "title": "Non Tenderable",
+                 "default": "",
+                 "examples": [
+                   "0"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "Decert": {
+                 "$id": "#/definitions/Recap/properties/Totals/properties/Decert",
+                 "type": "string",
+                 "title": "Decert",
+                 "default": "",
+                 "examples": [
+                   "0"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "RainGrown": {
+                 "$id": "#/definitions/Recap/properties/Totals/properties/RainGrown",
+                 "type": "string",
+                 "title": "Rain Grown",
+                 "default": "",
+                 "examples": [
+                   "0"
+                 ],
+                 "pattern": "^(.*)$"
+               }
+             }
+           },
+           "Other": {
+             "$id": "#/definitions/Recap/properties/Other",
+             "type": "array",
+             "title": "Other",
+             "items": {
+               "$id": "#/properties/Recap/properties/Other/items",
+               "type": "object",
+               "title": "Items",
+               "required": [
+                 "Type",
+                 "Value",
+                 "Bales"
+               ],
+               "properties": {
+                 "Type": {
+                   "$id": "#/definitions/Recap/properties/Other/items/properties/Type",
+                   "type": "string",
+                   "title": "Type",
+                   "default": "",
+                   "examples": [
+                     "color"
+                   ],
+                   "pattern": "^(.*)$"
+                 },
+                 "Value": {
+                   "$id": "#/definitions/Recap/properties/Other/items/properties/Value",
+                   "type": "string",
+                   "title": "Value",
+                   "default": "",
+                   "examples": [
+                     "11"
+                   ],
+                   "pattern": "^(.*)$"
+                 },
+                 "Bales": {
+                   "$id": "#/definitions/Recap/properties/Other/items/properties/Bales",
+                   "type": "string",
+                   "title": "Bales",
+                   "default": "",
+                   "examples": [
+                     "2"
+                   ],
+                   "pattern": "^(.*)$"
+                 }
+               }
+             }
+           },
+           "Whse": {
+             "$id": "#/definitions/Recap/properties/Whse",
+             "type": "array",
+             "title": "Whse",
+             "items": {
+               "$id": "#/definitions/Recap/properties/Whse/items",
+               "type": "object",
+               "title": "Items",
+               "required": [
+                 "WhseCode",
+                 "CertLoading",
+                 "HasGins",
+                 "Provider",
+                 "Bales",
+                 "AvgLRR",
+                 "AvgLoan",
+                 "City",
+                 "State",
+                 "Rail"
+               ],
+               "properties": {
+                 "WhseCode": {
+                   "$id": "#/definitions/Recap/properties/Whse/items/properties/WhseCode",
+                   "type": "string",
+                   "title": "Whse Code",
+                   "default": "",
+                   "examples": [
+                     "129004"
+                   ],
+                   "pattern": "^(.*)$"
+                 },
+                 "CertLoading": {
+                   "$id": "#/definitions/Recap/properties/Whse/items/properties/CertLoading",
+                   "type": "string",
+                   "title": "Cert Loading",
+                   "default": "",
+                   "examples": [
+                     "0.00"
+                   ],
+                   "pattern": "^(.*)$"
+                 },
+                 "HasGins": {
+                   "$id": "#/definitions/Recap/properties/Whse/items/properties/HasGins",
+                   "type": "string",
+                   "title": "Has Gins",
+                   "default": "",
+                   "examples": [
+                     "0"
+                   ],
+                   "pattern": "^(.*)$"
+                 },
+                 "Provider": {
+                   "$id": "#/definitions/Recap/properties/Whse/items/properties/Provider",
+                   "type": "string",
+                   "title": "Provider",
+                   "default": "",
+                   "examples": [
+                     "EWR"
+                   ],
+                   "pattern": "^(.*)$"
+                 },
+                 "Bales": {
+                   "$id": "#/definitions/Recap/properties/Whse/items/properties/Bales",
+                   "type": "string",
+                   "title": "Bales",
+                   "default": "",
+                   "examples": [
+                     "1"
+                   ],
+                   "pattern": "^(.*)$"
+                 },
+                 "AvgLRR": {
+                   "$id": "#/definitions/Recap/properties/Whse/items/properties/AvgLRR",
+                   "type": "string",
+                   "title": "Avg LRR",
+                   "default": "",
+                   "examples": [
+                     "0.5645"
+                   ],
+                   "pattern": "^(.*)$"
+                 },
+                 "AvgLoan": {
+                   "$id": "#/definitions/Recap/properties/Whse/items/properties/AvgLoan",
+                   "type": "string",
+                   "title": "Avg Loan",
+                   "default": "",
+                   "examples": [
+                     "0.564500"
+                   ],
+                   "pattern": "^(.*)$"
+                 },
+                 "City": {
+                   "$id": "#/definitions/Recap/properties/Whse/items/properties/City",
+                   "type": "string",
+                   "title": "City",
+                   "default": "",
+                   "examples": [
+                     "Blytheville"
+                   ],
+                   "pattern": "^(.*)$"
+                 },
+                 "State": {
+                   "$id": "#/definitions/Recap/properties/Whse/items/properties/State",
+                   "type": "string",
+                   "title": "State",
+                   "default": "",
+                   "examples": [
+                     "AR"
+                   ],
+                   "pattern": "^(.*)$"
+                 },
+                 "Rail": {
+                   "$id": "#/definitions/Recap/properties/Whse/items/properties/Rail",
+                   "type": "string",
+                   "title": "Rail",
+                   "default": "",
+                   "examples": [
+                     "no"
+                   ],
+                   "pattern": "^(.*)$"
+                 }
+               }
+             }
+           },
+           "Mic": {
+             "$id": "#/definitions/Recap/properties/Mic",
+             "type": "array",
+             "title": "Mic",
+             "items": {
+               "$id": "#/definitions/Recap/properties/Mic/items",
+               "type": "object",
+               "title": "Items",
+               "required": [
+                 "col",
+                 "staple_less",
+                 "staple_more",
+                 "mic"
+               ],
+               "properties": {
+                 "col": {
+                   "$id": "#/definitions/Recap/properties/Mic/items/properties/col",
+                   "type": "string",
+                   "title": "Col",
+                   "default": "",
+                   "examples": [
+                     "1"
+                   ],
+                   "pattern": "^(.*)$"
+                 },
+                 "staple_less": {
+                   "$id": "#/definitions/Recap/properties/Mic/items/properties/staple_less",
+                   "type": "string",
+                   "title": "Staple_less",
+                   "default": "",
+                   "examples": [
+                     "0"
+                   ],
+                   "pattern": "^(.*)$"
+                 },
+                 "staple_more": {
+                   "$id": "#/definitions/Recap/properties/Mic/items/properties/staple_more",
+                   "type": "string",
+                   "title": "Staple_more",
+                   "default": "",
+                   "examples": [
+                     "1"
+                   ],
+                   "pattern": "^(.*)$"
+                 },
+                 "mic": {
+                   "$id": "#/definitions/Recap/properties/Mic/items/properties/mic",
+                   "type": "string",
+                   "title": "Mic",
+                   "default": "",
+                   "examples": [
+                     "26.0"
+                   ],
+                   "pattern": "^(.*)$"
+                 }
+               }
+             }
+           },
+           "Classing": {
+             "$id": "#/definitions/Recap/properties/Classing",
+             "type": "array",
+             "title": "Classing",
+             "items": {
+               "$id": "#/definitions/Recap/properties/Classing/items",
+               "type": "object",
+               "title": "Items",
+               "required": [
+                 "cl_lf",
+                 "remarks",
+                 "staple_group1",
+                 "staple_group1_spotquoted",
+                 "staple_group2",
+                 "staple_group2_spotquoted",
+                 "staple_group3",
+                 "staple_group3_spotquoted",
+                 "staple_group4",
+                 "staple_group4_spotquoted",
+                 "staple_group5",
+                 "staple_group5_spotquoted",
+                 "staple_group6",
+                 "staple_group6_spotquoted",
+                 "staple_group7",
+                 "staple_group7_spotquoted",
+                 "staple_group8",
+                 "staple_group8_spotquoted",
+                 "staple_group9",
+                 "staple_group9_spotquoted",
+                 "staple_groupZ",
+                 "staple_groupZ_spotquoted"
+               ],
+               "properties": {
+                 "cl_lf": {
+                   "$id": "#/definitions/Recap/properties/Classing/items/properties/cl_lf",
+                   "type": "string",
+                   "title": "Cl_Lf",
+                   "default": "",
+                   "examples": [
+                     "11-1"
+                   ],
+                   "pattern": "^(.*)$"
+                 },
+                 "remarks": {
+                   "$id": "#/definitions/Recap/properties/Classing/items/properties/remarks",
+                   "type": "string",
+                   "title": "Remarks",
+                   "default": "",
+                   "examples": [
+                     "0"
+                   ],
+                   "pattern": "^(.*)$"
+                 },
+                 "staple_group1": {
+                   "$id": "#/definitions/Recap/properties/Classing/items/properties/staple_group1",
+                   "type": "string",
+                   "title": "Staple_Group1",
+                   "default": "",
+                   "examples": [
+                     "0"
+                   ],
+                   "pattern": "^(.*)$"
+                 },
+                 "staple_group1_spotquoted": {
+                   "$id": "#/definitions/Recap/properties/Classing/items/properties/staple_group1_spotquoted",
+                   "type": "string",
+                   "title": "Staple_Group1_SpotQuoted",
+                   "default": "",
+                   "examples": [
+                     "0"
+                   ],
+                   "pattern": "^(.*)$"
+                 },
+                 "staple_group2": {
+                   "$id": "#/definitions/Recap/properties/Classing/items/properties/staple_group2",
+                   "type": "string",
+                   "title": "Staple_Group2",
+                   "default": "",
+                   "examples": [
+                     "0"
+                   ],
+                   "pattern": "^(.*)$"
+                 },
+                 "staple_group2_spotquoted": {
+                   "$id": "#/definitions/Recap/properties/Classing/items/properties/staple_group2_spotquoted",
+                   "type": "string",
+                   "title": "Staple_Group2_SpotQuoted",
+                   "default": "",
+                   "examples": [
+                     "0"
+                   ],
+                   "pattern": "^(.*)$"
+                 },
+                 "staple_group3": {
+                   "$id": "#/definitions/Recap/properties/Classing/items/properties/staple_group3",
+                   "type": "string",
+                   "title": "Staple_Group3",
+                   "default": "",
+                   "examples": [
+                     "0"
+                   ],
+                   "pattern": "^(.*)$"
+                 },
+                 "staple_group3_spotquoted": {
+                   "$id": "#/definitions/Recap/properties/Classing/items/properties/staple_group3_spotquoted",
+                   "type": "string",
+                   "title": "Staple_Group3_SpotQuoted",
+                   "default": "",
+                   "examples": [
+                     "0"
+                   ],
+                   "pattern": "^(.*)$"
+                 },
+                 "staple_group4": {
+                   "$id": "#/definitions/Recap/properties/Classing/items/properties/staple_group4",
+                   "type": "string",
+                   "title": "Staple_Group4",
+                   "default": "",
+                   "examples": [
+                     "0"
+                   ],
+                   "pattern": "^(.*)$"
+                 },
+                 "staple_group4_spotquoted": {
+                   "$id": "#/definitions/Recap/properties/Classing/items/properties/staple_group4_spotquoted",
+                   "type": "string",
+                   "title": "Staple_Group4_SpotQuoted",
+                   "default": "",
+                   "examples": [
+                     "0"
+                   ],
+                   "pattern": "^(.*)$"
+                 },
+                 "staple_group5": {
+                   "$id": "#/definitions/Recap/properties/Classing/items/properties/staple_group5",
+                   "type": "string",
+                   "title": "Staple_Group5",
+                   "default": "",
+                   "examples": [
+                     "0"
+                   ],
+                   "pattern": "^(.*)$"
+                 },
+                 "staple_group5_spotquoted": {
+                   "$id": "#/definitions/Recap/properties/Classing/items/properties/staple_group5_spotquoted",
+                   "type": "string",
+                   "title": "Staple_Group5_SpotQuoted",
+                   "default": "",
+                   "examples": [
+                     "0"
+                   ],
+                   "pattern": "^(.*)$"
+                 },
+                 "staple_group6": {
+                   "$id": "#/definitions/Recap/properties/Classing/items/properties/staple_group6",
+                   "type": "string",
+                   "title": "Staple_Group6",
+                   "default": "",
+                   "examples": [
+                     "1"
+                   ],
+                   "pattern": "^(.*)$"
+                 },
+                 "staple_group6_spotquoted": {
+                   "$id": "#/definitions/Recap/properties/Classing/items/properties/staple_group6_spotquoted",
+                   "type": "string",
+                   "title": "Staple_Group6_SpotQuoted",
+                   "default": "",
+                   "examples": [
+                     "1"
+                   ],
+                   "pattern": "^(.*)$"
+                 },
+                 "staple_group7": {
+                   "$id": "#/definitions/Recap/properties/Classing/items/properties/staple_group7",
+                   "type": "string",
+                   "title": "Staple_Group7",
+                   "default": "",
+                   "examples": [
+                     "1"
+                   ],
+                   "pattern": "^(.*)$"
+                 },
+                 "staple_group7_spotquoted": {
+                   "$id": "#/definitions/Recap/properties/Classing/items/properties/staple_group7_spotquoted",
+                   "type": "string",
+                   "title": "Staple_Group7_SpotQuoted",
+                   "default": "",
+                   "examples": [
+                     "1"
+                   ],
+                   "pattern": "^(.*)$"
+                 },
+                 "staple_group8": {
+                   "$id": "#/definitions/Recap/properties/Classing/items/properties/staple_group8",
+                   "type": "string",
+                   "title": "Staple_Group8",
+                   "default": "",
+                   "examples": [
+                     "0"
+                   ],
+                   "pattern": "^(.*)$"
+                 },
+                 "staple_group8_spotquoted": {
+                   "$id": "#/definitions/Recap/properties/Classing/items/properties/staple_group8_spotquoted",
+                   "type": "string",
+                   "title": "Staple_Group8_SpotQuoted",
+                   "default": "",
+                   "examples": [
+                     "0"
+                   ],
+                   "pattern": "^(.*)$"
+                 },
+                 "staple_group9": {
+                   "$id": "#/definitions/Recap/properties/Classing/items/properties/staple_group9",
+                   "type": "string",
+                   "title": "Staple_Group9",
+                   "default": "",
+                   "examples": [
+                     "0"
+                   ],
+                   "pattern": "^(.*)$"
+                 },
+                 "staple_group9_spotquoted": {
+                   "$id": "#/definitions/Recap/properties/Classing/items/properties/staple_group9_spotquoted",
+                   "type": "string",
+                   "title": "Staple_Group9_SpotQuoted",
+                   "default": "",
+                   "examples": [
+                     "0"
+                   ],
+                   "pattern": "^(.*)$"
+                 },
+                 "staple_groupZ": {
+                   "$id": "#/definitions/Recap/properties/Classing/items/properties/staple_groupZ",
+                   "type": "string",
+                   "title": "Staple_GroupZ",
+                   "default": "",
+                   "examples": [
+                     "0"
+                   ],
+                   "pattern": "^(.*)$"
+                 },
+                 "staple_groupZ_spotquoted": {
+                   "$id": "#/definitions/Recap/properties/Classing/items/properties/staple_groupZ_spotquoted",
+                   "type": "string",
+                   "title": "Staple_GroupZ_SpotQuoted",
+                   "default": "",
+                   "examples": [
+                     "0"
+                   ],
+                   "pattern": "^(.*)$"
+                 }
+               }
+             }
+           },
+           "Offer": {
+             "$id": "#/definitions/Recap/properties/Offer",
+             "type": "object",
+             "title": "Offer",
+             "required": [
+               "OfferNumber",
+               "BuyerOfferNumber",
+               "CurrentCropYear",
+               "BuyerCommission",
+               "lrr",
+               "Price",
+               "Loan",
+               "ActualLRR",
+               "ActualLoanPrice",
+               "PickerBales",
+               "SampledBales",
+               "IsG2B",
+               "IsEquity",
+               "Bales",
+               "Terms",
+               "CertifiedFibermaxBales",
+               "IsPima",
+               "IsAuction",
+               "SpotQuote",
+               "recapId",
+               "recapBales"
+             ],
+             "properties": {
+               "OfferNumber": {
+                 "$id": "#/definitions/Recap/properties/Offer/properties/OfferNumber",
+                 "type": "string",
+                 "title": "Offer Number",
+                 "default": "",
+                 "examples": [
+                   "959542"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "BuyerOfferNumber": {
+                 "$id": "#/definitions/Recap/properties/Offer/properties/BuyerOfferNumber",
+                 "type": "string",
+                 "title": "Buyer Offer Number",
+                 "default": "",
+                 "examples": [
+                   "17066150"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "CurrentCropYear": {
+                 "$id": "#/definitions/Recap/properties/Offer/properties/CurrentCropYear",
+                 "type": "string",
+                 "title": "Current Crop Year",
+                 "default": "",
+                 "examples": [
+                   "2018"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "BuyerCommission": {
+                 "$id": "#/definitions/Recap/properties/Offer/properties/BuyerCommission",
+                 "type": "string",
+                 "title": "Buyer Commission",
+                 "default": "",
+                 "examples": [
+                   "0.75"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "lrr": {
+                 "$id": "#/definitions/Recap/properties/Offer/properties/lrr",
+                 "type": "string",
+                 "title": "LRR",
+                 "default": "",
+                 "examples": [
+                   "0.4944"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "Price": {
+                 "$id": "#/definitions/Recap/properties/Offer/properties/Price",
+                 "type": "string",
+                 "title": "Price",
+                 "default": "",
+                 "examples": [
+                   "CTZ7        -50"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "Loan": {
+                 "$id": "#/definitions/Recap/properties/Offer/properties/Loan",
+                 "type": "string",
+                 "title": "Loan",
+                 "default": "",
+                 "examples": [
+                   "0.494400"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "ActualLRR": {
+                 "$id": "#/definitions/Recap/properties/Offer/properties/ActualLRR",
+                 "type": "string",
+                 "title": "Actual LRR",
+                 "default": "",
+                 "examples": [
+                   "0.4982"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "ActualLoanPrice": {
+                 "$id": "#/definitions/Recap/properties/Offer/properties/ActualLoanPrice",
+                 "type": "string",
+                 "title": "Actual Loan Price",
+                 "default": "",
+                 "examples": [
+                   "0.498200"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "PickerBales": {
+                 "$id": "#/definitions/Recap/properties/Offer/properties/PickerBales",
+                 "type": "string",
+                 "title": "Picker Bales",
+                 "default": "",
+                 "examples": [
+                   "160"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "SampledBales": {
+                 "$id": "#/definitions/Recap/properties/Offer/properties/SampledBales",
+                 "type": "string",
+                 "title": "Sampled Bales",
+                 "default": "",
+                 "examples": [
+                   "0"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "IsG2B": {
+                 "$id": "#/definitions/Recap/properties/Offer/properties/IsG2B",
+                 "type": "string",
+                 "title": "Is G2B",
+                 "default": "",
+                 "examples": [
+                   "0"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "IsEquity": {
+                 "$id": "#/definitions/Recap/properties/Offer/properties/IsEquity",
+                 "type": "string",
+                 "title": "Is Equity",
+                 "default": "",
+                 "examples": [
+                   "0"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "Bales": {
+                 "$id": "#/definitions/Recap/properties/Offer/properties/Bales",
+                 "type": "string",
+                 "title": "Bales",
+                 "default": "",
+                 "examples": [
+                   "160"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "Terms": {
+                 "$id": "#/definitions/Recap/properties/Offer/properties/Terms",
+                 "type": "string",
+                 "title": "Terms",
+                 "default": "",
+                 "examples": [
+                   "01"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "CertifiedFibermaxBales": {
+                 "$id": "#/definitions/Recap/properties/Offer/properties/CertifiedFibermaxBales",
+                 "type": "string",
+                 "title": "Certified Fiber Max Bales",
+                 "default": "",
+                 "examples": [
+                   "0"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "IsPima": {
+                 "$id": "#/definitions/Recap/properties/Offer/properties/IsPima",
+                 "type": "string",
+                 "title": "Is Pima",
+                 "default": "",
+                 "examples": [
+                   "0"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "IsAuction": {
+                 "$id": "#/definitions/Recap/properties/Offer/properties/IsAuction",
+                 "type": "string",
+                 "title": "Is Auction",
+                 "default": "",
+                 "examples": [
+                   "0"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "SpotQuote": {
+                 "$id": "#/definitions/Recap/properties/Offer/properties/SpotQuote",
+                 "type": "string",
+                 "title": "Spot Quote",
+                 "default": "",
+                 "examples": [
+                   "-0.0382"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "recapId": {
+                 "$id": "#/definitions/Recap/properties/Offer/properties/recapId",
+                 "type": "string",
+                 "title": "Recap ID",
+                 "default": "",
+                 "examples": [
+                   "0"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "recapBales": {
+                 "$id": "#/definitions/Recap/properties/Offer/properties/recapBales",
+                 "type": "string",
+                 "title": "Recap Bales",
+                 "default": "",
+                 "examples": [
+                   "0"
+                 ],
+                 "pattern": "^(.*)$"
+               }
+             }
+           }
+         }
+       }
+     }
+   }

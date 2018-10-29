@@ -1,0 +1,1748 @@
+{
+    "Recap": {
+      "User": { "-UserIsBuyer": "0" },
+      "Totals": {
+        "NetWeight": "79025",
+        "TotalBales": "160",
+        "AvgStr": "30.5",
+        "AvgLeaf": "4.0",
+        "AvgStpl": "35.8",
+        "AvgMic": "46.0",
+        "AvgUniformity": "81.4",
+        "showActual": "1",
+        "TareWeight": "534",
+        "Tenderable": "0",
+        "TenderableSD": "0",
+        "NonTenderable": "0",
+        "Decert": "0",
+        "RainGrown": "0"
+      },
+      "Other": [
+        {
+          "Type": "color",
+          "Value": "11",
+          "Bales": "2"
+        },
+        {
+          "Type": "color",
+          "Value": "21",
+          "Bales": "13"
+        },
+        {
+          "Type": "color",
+          "Value": "31",
+          "Bales": "48"
+        },
+        {
+          "Type": "color",
+          "Value": "41",
+          "Bales": "58"
+        },
+        {
+          "Type": "color",
+          "Value": "51",
+          "Bales": "8"
+        },
+        {
+          "Type": "color",
+          "Value": "61",
+          "Bales": "1"
+        },
+        {
+          "Type": "color",
+          "Value": "71",
+          "Bales": "1"
+        },
+        {
+          "Type": "color",
+          "Value": "22",
+          "Bales": "1"
+        },
+        {
+          "Type": "color",
+          "Value": "42",
+          "Bales": "2"
+        },
+        {
+          "Type": "color",
+          "Value": "52",
+          "Bales": "3"
+        },
+        {
+          "Type": "color",
+          "Value": "33",
+          "Bales": "8"
+        },
+        {
+          "Type": "color",
+          "Value": "43",
+          "Bales": "14"
+        },
+        {
+          "Type": "color",
+          "Value": "53",
+          "Bales": "1"
+        },
+        {
+          "Type": "compression",
+          "Value": "5",
+          "Bales": "160"
+        },
+        {
+          "Type": "cropyear",
+          "Value": "2014",
+          "Bales": "8"
+        },
+        {
+          "Type": "cropyear",
+          "Value": "2015",
+          "Bales": "3"
+        },
+        {
+          "Type": "cropyear",
+          "Value": "2016",
+          "Bales": "149"
+        },
+        {
+          "Type": "extraneous",
+          "Value": "0",
+          "Bales": "146"
+        },
+        {
+          "Type": "extraneous",
+          "Value": "11",
+          "Bales": "13",
+          "TypeToolTip": "11 = Bark Level 1"
+        },
+        {
+          "Type": "extraneous",
+          "Value": "21",
+          "Bales": "1",
+          "TypeToolTip": "21 = Grass Level 1"
+        },
+        {
+          "Type": "leaf",
+          "Value": "1",
+          "Bales": "4"
+        },
+        {
+          "Type": "leaf",
+          "Value": "2",
+          "Bales": "19"
+        },
+        {
+          "Type": "leaf",
+          "Value": "3",
+          "Bales": "47"
+        },
+        {
+          "Type": "leaf",
+          "Value": "4",
+          "Bales": "39"
+        },
+        {
+          "Type": "leaf",
+          "Value": "5",
+          "Bales": "17"
+        },
+        {
+          "Type": "leaf",
+          "Value": "6",
+          "Bales": "28"
+        },
+        {
+          "Type": "leaf",
+          "Value": "7",
+          "Bales": "6"
+        },
+        {
+          "Type": "length",
+          "Value": "100",
+          "Bales": "1"
+        },
+        {
+          "Type": "length",
+          "Value": "101",
+          "Bales": "5"
+        },
+        {
+          "Type": "length",
+          "Value": "104",
+          "Bales": "4"
+        },
+        {
+          "Type": "length",
+          "Value": "105",
+          "Bales": "2"
+        },
+        {
+          "Type": "length",
+          "Value": "106",
+          "Bales": "11"
+        },
+        {
+          "Type": "length",
+          "Value": "107",
+          "Bales": "7"
+        },
+        {
+          "Type": "length",
+          "Value": "108",
+          "Bales": "9"
+        },
+        {
+          "Type": "length",
+          "Value": "109",
+          "Bales": "10"
+        },
+        {
+          "Type": "length",
+          "Value": "110",
+          "Bales": "20"
+        },
+        {
+          "Type": "length",
+          "Value": "111",
+          "Bales": "9"
+        },
+        {
+          "Type": "length",
+          "Value": "112",
+          "Bales": "12"
+        },
+        {
+          "Type": "length",
+          "Value": "113",
+          "Bales": "10"
+        },
+        {
+          "Type": "length",
+          "Value": "114",
+          "Bales": "14"
+        },
+        {
+          "Type": "length",
+          "Value": "115",
+          "Bales": "17"
+        },
+        {
+          "Type": "length",
+          "Value": "116",
+          "Bales": "3"
+        },
+        {
+          "Type": "length",
+          "Value": "117",
+          "Bales": "9"
+        },
+        {
+          "Type": "length",
+          "Value": "118",
+          "Bales": "8"
+        },
+        {
+          "Type": "length",
+          "Value": "119",
+          "Bales": "5"
+        },
+        {
+          "Type": "length",
+          "Value": "120",
+          "Bales": "1"
+        },
+        {
+          "Type": "length",
+          "Value": "122",
+          "Bales": "3"
+        },
+        {
+          "Type": "mic",
+          "Value": "26",
+          "Bales": "1"
+        },
+        {
+          "Type": "mic",
+          "Value": "27",
+          "Bales": "3"
+        },
+        {
+          "Type": "mic",
+          "Value": "28",
+          "Bales": "3"
+        },
+        {
+          "Type": "mic",
+          "Value": "29",
+          "Bales": "1"
+        },
+        {
+          "Type": "mic",
+          "Value": "33",
+          "Bales": "1"
+        },
+        {
+          "Type": "mic",
+          "Value": "34",
+          "Bales": "5"
+        },
+        {
+          "Type": "mic",
+          "Value": "35",
+          "Bales": "1"
+        },
+        {
+          "Type": "mic",
+          "Value": "36",
+          "Bales": "4"
+        },
+        {
+          "Type": "mic",
+          "Value": "37",
+          "Bales": "3"
+        },
+        {
+          "Type": "mic",
+          "Value": "39",
+          "Bales": "1"
+        },
+        {
+          "Type": "mic",
+          "Value": "40",
+          "Bales": "9"
+        },
+        {
+          "Type": "mic",
+          "Value": "41",
+          "Bales": "2"
+        },
+        {
+          "Type": "mic",
+          "Value": "42",
+          "Bales": "5"
+        },
+        {
+          "Type": "mic",
+          "Value": "43",
+          "Bales": "4"
+        },
+        {
+          "Type": "mic",
+          "Value": "44",
+          "Bales": "4"
+        },
+        {
+          "Type": "mic",
+          "Value": "45",
+          "Bales": "14"
+        },
+        {
+          "Type": "mic",
+          "Value": "46",
+          "Bales": "9"
+        },
+        {
+          "Type": "mic",
+          "Value": "47",
+          "Bales": "7"
+        },
+        {
+          "Type": "mic",
+          "Value": "48",
+          "Bales": "18"
+        },
+        {
+          "Type": "mic",
+          "Value": "49",
+          "Bales": "8"
+        },
+        {
+          "Type": "mic",
+          "Value": "50",
+          "Bales": "13"
+        },
+        {
+          "Type": "mic",
+          "Value": "51",
+          "Bales": "5"
+        },
+        {
+          "Type": "mic",
+          "Value": "52",
+          "Bales": "12"
+        },
+        {
+          "Type": "mic",
+          "Value": "53",
+          "Bales": "20"
+        },
+        {
+          "Type": "mic",
+          "Value": "54",
+          "Bales": "6"
+        },
+        {
+          "Type": "mic",
+          "Value": "56",
+          "Bales": "1"
+        },
+        {
+          "Type": "mic group",
+          "Value": "1",
+          "Bales": "1"
+        },
+        {
+          "Type": "mic group",
+          "Value": "2",
+          "Bales": "7"
+        },
+        {
+          "Type": "mic group",
+          "Value": "4",
+          "Bales": "6"
+        },
+        {
+          "Type": "mic group",
+          "Value": "5",
+          "Bales": "89"
+        },
+        {
+          "Type": "mic group",
+          "Value": "6",
+          "Bales": "30"
+        },
+        {
+          "Type": "mic group",
+          "Value": "7",
+          "Bales": "27"
+        },
+        {
+          "Type": "netweight",
+          "Value": "420-453",
+          "Bales": "3",
+          "TypeToolTip": "Terms Code 01"
+        },
+        {
+          "Type": "netweight",
+          "Value": "454-600",
+          "Bales": "157",
+          "TypeToolTip": "Terms Code 01"
+        },
+        {
+          "Type": "specialconditions",
+          "Bales": "158"
+        },
+        {
+          "Type": "specialconditions",
+          "Value": "75",
+          "Bales": "2",
+          "TypeToolTip": "75 = Color Grade Mismatch"
+        },
+        {
+          "Type": "staple",
+          "Value": "32",
+          "Bales": "6"
+        },
+        {
+          "Type": "staple",
+          "Value": "33",
+          "Bales": "4"
+        },
+        {
+          "Type": "staple",
+          "Value": "34",
+          "Bales": "20"
+        },
+        {
+          "Type": "staple",
+          "Value": "35",
+          "Bales": "39"
+        },
+        {
+          "Type": "staple",
+          "Value": "36",
+          "Bales": "31"
+        },
+        {
+          "Type": "staple",
+          "Value": "37",
+          "Bales": "43"
+        },
+        {
+          "Type": "staple",
+          "Value": "38",
+          "Bales": "14"
+        },
+        {
+          "Type": "staple",
+          "Value": "39",
+          "Bales": "3"
+        },
+        {
+          "Type": "strength",
+          "Value": "25.0",
+          "Bales": "2"
+        },
+        {
+          "Type": "strength",
+          "Value": "25.5",
+          "Bales": "3"
+        },
+        {
+          "Type": "strength",
+          "Value": "26.0",
+          "Bales": "1"
+        },
+        {
+          "Type": "strength",
+          "Value": "26.5",
+          "Bales": "5"
+        },
+        {
+          "Type": "strength",
+          "Value": "27.0",
+          "Bales": "3"
+        },
+        {
+          "Type": "strength",
+          "Value": "27.5",
+          "Bales": "3"
+        },
+        {
+          "Type": "strength",
+          "Value": "28.0",
+          "Bales": "16"
+        },
+        {
+          "Type": "strength",
+          "Value": "28.5",
+          "Bales": "14"
+        },
+        {
+          "Type": "strength",
+          "Value": "29.0",
+          "Bales": "11"
+        },
+        {
+          "Type": "strength",
+          "Value": "29.5",
+          "Bales": "13"
+        },
+        {
+          "Type": "strength",
+          "Value": "30.0",
+          "Bales": "9"
+        },
+        {
+          "Type": "strength",
+          "Value": "30.5",
+          "Bales": "7"
+        },
+        {
+          "Type": "strength",
+          "Value": "31.0",
+          "Bales": "16"
+        },
+        {
+          "Type": "strength",
+          "Value": "31.5",
+          "Bales": "11"
+        },
+        {
+          "Type": "strength",
+          "Value": "32.0",
+          "Bales": "13"
+        },
+        {
+          "Type": "strength",
+          "Value": "32.5",
+          "Bales": "16"
+        },
+        {
+          "Type": "strength",
+          "Value": "33.0",
+          "Bales": "3"
+        },
+        {
+          "Type": "strength",
+          "Value": "33.5",
+          "Bales": "1"
+        },
+        {
+          "Type": "strength",
+          "Value": "34.0",
+          "Bales": "4"
+        },
+        {
+          "Type": "strength",
+          "Value": "34.5",
+          "Bales": "5"
+        },
+        {
+          "Type": "strength",
+          "Value": "35.0",
+          "Bales": "2"
+        },
+        {
+          "Type": "strength",
+          "Value": "36.0",
+          "Bales": "2"
+        },
+        {
+          "Type": "uniformity",
+          "Value": "75.0",
+          "Bales": "1"
+        },
+        {
+          "Type": "uniformity",
+          "Value": "77.5",
+          "Bales": "1"
+        },
+        {
+          "Type": "uniformity",
+          "Value": "78.0",
+          "Bales": "7"
+        },
+        {
+          "Type": "uniformity",
+          "Value": "78.5",
+          "Bales": "4"
+        },
+        {
+          "Type": "uniformity",
+          "Value": "79.0",
+          "Bales": "6"
+        },
+        {
+          "Type": "uniformity",
+          "Value": "79.5",
+          "Bales": "24"
+        },
+        {
+          "Type": "uniformity",
+          "Value": "80.0",
+          "Bales": "7"
+        },
+        {
+          "Type": "uniformity",
+          "Value": "80.5",
+          "Bales": "6"
+        },
+        {
+          "Type": "uniformity",
+          "Value": "81.0",
+          "Bales": "5"
+        },
+        {
+          "Type": "uniformity",
+          "Value": "81.5",
+          "Bales": "24"
+        },
+        {
+          "Type": "uniformity",
+          "Value": "82.0",
+          "Bales": "20"
+        },
+        {
+          "Type": "uniformity",
+          "Value": "82.5",
+          "Bales": "27"
+        },
+        {
+          "Type": "uniformity",
+          "Value": "83.0",
+          "Bales": "22"
+        },
+        {
+          "Type": "uniformity",
+          "Value": "83.5",
+          "Bales": "4"
+        },
+        {
+          "Type": "uniformity",
+          "Value": "84.0",
+          "Bales": "2"
+        }
+      ],
+      "Whse": [
+        {
+          "WhseCode": "129004",
+          "CertLoading": "0.00",
+          "HasGins": "0",
+          "Provider": "EWR",
+          "Bales": "1",
+          "AvgLRR": "0.5645",
+          "AvgLoan": "0.564500",
+          "City": "Blytheville",
+          "State": "AR",
+          "Rail": "no"
+        },
+        {
+          "WhseCode": "153505",
+          "CertLoading": "4.25",
+          "HasGins": "0",
+          "Provider": "EWR",
+          "Bales": "6",
+          "AvgLRR": "0.4140",
+          "AvgLoan": "0.414000",
+          "City": "Crawfordsville",
+          "State": "AR",
+          "Rail": "no"
+        },
+        {
+          "WhseCode": "137001",
+          "CertLoading": "0.00",
+          "HasGins": "0",
+          "Provider": "EWR",
+          "Bales": "13",
+          "AvgLRR": "0.5009",
+          "AvgLoan": "0.500923",
+          "City": "Dumas",
+          "State": "AR",
+          "Rail": "yes"
+        },
+        {
+          "WhseCode": "152705",
+          "CertLoading": "0.00",
+          "HasGins": "0",
+          "Provider": "EWR",
+          "Bales": "16",
+          "AvgLRR": "0.4918",
+          "AvgLoan": "0.491843",
+          "City": "Manila",
+          "State": "AR",
+          "Rail": "no",
+          "GinDiscrep": {
+            "State": "MO",
+            "Bales": "16"
+          }
+        },
+        {
+          "WhseCode": "153005",
+          "CertLoading": "0.00",
+          "HasGins": "0",
+          "Provider": "EWR",
+          "Bales": "4",
+          "AvgLRR": "0.5018",
+          "AvgLoan": "0.501875",
+          "City": "Marianna",
+          "State": "AR",
+          "Rail": "yes"
+        },
+        {
+          "WhseCode": "156006",
+          "CertLoading": "0.00",
+          "HasGins": "0",
+          "Provider": "EWR",
+          "Bales": "3",
+          "AvgLRR": "0.4931",
+          "AvgLoan": "0.493166",
+          "City": "Marianna",
+          "State": "AR",
+          "Rail": "no"
+        },
+        {
+          "WhseCode": "165506",
+          "CertLoading": "0.00",
+          "HasGins": "0",
+          "Provider": "EWR",
+          "Bales": "17",
+          "AvgLRR": "0.4822",
+          "AvgLoan": "0.482264",
+          "City": "Trumann",
+          "State": "AR",
+          "Rail": "no"
+        },
+        {
+          "WhseCode": "167003",
+          "CertLoading": "4.25",
+          "HasGins": "0",
+          "Provider": "EWR",
+          "Bales": "11",
+          "AvgLRR": "0.5291",
+          "AvgLoan": "0.529136",
+          "City": "West Memphis",
+          "State": "AR",
+          "Rail": "yes",
+          "GinDiscrep": {
+            "State": "TX",
+            "Bales": "11"
+          }
+        },
+        {
+          "WhseCode": "400510",
+          "CertLoading": "0.00",
+          "HasGins": "0",
+          "Provider": "EWR",
+          "Bales": "3",
+          "AvgLRR": "0.4968",
+          "AvgLoan": "0.496833",
+          "City": "Alexandria",
+          "State": "LA",
+          "Rail": "yes"
+        },
+        {
+          "WhseCode": "416010",
+          "CertLoading": "0.00",
+          "HasGins": "0",
+          "Provider": "EWR",
+          "Bales": "8",
+          "AvgLRR": "0.5385",
+          "AvgLoan": "0.538500",
+          "City": "Rayville",
+          "State": "LA",
+          "Rail": "yes"
+        },
+        {
+          "WhseCode": "420002",
+          "CertLoading": "0.00",
+          "HasGins": "0",
+          "Provider": "EWR",
+          "Bales": "9",
+          "AvgLRR": "0.5190",
+          "AvgLoan": "0.519000",
+          "City": "Winnsboro",
+          "State": "LA",
+          "Rail": "no"
+        },
+        {
+          "WhseCode": "516004",
+          "CertLoading": "0.00",
+          "HasGins": "0",
+          "Provider": "EWR",
+          "Bales": "3",
+          "AvgLRR": "0.5326",
+          "AvgLoan": "0.532666",
+          "City": "Caruthersville",
+          "State": "MO",
+          "Rail": "no"
+        },
+        {
+          "WhseCode": "518085",
+          "CertLoading": "0.00",
+          "HasGins": "0",
+          "Provider": "EWR",
+          "Bales": "4",
+          "AvgLRR": "0.4668",
+          "AvgLoan": "0.466875",
+          "City": "New Madrid",
+          "State": "MO",
+          "Rail": "no"
+        },
+        {
+          "WhseCode": "476510",
+          "CertLoading": "0.00",
+          "HasGins": "0",
+          "Provider": "EWR",
+          "Bales": "11",
+          "AvgLRR": "0.5162",
+          "AvgLoan": "0.516272",
+          "City": "Greenwood ",
+          "State": "MS",
+          "Rail": "no"
+        },
+        {
+          "WhseCode": "477005",
+          "CertLoading": "0.00",
+          "HasGins": "0",
+          "Provider": "EWR",
+          "Bales": "12",
+          "AvgLRR": "0.4613",
+          "AvgLoan": "0.461333",
+          "City": "Grenada",
+          "State": "MS",
+          "Rail": "no"
+        },
+        {
+          "WhseCode": "480505",
+          "CertLoading": "0.00",
+          "HasGins": "0",
+          "Provider": "EWR",
+          "Bales": "1",
+          "AvgLRR": "0.5620",
+          "AvgLoan": "0.562000",
+          "City": "Indianola",
+          "State": "MS",
+          "Rail": "yes"
+        },
+        {
+          "WhseCode": "481005",
+          "CertLoading": "0.00",
+          "HasGins": "0",
+          "Provider": "EWR",
+          "Bales": "14",
+          "AvgLRR": "0.4560",
+          "AvgLoan": "0.456071",
+          "City": "Inverness",
+          "State": "MS",
+          "Rail": "no"
+        },
+        {
+          "WhseCode": "787005",
+          "CertLoading": "0.00",
+          "HasGins": "0",
+          "Provider": "EWR",
+          "Bales": "1",
+          "AvgLRR": "0.5040",
+          "AvgLoan": "0.504000",
+          "City": "Brownsville",
+          "State": "TN",
+          "Rail": "no"
+        },
+        {
+          "WhseCode": "791730",
+          "CertLoading": "0.00",
+          "HasGins": "0",
+          "Provider": "EWR",
+          "Bales": "16",
+          "AvgLRR": "0.4864",
+          "AvgLoan": "0.486406",
+          "City": "Humboldt ",
+          "State": "TN",
+          "Rail": "no"
+        },
+        {
+          "WhseCode": "794205",
+          "CertLoading": "0.00",
+          "HasGins": "0",
+          "Provider": "EWR",
+          "Bales": "1",
+          "AvgLRR": "0.5380",
+          "AvgLoan": "0.538000",
+          "City": "Mason",
+          "State": "TN",
+          "Rail": "no"
+        },
+        {
+          "WhseCode": "795005",
+          "CertLoading": "0.00",
+          "HasGins": "0",
+          "Provider": "EWR",
+          "Bales": "5",
+          "AvgLRR": "0.5351",
+          "AvgLoan": "0.535100",
+          "City": "Milan",
+          "State": "TN",
+          "Rail": "yes"
+        },
+        {
+          "WhseCode": "797660",
+          "CertLoading": "0.00",
+          "HasGins": "0",
+          "Provider": "EWR",
+          "Bales": "1",
+          "AvgLRR": "0.5265",
+          "AvgLoan": "0.526500",
+          "City": "Somerville",
+          "State": "TN",
+          "Rail": "no"
+        }
+      ],
+      "Mic": [
+        {
+          "col": "1",
+          "staple_less": "0",
+          "staple_more": "1",
+          "mic": "26.0"
+        },
+        {
+          "col": "2",
+          "staple_less": "1",
+          "staple_more": "6",
+          "mic": "27.7"
+        },
+        {
+          "col": "4",
+          "staple_less": "0",
+          "staple_more": "6",
+          "mic": "33.8"
+        },
+        {
+          "col": "5",
+          "staple_less": "13",
+          "staple_more": "76",
+          "mic": "44.5"
+        },
+        {
+          "col": "6",
+          "staple_less": "11",
+          "staple_more": "19",
+          "mic": "51.0"
+        },
+        {
+          "col": "7",
+          "staple_less": "5",
+          "staple_more": "22",
+          "mic": "53.3"
+        }
+      ],
+      "Classing": [
+        {
+          "cl_lf": "11-1",
+          "remarks": "0",
+          "staple_group1": "0",
+          "staple_group1_spotquoted": "0",
+          "staple_group2": "0",
+          "staple_group2_spotquoted": "0",
+          "staple_group3": "0",
+          "staple_group3_spotquoted": "0",
+          "staple_group4": "0",
+          "staple_group4_spotquoted": "0",
+          "staple_group5": "0",
+          "staple_group5_spotquoted": "0",
+          "staple_group6": "1",
+          "staple_group6_spotquoted": "1",
+          "staple_group7": "1",
+          "staple_group7_spotquoted": "1",
+          "staple_group8": "0",
+          "staple_group8_spotquoted": "0",
+          "staple_group9": "0",
+          "staple_group9_spotquoted": "0",
+          "staple_groupZ": "0",
+          "staple_groupZ_spotquoted": "0"
+        },
+        {
+          "cl_lf": "21-1",
+          "remarks": "0",
+          "staple_group1": "0",
+          "staple_group1_spotquoted": "0",
+          "staple_group2": "0",
+          "staple_group2_spotquoted": "0",
+          "staple_group3": "0",
+          "staple_group3_spotquoted": "0",
+          "staple_group4": "0",
+          "staple_group4_spotquoted": "0",
+          "staple_group5": "0",
+          "staple_group5_spotquoted": "0",
+          "staple_group6": "1",
+          "staple_group6_spotquoted": "1",
+          "staple_group7": "1",
+          "staple_group7_spotquoted": "1",
+          "staple_group8": "0",
+          "staple_group8_spotquoted": "0",
+          "staple_group9": "0",
+          "staple_group9_spotquoted": "0",
+          "staple_groupZ": "0",
+          "staple_groupZ_spotquoted": "0"
+        },
+        {
+          "cl_lf": "21-2",
+          "remarks": "0",
+          "staple_group1": "0",
+          "staple_group1_spotquoted": "0",
+          "staple_group2": "0",
+          "staple_group2_spotquoted": "0",
+          "staple_group3": "0",
+          "staple_group3_spotquoted": "0",
+          "staple_group4": "0",
+          "staple_group4_spotquoted": "0",
+          "staple_group5": "1",
+          "staple_group5_spotquoted": "1",
+          "staple_group6": "0",
+          "staple_group6_spotquoted": "0",
+          "staple_group7": "4",
+          "staple_group7_spotquoted": "4",
+          "staple_group8": "0",
+          "staple_group8_spotquoted": "0",
+          "staple_group9": "0",
+          "staple_group9_spotquoted": "0",
+          "staple_groupZ": "1",
+          "staple_groupZ_spotquoted": "1"
+        },
+        {
+          "cl_lf": "21-3",
+          "remarks": "0",
+          "staple_group1": "0",
+          "staple_group1_spotquoted": "0",
+          "staple_group2": "0",
+          "staple_group2_spotquoted": "0",
+          "staple_group3": "0",
+          "staple_group3_spotquoted": "0",
+          "staple_group4": "0",
+          "staple_group4_spotquoted": "0",
+          "staple_group5": "0",
+          "staple_group5_spotquoted": "0",
+          "staple_group6": "0",
+          "staple_group6_spotquoted": "0",
+          "staple_group7": "2",
+          "staple_group7_spotquoted": "2",
+          "staple_group8": "2",
+          "staple_group8_spotquoted": "2",
+          "staple_group9": "0",
+          "staple_group9_spotquoted": "0",
+          "staple_groupZ": "0",
+          "staple_groupZ_spotquoted": "0"
+        },
+        {
+          "cl_lf": "21-4",
+          "remarks": "0",
+          "staple_group1": "0",
+          "staple_group1_spotquoted": "0",
+          "staple_group2": "0",
+          "staple_group2_spotquoted": "0",
+          "staple_group3": "0",
+          "staple_group3_spotquoted": "0",
+          "staple_group4": "0",
+          "staple_group4_spotquoted": "0",
+          "staple_group5": "0",
+          "staple_group5_spotquoted": "0",
+          "staple_group6": "0",
+          "staple_group6_spotquoted": "0",
+          "staple_group7": "0",
+          "staple_group7_spotquoted": "0",
+          "staple_group8": "0",
+          "staple_group8_spotquoted": "0",
+          "staple_group9": "1",
+          "staple_group9_spotquoted": "1",
+          "staple_groupZ": "0",
+          "staple_groupZ_spotquoted": "0"
+        },
+        {
+          "cl_lf": "31-2",
+          "remarks": "0",
+          "staple_group1": "0",
+          "staple_group1_spotquoted": "0",
+          "staple_group2": "0",
+          "staple_group2_spotquoted": "0",
+          "staple_group3": "0",
+          "staple_group3_spotquoted": "0",
+          "staple_group4": "0",
+          "staple_group4_spotquoted": "0",
+          "staple_group5": "0",
+          "staple_group5_spotquoted": "0",
+          "staple_group6": "8",
+          "staple_group6_spotquoted": "8",
+          "staple_group7": "1",
+          "staple_group7_spotquoted": "1",
+          "staple_group8": "1",
+          "staple_group8_spotquoted": "1",
+          "staple_group9": "1",
+          "staple_group9_spotquoted": "1",
+          "staple_groupZ": "0",
+          "staple_groupZ_spotquoted": "0"
+        },
+        {
+          "cl_lf": "31-3",
+          "remarks": "0",
+          "staple_group1": "0",
+          "staple_group1_spotquoted": "0",
+          "staple_group2": "0",
+          "staple_group2_spotquoted": "0",
+          "staple_group3": "0",
+          "staple_group3_spotquoted": "0",
+          "staple_group4": "5",
+          "staple_group4_spotquoted": "5",
+          "staple_group5": "2",
+          "staple_group5_spotquoted": "2",
+          "staple_group6": "5",
+          "staple_group6_spotquoted": "5",
+          "staple_group7": "10",
+          "staple_group7_spotquoted": "10",
+          "staple_group8": "2",
+          "staple_group8_spotquoted": "2",
+          "staple_group9": "3",
+          "staple_group9_spotquoted": "3",
+          "staple_groupZ": "0",
+          "staple_groupZ_spotquoted": "0"
+        },
+        {
+          "cl_lf": "31-4",
+          "remarks": "0",
+          "staple_group1": "0",
+          "staple_group1_spotquoted": "0",
+          "staple_group2": "0",
+          "staple_group2_spotquoted": "0",
+          "staple_group3": "0",
+          "staple_group3_spotquoted": "0",
+          "staple_group4": "0",
+          "staple_group4_spotquoted": "0",
+          "staple_group5": "0",
+          "staple_group5_spotquoted": "0",
+          "staple_group6": "1",
+          "staple_group6_spotquoted": "1",
+          "staple_group7": "1",
+          "staple_group7_spotquoted": "1",
+          "staple_group8": "2",
+          "staple_group8_spotquoted": "2",
+          "staple_group9": "4",
+          "staple_group9_spotquoted": "4",
+          "staple_groupZ": "0",
+          "staple_groupZ_spotquoted": "0"
+        },
+        {
+          "cl_lf": "31-5",
+          "remarks": "0",
+          "staple_group1": "0",
+          "staple_group1_spotquoted": "0",
+          "staple_group2": "0",
+          "staple_group2_spotquoted": "0",
+          "staple_group3": "0",
+          "staple_group3_spotquoted": "0",
+          "staple_group4": "0",
+          "staple_group4_spotquoted": "0",
+          "staple_group5": "0",
+          "staple_group5_spotquoted": "0",
+          "staple_group6": "0",
+          "staple_group6_spotquoted": "0",
+          "staple_group7": "0",
+          "staple_group7_spotquoted": "0",
+          "staple_group8": "0",
+          "staple_group8_spotquoted": "0",
+          "staple_group9": "2",
+          "staple_group9_spotquoted": "2",
+          "staple_groupZ": "0",
+          "staple_groupZ_spotquoted": "0"
+        },
+        {
+          "cl_lf": "41-2",
+          "remarks": "0",
+          "staple_group1": "0",
+          "staple_group1_spotquoted": "0",
+          "staple_group2": "0",
+          "staple_group2_spotquoted": "0",
+          "staple_group3": "0",
+          "staple_group3_spotquoted": "0",
+          "staple_group4": "1",
+          "staple_group4_spotquoted": "1",
+          "staple_group5": "0",
+          "staple_group5_spotquoted": "0",
+          "staple_group6": "0",
+          "staple_group6_spotquoted": "0",
+          "staple_group7": "0",
+          "staple_group7_spotquoted": "0",
+          "staple_group8": "0",
+          "staple_group8_spotquoted": "0",
+          "staple_group9": "0",
+          "staple_group9_spotquoted": "0",
+          "staple_groupZ": "0",
+          "staple_groupZ_spotquoted": "0"
+        },
+        {
+          "cl_lf": "41-3",
+          "remarks": "0",
+          "staple_group1": "0",
+          "staple_group1_spotquoted": "0",
+          "staple_group2": "0",
+          "staple_group2_spotquoted": "0",
+          "staple_group3": "0",
+          "staple_group3_spotquoted": "0",
+          "staple_group4": "0",
+          "staple_group4_spotquoted": "0",
+          "staple_group5": "1",
+          "staple_group5_spotquoted": "1",
+          "staple_group6": "2",
+          "staple_group6_spotquoted": "2",
+          "staple_group7": "2",
+          "staple_group7_spotquoted": "2",
+          "staple_group8": "2",
+          "staple_group8_spotquoted": "2",
+          "staple_group9": "1",
+          "staple_group9_spotquoted": "1",
+          "staple_groupZ": "0",
+          "staple_groupZ_spotquoted": "0"
+        },
+        {
+          "cl_lf": "41-4",
+          "remarks": "0",
+          "staple_group1": "0",
+          "staple_group1_spotquoted": "0",
+          "staple_group2": "0",
+          "staple_group2_spotquoted": "0",
+          "staple_group3": "0",
+          "staple_group3_spotquoted": "0",
+          "staple_group4": "0",
+          "staple_group4_spotquoted": "0",
+          "staple_group5": "0",
+          "staple_group5_spotquoted": "0",
+          "staple_group6": "1",
+          "staple_group6_spotquoted": "1",
+          "staple_group7": "3",
+          "staple_group7_spotquoted": "3",
+          "staple_group8": "5",
+          "staple_group8_spotquoted": "5",
+          "staple_group9": "1",
+          "staple_group9_spotquoted": "1",
+          "staple_groupZ": "2",
+          "staple_groupZ_spotquoted": "0"
+        },
+        {
+          "cl_lf": "41-5",
+          "remarks": "0",
+          "staple_group1": "0",
+          "staple_group1_spotquoted": "0",
+          "staple_group2": "0",
+          "staple_group2_spotquoted": "0",
+          "staple_group3": "0",
+          "staple_group3_spotquoted": "0",
+          "staple_group4": "0",
+          "staple_group4_spotquoted": "0",
+          "staple_group5": "0",
+          "staple_group5_spotquoted": "0",
+          "staple_group6": "0",
+          "staple_group6_spotquoted": "0",
+          "staple_group7": "3",
+          "staple_group7_spotquoted": "3",
+          "staple_group8": "3",
+          "staple_group8_spotquoted": "3",
+          "staple_group9": "3",
+          "staple_group9_spotquoted": "3",
+          "staple_groupZ": "3",
+          "staple_groupZ_spotquoted": "2"
+        },
+        {
+          "cl_lf": "41-6",
+          "remarks": "7",
+          "staple_group1": "0",
+          "staple_group1_spotquoted": "0",
+          "staple_group2": "0",
+          "staple_group2_spotquoted": "0",
+          "staple_group3": "0",
+          "staple_group3_spotquoted": "0",
+          "staple_group4": "0",
+          "staple_group4_spotquoted": "0",
+          "staple_group5": "0",
+          "staple_group5_spotquoted": "0",
+          "staple_group6": "0",
+          "staple_group6_spotquoted": "0",
+          "staple_group7": "2",
+          "staple_group7_spotquoted": "2",
+          "staple_group8": "3",
+          "staple_group8_spotquoted": "3",
+          "staple_group9": "9",
+          "staple_group9_spotquoted": "9",
+          "staple_groupZ": "9",
+          "staple_groupZ_spotquoted": "9"
+        },
+        {
+          "cl_lf": "41-7",
+          "remarks": "0",
+          "staple_group1": "0",
+          "staple_group1_spotquoted": "0",
+          "staple_group2": "0",
+          "staple_group2_spotquoted": "0",
+          "staple_group3": "0",
+          "staple_group3_spotquoted": "0",
+          "staple_group4": "0",
+          "staple_group4_spotquoted": "0",
+          "staple_group5": "0",
+          "staple_group5_spotquoted": "0",
+          "staple_group6": "0",
+          "staple_group6_spotquoted": "0",
+          "staple_group7": "0",
+          "staple_group7_spotquoted": "0",
+          "staple_group8": "0",
+          "staple_group8_spotquoted": "0",
+          "staple_group9": "1",
+          "staple_group9_spotquoted": "1",
+          "staple_groupZ": "1",
+          "staple_groupZ_spotquoted": "1"
+        },
+        {
+          "cl_lf": "51-4",
+          "remarks": "1",
+          "staple_group1": "0",
+          "staple_group1_spotquoted": "0",
+          "staple_group2": "0",
+          "staple_group2_spotquoted": "0",
+          "staple_group3": "0",
+          "staple_group3_spotquoted": "0",
+          "staple_group4": "0",
+          "staple_group4_spotquoted": "0",
+          "staple_group5": "0",
+          "staple_group5_spotquoted": "0",
+          "staple_group6": "0",
+          "staple_group6_spotquoted": "0",
+          "staple_group7": "1",
+          "staple_group7_spotquoted": "1",
+          "staple_group8": "1",
+          "staple_group8_spotquoted": "1",
+          "staple_group9": "0",
+          "staple_group9_spotquoted": "0",
+          "staple_groupZ": "0",
+          "staple_groupZ_spotquoted": "0"
+        },
+        {
+          "cl_lf": "51-6",
+          "remarks": "1",
+          "staple_group1": "0",
+          "staple_group1_spotquoted": "0",
+          "staple_group2": "0",
+          "staple_group2_spotquoted": "0",
+          "staple_group3": "0",
+          "staple_group3_spotquoted": "0",
+          "staple_group4": "0",
+          "staple_group4_spotquoted": "0",
+          "staple_group5": "0",
+          "staple_group5_spotquoted": "0",
+          "staple_group6": "0",
+          "staple_group6_spotquoted": "0",
+          "staple_group7": "2",
+          "staple_group7_spotquoted": "2",
+          "staple_group8": "0",
+          "staple_group8_spotquoted": "0",
+          "staple_group9": "0",
+          "staple_group9_spotquoted": "0",
+          "staple_groupZ": "0",
+          "staple_groupZ_spotquoted": "0"
+        },
+        {
+          "cl_lf": "51-7",
+          "remarks": "2",
+          "staple_group1": "0",
+          "staple_group1_spotquoted": "0",
+          "staple_group2": "0",
+          "staple_group2_spotquoted": "0",
+          "staple_group3": "0",
+          "staple_group3_spotquoted": "0",
+          "staple_group4": "0",
+          "staple_group4_spotquoted": "0",
+          "staple_group5": "0",
+          "staple_group5_spotquoted": "0",
+          "staple_group6": "0",
+          "staple_group6_spotquoted": "0",
+          "staple_group7": "4",
+          "staple_group7_spotquoted": "4",
+          "staple_group8": "0",
+          "staple_group8_spotquoted": "0",
+          "staple_group9": "0",
+          "staple_group9_spotquoted": "0",
+          "staple_groupZ": "0",
+          "staple_groupZ_spotquoted": "0"
+        },
+        {
+          "cl_lf": "61-3",
+          "remarks": "1",
+          "staple_group1": "0",
+          "staple_group1_spotquoted": "0",
+          "staple_group2": "0",
+          "staple_group2_spotquoted": "0",
+          "staple_group3": "0",
+          "staple_group3_spotquoted": "0",
+          "staple_group4": "0",
+          "staple_group4_spotquoted": "0",
+          "staple_group5": "0",
+          "staple_group5_spotquoted": "0",
+          "staple_group6": "0",
+          "staple_group6_spotquoted": "0",
+          "staple_group7": "0",
+          "staple_group7_spotquoted": "0",
+          "staple_group8": "0",
+          "staple_group8_spotquoted": "0",
+          "staple_group9": "1",
+          "staple_group9_spotquoted": "1",
+          "staple_groupZ": "0",
+          "staple_groupZ_spotquoted": "0"
+        },
+        {
+          "cl_lf": "71-3",
+          "remarks": "1",
+          "staple_group1": "0",
+          "staple_group1_spotquoted": "0",
+          "staple_group2": "0",
+          "staple_group2_spotquoted": "0",
+          "staple_group3": "0",
+          "staple_group3_spotquoted": "0",
+          "staple_group4": "0",
+          "staple_group4_spotquoted": "0",
+          "staple_group5": "0",
+          "staple_group5_spotquoted": "0",
+          "staple_group6": "0",
+          "staple_group6_spotquoted": "0",
+          "staple_group7": "0",
+          "staple_group7_spotquoted": "0",
+          "staple_group8": "0",
+          "staple_group8_spotquoted": "0",
+          "staple_group9": "1",
+          "staple_group9_spotquoted": "1",
+          "staple_groupZ": "0",
+          "staple_groupZ_spotquoted": "0"
+        },
+        {
+          "cl_lf": "22-2",
+          "remarks": "0",
+          "staple_group1": "0",
+          "staple_group1_spotquoted": "0",
+          "staple_group2": "0",
+          "staple_group2_spotquoted": "0",
+          "staple_group3": "0",
+          "staple_group3_spotquoted": "0",
+          "staple_group4": "0",
+          "staple_group4_spotquoted": "0",
+          "staple_group5": "0",
+          "staple_group5_spotquoted": "0",
+          "staple_group6": "0",
+          "staple_group6_spotquoted": "0",
+          "staple_group7": "1",
+          "staple_group7_spotquoted": "1",
+          "staple_group8": "0",
+          "staple_group8_spotquoted": "0",
+          "staple_group9": "0",
+          "staple_group9_spotquoted": "0",
+          "staple_groupZ": "0",
+          "staple_groupZ_spotquoted": "0"
+        },
+        {
+          "cl_lf": "42-6",
+          "remarks": "0",
+          "staple_group1": "0",
+          "staple_group1_spotquoted": "0",
+          "staple_group2": "0",
+          "staple_group2_spotquoted": "0",
+          "staple_group3": "0",
+          "staple_group3_spotquoted": "0",
+          "staple_group4": "0",
+          "staple_group4_spotquoted": "0",
+          "staple_group5": "0",
+          "staple_group5_spotquoted": "0",
+          "staple_group6": "0",
+          "staple_group6_spotquoted": "0",
+          "staple_group7": "0",
+          "staple_group7_spotquoted": "0",
+          "staple_group8": "2",
+          "staple_group8_spotquoted": "2",
+          "staple_group9": "0",
+          "staple_group9_spotquoted": "0",
+          "staple_groupZ": "0",
+          "staple_groupZ_spotquoted": "0"
+        },
+        {
+          "cl_lf": "52-4",
+          "remarks": "1",
+          "staple_group1": "0",
+          "staple_group1_spotquoted": "0",
+          "staple_group2": "0",
+          "staple_group2_spotquoted": "0",
+          "staple_group3": "0",
+          "staple_group3_spotquoted": "0",
+          "staple_group4": "0",
+          "staple_group4_spotquoted": "0",
+          "staple_group5": "0",
+          "staple_group5_spotquoted": "0",
+          "staple_group6": "1",
+          "staple_group6_spotquoted": "1",
+          "staple_group7": "0",
+          "staple_group7_spotquoted": "0",
+          "staple_group8": "1",
+          "staple_group8_spotquoted": "1",
+          "staple_group9": "0",
+          "staple_group9_spotquoted": "0",
+          "staple_groupZ": "0",
+          "staple_groupZ_spotquoted": "0"
+        },
+        {
+          "cl_lf": "52-5",
+          "remarks": "0",
+          "staple_group1": "0",
+          "staple_group1_spotquoted": "0",
+          "staple_group2": "0",
+          "staple_group2_spotquoted": "0",
+          "staple_group3": "0",
+          "staple_group3_spotquoted": "0",
+          "staple_group4": "0",
+          "staple_group4_spotquoted": "0",
+          "staple_group5": "0",
+          "staple_group5_spotquoted": "0",
+          "staple_group6": "0",
+          "staple_group6_spotquoted": "0",
+          "staple_group7": "0",
+          "staple_group7_spotquoted": "0",
+          "staple_group8": "0",
+          "staple_group8_spotquoted": "0",
+          "staple_group9": "1",
+          "staple_group9_spotquoted": "1",
+          "staple_groupZ": "0",
+          "staple_groupZ_spotquoted": "0"
+        },
+        {
+          "cl_lf": "33-3",
+          "remarks": "0",
+          "staple_group1": "0",
+          "staple_group1_spotquoted": "0",
+          "staple_group2": "0",
+          "staple_group2_spotquoted": "0",
+          "staple_group3": "0",
+          "staple_group3_spotquoted": "0",
+          "staple_group4": "0",
+          "staple_group4_spotquoted": "0",
+          "staple_group5": "0",
+          "staple_group5_spotquoted": "0",
+          "staple_group6": "0",
+          "staple_group6_spotquoted": "0",
+          "staple_group7": "0",
+          "staple_group7_spotquoted": "0",
+          "staple_group8": "0",
+          "staple_group8_spotquoted": "0",
+          "staple_group9": "3",
+          "staple_group9_spotquoted": "3",
+          "staple_groupZ": "0",
+          "staple_groupZ_spotquoted": "0"
+        },
+        {
+          "cl_lf": "33-4",
+          "remarks": "0",
+          "staple_group1": "0",
+          "staple_group1_spotquoted": "0",
+          "staple_group2": "0",
+          "staple_group2_spotquoted": "0",
+          "staple_group3": "0",
+          "staple_group3_spotquoted": "0",
+          "staple_group4": "0",
+          "staple_group4_spotquoted": "0",
+          "staple_group5": "0",
+          "staple_group5_spotquoted": "0",
+          "staple_group6": "0",
+          "staple_group6_spotquoted": "0",
+          "staple_group7": "0",
+          "staple_group7_spotquoted": "0",
+          "staple_group8": "0",
+          "staple_group8_spotquoted": "0",
+          "staple_group9": "5",
+          "staple_group9_spotquoted": "5",
+          "staple_groupZ": "0",
+          "staple_groupZ_spotquoted": "0"
+        },
+        {
+          "cl_lf": "43-3",
+          "remarks": "1",
+          "staple_group1": "0",
+          "staple_group1_spotquoted": "0",
+          "staple_group2": "0",
+          "staple_group2_spotquoted": "0",
+          "staple_group3": "0",
+          "staple_group3_spotquoted": "0",
+          "staple_group4": "0",
+          "staple_group4_spotquoted": "0",
+          "staple_group5": "0",
+          "staple_group5_spotquoted": "0",
+          "staple_group6": "0",
+          "staple_group6_spotquoted": "0",
+          "staple_group7": "0",
+          "staple_group7_spotquoted": "0",
+          "staple_group8": "1",
+          "staple_group8_spotquoted": "1",
+          "staple_group9": "2",
+          "staple_group9_spotquoted": "2",
+          "staple_groupZ": "0",
+          "staple_groupZ_spotquoted": "0"
+        },
+        {
+          "cl_lf": "43-4",
+          "remarks": "0",
+          "staple_group1": "0",
+          "staple_group1_spotquoted": "0",
+          "staple_group2": "0",
+          "staple_group2_spotquoted": "0",
+          "staple_group3": "0",
+          "staple_group3_spotquoted": "0",
+          "staple_group4": "0",
+          "staple_group4_spotquoted": "0",
+          "staple_group5": "0",
+          "staple_group5_spotquoted": "0",
+          "staple_group6": "0",
+          "staple_group6_spotquoted": "0",
+          "staple_group7": "0",
+          "staple_group7_spotquoted": "0",
+          "staple_group8": "5",
+          "staple_group8_spotquoted": "5",
+          "staple_group9": "3",
+          "staple_group9_spotquoted": "3",
+          "staple_groupZ": "1",
+          "staple_groupZ_spotquoted": "1"
+        },
+        {
+          "cl_lf": "43-5",
+          "remarks": "1",
+          "staple_group1": "0",
+          "staple_group1_spotquoted": "0",
+          "staple_group2": "0",
+          "staple_group2_spotquoted": "0",
+          "staple_group3": "0",
+          "staple_group3_spotquoted": "0",
+          "staple_group4": "0",
+          "staple_group4_spotquoted": "0",
+          "staple_group5": "0",
+          "staple_group5_spotquoted": "0",
+          "staple_group6": "0",
+          "staple_group6_spotquoted": "0",
+          "staple_group7": "0",
+          "staple_group7_spotquoted": "0",
+          "staple_group8": "0",
+          "staple_group8_spotquoted": "0",
+          "staple_group9": "1",
+          "staple_group9_spotquoted": "1",
+          "staple_groupZ": "0",
+          "staple_groupZ_spotquoted": "0"
+        },
+        {
+          "cl_lf": "43-6",
+          "remarks": "0",
+          "staple_group1": "0",
+          "staple_group1_spotquoted": "0",
+          "staple_group2": "0",
+          "staple_group2_spotquoted": "0",
+          "staple_group3": "0",
+          "staple_group3_spotquoted": "0",
+          "staple_group4": "0",
+          "staple_group4_spotquoted": "0",
+          "staple_group5": "0",
+          "staple_group5_spotquoted": "0",
+          "staple_group6": "0",
+          "staple_group6_spotquoted": "0",
+          "staple_group7": "1",
+          "staple_group7_spotquoted": "1",
+          "staple_group8": "0",
+          "staple_group8_spotquoted": "0",
+          "staple_group9": "0",
+          "staple_group9_spotquoted": "0",
+          "staple_groupZ": "0",
+          "staple_groupZ_spotquoted": "0"
+        },
+        {
+          "cl_lf": "53-5",
+          "remarks": "0",
+          "staple_group1": "0",
+          "staple_group1_spotquoted": "0",
+          "staple_group2": "0",
+          "staple_group2_spotquoted": "0",
+          "staple_group3": "0",
+          "staple_group3_spotquoted": "0",
+          "staple_group4": "0",
+          "staple_group4_spotquoted": "0",
+          "staple_group5": "0",
+          "staple_group5_spotquoted": "0",
+          "staple_group6": "0",
+          "staple_group6_spotquoted": "0",
+          "staple_group7": "0",
+          "staple_group7_spotquoted": "0",
+          "staple_group8": "1",
+          "staple_group8_spotquoted": "1",
+          "staple_group9": "0",
+          "staple_group9_spotquoted": "0",
+          "staple_groupZ": "0",
+          "staple_groupZ_spotquoted": "0"
+        }
+      ],
+      "Offer": {
+        "OfferNumber": "959542",
+        "BuyerOfferNumber": "17066150",
+        "CurrentCropYear": "2018",
+        "BuyerCommission": "0.75",
+        "lrr": "0.4944",
+        "Price": "CTZ7        -50",
+        "Loan": "0.494400",
+        "ActualLRR": "0.4982",
+        "ActualLoanPrice": "0.498200",
+        "PickerBales": "160",
+        "SampledBales": "0",
+        "IsG2B": "0",
+        "IsEquity": "0",
+        "Bales": "160",
+        "Terms": "01",
+        "CertifiedFibermaxBales": "0",
+        "IsPima": "0",
+        "IsAuction": "0",
+        "SpotQuote": "-0.0382",
+        "recapId": "0",
+        "recapBales": "0"
+      }
+    }
+  }

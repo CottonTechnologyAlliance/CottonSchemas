@@ -1,0 +1,209 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "$id": "https://cottontechnologyalliance.github.io/Documentation/WarehouseTariff/warehouseTariff.json",
+    "definitions" :{
+      "receiving": {
+        "type": "object",
+        "title": "Receiving",
+        "description": "",
+        "properties": {
+          "receivingA": { 
+            "type": "number",
+            "title": "Receiving.A",
+            "description": "Receiving, weighing, issuing receipt, placing in storage, and if required furnishing weight sheets, per bale.",
+            "minimum": 0,
+            "maximum": 100
+          }
+        },
+        "required": [
+          "receivingA"
+        ]
+      },
+      "storage": {
+        "type": "object",
+        "title": "Storage",
+        "description": "",
+        "properties": {
+          "storageA": { 
+            "type": "number",
+            "title": "Storage.A",
+            "description": "Per bale per month or fraction thereof, including insurance.",
+            "minimum": 0,
+            "maximum": 100
+          }
+        },
+        "required": [
+          "storageA"
+        ]
+      },
+      "weighingOrSampling": {
+        "type": "object",
+        "title": "Weighing Or Sampling",
+        "description": "",
+        "properties": {
+          "weighingOrSamplingA": { 
+            "type": "number",
+            "title": "WeighingOrSampling.A",
+            "description": "Reweighing or resampling, including removing from and returning to storage per bale.",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "weighingOrSamplingB": { 
+            "type": "number",
+            "title": "WeighingOrSampling.B",
+            "description": "Reweighing and resampling, including removing from and returning to storage per bale.",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "weighingOrSamplingC": { 
+            "type": "number",
+            "title": "WeighingOrSampling.C",
+            "description": "Reweighing and resampling at time of shipment, per bale.",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "weighingOrSamplingD": { 
+            "type": "number",
+            "title": "WeighingOrSampling.D",
+            "description": "Drawing extra set of samples at time of any sampling (limited to one set), per bale.",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "weighingOrSamplingE": { 
+            "type": "number",
+            "title": "WeighingOrSampling.E",
+            "description": "Delivery of samples (postage, express, etc).",
+            "minimum": 0,
+            "maximum": 100
+          }
+        },
+        "required": [
+          "weighingOrSamplingA", "weighingOrSamplingB", "weighingOrSamplingC", "weighingOrSamplingD", "weighingOrSamplingE"
+        ]
+      },
+      "delivery": {
+        "type": "object",
+        "title": "Delivery",
+        "description": "",
+        "properties": {
+          "deliveryA": { 
+            "type": "number",
+            "title": "Delivery.A",
+            "description": "Picking out by tag number, remving from storage, delivery to warehouse platform and loading.",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "deliveryB": { 
+            "type": "number",
+            "title": "Delivery.B",
+            "description": "Cancellation of order and return to stock after breakout.",
+            "minimum": 0,
+            "maximum": 100
+          }
+        },
+        "required": [
+          "deliveryA", "deliveryB"
+        ]
+      },
+      "receiptedInsuredBlockStorage": {
+        "type": "object",
+        "title": "Receipted Insured Block Storage",
+        "description": "",
+        "properties": {
+          "receiptedInsuredBlockStorageA": { 
+            "type": "number",
+            "title": "ReceiptedInsuredBlockStorage.A",
+            "description": "Receiving.",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "receiptedInsuredBlockStorageB": { 
+            "type": "number",
+            "title": "ReceiptedInsuredBlockStorage.B",
+            "description": "Storage, per month.",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "receiptedInsuredBlockStorageC": { 
+            "type": "number",
+            "title": "ReceiptedInsuredBlockStorage.C",
+            "description": "Loading out.",
+            "minimum": 0,
+            "maximum": 100
+          }
+        },
+        "required": [
+          "receiptedInsuredBlockStorageA", "receiptedInsuredBlockStorageB", "receiptedInsuredBlockStorageC"
+        ]
+      },
+      "miscellaneous": {
+        "type": "object",
+        "title": "Miscellaneous",
+        "description": "",
+        "properties": {
+          "miscellaneousA": { 
+            "type": "number",
+            "title": "Miscellaneous.A",
+            "description": "Attaching tages furnished by shipper, per tag.",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "miscellaneousB": { 
+            "type": "number",
+            "title": "Miscellaneous.B",
+            "description": "Drying cotton received wet, per bale.",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "miscellaneousC": { 
+            "type": "number",
+            "title": "Miscellaneous.C",
+            "description": "Cleaning, reconditioning, rebaling, per bale.",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "miscellaneousD": { 
+            "type": "number",
+            "title": "Miscellaneous.D",
+            "description": "Segregating and shipping block receipted cotton by tag numbers, per bale.",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "miscellaneousE": { 
+            "type": "number",
+            "title": "Miscellaneous.E",
+            "description": "Marking cotton one or two sides, maximum five letters per mark, one line, per bale.",
+            "minimum": 0,
+            "maximum": 100
+          }
+        },
+        "required": [
+          "miscellaneousA", "miscellaneousB", "miscellaneousC", "miscellaneousD", "miscellaneousE"
+        ]
+      },
+      "other": {
+        "type": "object",
+        "title": "Other",
+        "description": "",
+        "properties": {
+          "handlingCharge": { 
+            "type": "number",
+            "title": "Handling Charge",
+            "description": "A handling charge will be made when shipping order is not picked up within 7 days of Original ship date per bale.",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "cancel": { 
+            "type": "number",
+            "title": "Cancel",
+            "description": "Request to cancel or move ship date, must by made 14 days prior ot original ship date. Failure to do so, charge per bale.",
+            "minimum": 0,
+            "maximum": 100
+          }
+        },
+        "required": [
+          "handlingCharge", "cancel"
+        ]
+      }
+    }
+}
