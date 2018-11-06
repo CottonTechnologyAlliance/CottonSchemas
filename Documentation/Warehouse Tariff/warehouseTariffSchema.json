@@ -2,6 +2,28 @@
     "$schema": "http://json-schema.org/schema#",
     "$id": "https://cottontechnologyalliance.github.io/Documentation/WarehouseTariff/warehouseTariff.json",
     "definitions" :{
+      "dateStandard": {
+        "type": "object",
+        "title": "Date Standard",
+        "description": "",
+        "properties": {
+          "beginDate": { 
+            "title": "Begin Date",
+            "description": "The effective date of the warehouse tariff.",
+            "type": "string",
+            "format": "date"
+          },
+          "endDate": { 
+            "title": "End Date",
+            "description": "The day before the effective date of the new year.",
+            "type": "string",
+            "format": "date"
+          }
+        },
+        "required": [
+          "beginDate", "endDate"
+        ]
+      },
       "receivingStandard": {
         "type": "object",
         "title": "Receiving Standard",
