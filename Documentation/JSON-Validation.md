@@ -37,6 +37,7 @@
   ```json
   "beginDate": "2018-11-06"
   ```
+  
+#### More information about JSON schemas can be found at:
 
-  * More information about JSON schemas can be found at:
-  * [JSONSchema](http://json-schema.org/)
+* [JSONSchema](http://json-schema.org/)
