@@ -1,0 +1,72 @@
+{
+	"dateStandard": {
+		"BeginDate": "2018-11-06",
+		"endDate": "2019-11-05"
+	},
+	"receivingStandard": {
+		"receiving": 2.25
+	},
+	"storageStandard": {
+		"storage": 4.00
+	},
+	"weighingStandard": {
+		"extraCopies": 2.50,
+		"weighingAtShipment": 2.00,
+		"weighingFromStorage": 3.25
+	},
+	"samplingStandard": {
+		"samplingFromStorage": 6.00,
+		"additionalSampling": 1.00,
+		"oneSideSamples": 2.50,
+		"sampleSacks": 0.75
+	},
+	"deliveryStandard": {
+		"markOrBrand": 0.40,
+		"additionalMarkOrBrand": 0.25,
+		"rehandling": 1.50,
+		"standardDelivery": 4.25,
+		"expeditedOrders": 7.50,
+		"car": 1.50,
+		"truck": 1.50,
+		"drayage": 1.50,
+		"cancelOrder": 3.00,
+		"delayedPickUp": 6.25,
+		"shipperTag": 0.50
+	},
+	"compressionStandard": {
+		"patch": "1.00",
+		"density": 9.50,
+		"extraCompression": 2.00
+	},
+	"miscellaneous": {
+		"deliveryOfSamples": 3.25,
+		"typing": 15.00,
+		"ranging": 1.50,
+		"bailing": 1.00,
+		"handlingCotton": 2.25,
+		"damagedCotton": 1.25,
+		"consolidation": 4.00,
+		"matchingTags": 1.00,
+		"segregating": 1.50,
+		"brushingOrBlowing": 3.50,
+		"dryingCotton": 2.00
+	},
+	"other": {
+		"handlingCharge": 4.00,
+		"moveShippingDate": 4.00,
+		"transitCotton": 2.50,
+		"receipts": 3.00,
+		"surcharge": 3.00,
+		"resale": 5.00,
+		"swapping": 2.50,
+		"phytosanitary": 7.50,
+		"flatbedTrucks": 1.00,
+		"unloading": 2.00,
+		"onHold": 1.00
+	},
+	"latePickUpStandard": {
+		"conversionOfOrders": 18.00,
+		"changeDate": 4.20,
+		"lateCancel": 2.40
+	}
+}
