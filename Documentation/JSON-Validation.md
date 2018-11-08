@@ -8,9 +8,9 @@
 #### Notes For JSON
 * Steps to Use Online Validation Tools
   
-  1. Paste JSON Schema into the left schema box.
-  2. Paste JSON/Data to test in the right box.
-  3. The text below the boxes alert you if the data validates or fails. 
+1. Paste JSON Schema into the left schema box.
+2. Paste JSON/Data to test in the right box.
+3. The text below the boxes alert you if the data validates or fails. 
 
 ![alt text](/Images/validate.PNG)
 
