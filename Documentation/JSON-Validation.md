@@ -97,6 +97,6 @@
   
 #### More information about JSON and JSON Schemas can be found at:
 
-* [JSONSchema](http://json-schema.org/)
-* [JSON](http://www.json.org/)
-* [JSON Info](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)
+* [JSON Schema](http://json-schema.org/)
+* [JSON Spec Documentation](http://www.json.org/)
+* [JSON Information](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)
