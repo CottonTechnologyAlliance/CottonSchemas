@@ -3,6 +3,9 @@
 #### Main repository for Cotton related JSON schemas
 
 ---
+## Link to SharePoint Project
+
+* [SharePoint](https://theseam2.sharepoint.com/sites/cta/Shared%20Documents/Forms/AllItems.aspx?viewpath=%2Fsites%2Fcta%2FShared%20Documents%2FForms%2FAllItems.aspx)
 
 ## Quick Note before beginning
 

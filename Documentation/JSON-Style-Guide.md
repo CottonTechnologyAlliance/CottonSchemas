@@ -1,6 +1,7 @@
 # Style guide for creating JSON schemas
 
 * For more information on JSON, please see the [JSON Spec documentation](http://www.json.org/)
+* Additional JSON documentation [JSON Information](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)
 
 ## Properties
 
