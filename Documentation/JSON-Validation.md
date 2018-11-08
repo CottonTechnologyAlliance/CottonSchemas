@@ -7,12 +7,12 @@
 
 #### Notes For JSON
 * Steps to Use Online Validation Tools
+  
+  1. Paste JSON Schema into the left schema box.
+  2. Paste JSON/Data to test in the right box.
+  3. The text below the boxes alert you if the data validates or fails. 
 
 ![alt text](/Images/validate.PNG)
-
-1. Paste JSON Schema into the left schema box.
-2. Paste JSON/Data to test in the right box.
-3. The text below the boxes alert you if the data validates or fails.
 
 * Case Matters
   * This will **FAIL**
@@ -44,7 +44,7 @@
    },
 	
    "required": ["id", "name", "price"]
-}
+  }
   ```
 
   ```json
@@ -95,6 +95,8 @@
    }
   ```
   
-#### More information about JSON schemas can be found at:
+#### More information about JSON and JSON Schemas can be found at:
 
 * [JSONSchema](http://json-schema.org/)
+* [JSON](http://www.json.org/)
+* [JSON Info](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)
