@@ -7,6 +7,8 @@
 
 #### Notes For JSON
 
+![alt text](/Images/validate.PNG)
+
 * Case Matters
   * This will **FAIL**
 
