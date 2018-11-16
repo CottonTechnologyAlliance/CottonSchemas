@@ -1,0 +1,11 @@
+////////// Date //////////
+
+"nc:Date": {
+	"namespace": "Core",
+	"namespacePrefix": "nc",
+	"description": "A full date.",
+	"type": "string",
+	"format": "date"
+}
+
+//////////////////////////
