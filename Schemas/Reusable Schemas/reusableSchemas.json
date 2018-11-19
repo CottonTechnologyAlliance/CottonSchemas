@@ -9,3 +9,49 @@
 }
 
 //////////////////////////
+
+//// Organization Name ////
+
+"nc:OrganizationName": {
+	"namespace": "Core",
+	"namespacePrefix": "nc",
+	"description": "A name of an organization.",
+	"type": "string"
+}
+
+//////////////////////////
+
+//////// Address ////////
+
+"nc:AddressFullText": {
+	"namespace": "Core",
+	"namespacePrefix": "nc",
+	"description": "A complete address.",
+	"type": "string"
+}
+
+"nc:LocationCountry": {
+	"namespace": "Core",
+	"namespacePrefix": "nc",
+	"description": "A country, territory, dependency, or other such geopolitical subdivision of a location.",
+	"type": "string"
+}
+
+//////////////////////////
+
+//////// Currency ////////
+
+"iso_4217:CurrencyCodeType": {
+	"description": "A data type for a currency that qualifies a monetary amount.",
+	"allOf": [
+	  {
+		"$ref": "#/definitions/iso_4217:CurrencyCodeSimpleType"
+	  }
+	]
+},
+"iso_4217:CurrencyCodeSimpleType": {
+	"description": "A data type for a currency that qualifies a monetary amount.",
+	"enum": ["EUR","GBP","USD", "CNY"]
+}
+
+//////////////////////////
