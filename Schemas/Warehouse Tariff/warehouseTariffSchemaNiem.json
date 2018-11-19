@@ -14,16 +14,16 @@
 				},
 				"WarehouseName": {
 					"description": "The name of the cotton distributor.",
-					"$ref": "#/definitions/nc:OrganizationName"
+					"$ref": "#/definitions/OrganizationName"
 				},
 				"WarehouseAddress": {
 					"description": "The address of the warehouse.",
 					"allOf": [
 						{
-							"$ref": "#/definitions/nc:AddressFullText"
+							"$ref": "#/definitions/AddressFullText"
 						},
 						{
-							"$ref": "#/definitions/nc:LocationCountry"
+							"$ref": "#/definitions/LocationCountry"
 						}
 					]
 					
@@ -36,19 +36,34 @@
 			]
 		},
 		"CurrencyType": {
-			"additionalProperties": false,
+			"additionalProperties": true,
 			"type": "object",
 			"description": "The type of currency this warehouse uses.",
 			"properties": {
-				"nc:CurrencyCode": {
+				"CurrencyCode": {
 					"description": "A unit of money or exchange.",
-					"$ref": "#/definitions/iso_4217:CurrencyCodeType"
+					"$ref": "#/definitions/CurrencyCodeType"
 				}
 			},
 			"required": [
-				"nc:CurrencyCode"
+				"CurrencyCode"
 			]
 		},
+		"Unit": {
+			"additionalProperties": false,
+			"type": "object",
+			"description": "The unit each price is set to.",
+			"properties": {
+				"UnitType": {
+					"description": "The quantity things are measured at.",
+					"$ref": "#/definitions/Unit"
+				}
+			},
+			"required": [
+				"UnitType"
+			]
+		},
+
 		"WarehouseTariffDate": {
 			"additionalProperties": false,
 			"type": "object",
@@ -56,11 +71,11 @@
 			"properties": {
 				"BeginDate": {
 					"description": "The effective date of the warehouse tariff.",
-					"$ref": "#/definitions/nc:Date"
+					"$ref": "#/definitions/Date"
 				},
 				"EndDate": {
 					"description": "The day before the effective date of the new year.",
-					"$ref": "#/definitions/nc:Date"
+					"$ref": "#/definitions/Date"
 				}
 			},
 			"required": [
@@ -493,42 +508,38 @@
 		  }
 	},
 	"definitions": {
-		"nc:Date": {
-			"namespace": "Core",
-			"namespacePrefix": "nc",
+		"Date": {
 			"description": "A full date.",
 			"type": "string",
 			"format": "date"
 		},
-		"nc:OrganizationName": {
-			"namespace": "Core",
-			"namespacePrefix": "nc",
+		"OrganizationName": {
 			"description": "A name of an organization.",
 			"type": "string"
 		},
-		"nc:AddressFullText": {
-			"namespace": "Core",
-			"namespacePrefix": "nc",
+		"AddressFullText": {
 			"description": "A complete address.",
 			"type": "string"
 		},
-		"nc:LocationCountry": {
-			"namespace": "Core",
-			"namespacePrefix": "nc",
+		"LocationCountry": {
 			"description": "A country, territory, dependency, or other such geopolitical subdivision of a location.",
 			"type": "string"
 		},
-		"iso_4217:CurrencyCodeType": {
+		"CurrencyCodeType": {
 			"description": "A data type for a currency that qualifies a monetary amount.",
 			"allOf": [
 			  {
-				"$ref": "#/definitions/iso_4217:CurrencyCodeSimpleType"
+				"$ref": "#/definitions/CurrencyCodeSimpleType"
 			  }
 			]
 		},
-		"iso_4217:CurrencyCodeSimpleType": {
+		"CurrencyCodeSimpleType": {
 			"description": "A data type for a currency that qualifies a monetary amount.",
 			"enum": ["EUR","GBP","USD", "CNY"]
+		},
+		"Unit": {
+			"description": "A quantity chosen as a standard in terms of which other quantities may be expressed.",
+			"type": "string"
 		}
 	}
 }

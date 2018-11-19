@@ -1,8 +1,6 @@
-////////// Date //////////
+////////// DATE //////////
 
-"nc:Date": {
-	"namespace": "Core",
-	"namespacePrefix": "nc",
+"Date": {
 	"description": "A full date.",
 	"type": "string",
 	"format": "date"
@@ -10,38 +8,32 @@
 
 //////////////////////////
 
-//// Organization Name ////
+//// ORGANIZATION NAME ////
 
-"nc:OrganizationName": {
-	"namespace": "Core",
-	"namespacePrefix": "nc",
+"OrganizationName": {
 	"description": "A name of an organization.",
 	"type": "string"
 }
 
 //////////////////////////
 
-//////// Address ////////
+//////// ADDRESS ////////
 
-"nc:AddressFullText": {
-	"namespace": "Core",
-	"namespacePrefix": "nc",
+"AddressFullText": {
 	"description": "A complete address.",
 	"type": "string"
 }
 
-"nc:LocationCountry": {
-	"namespace": "Core",
-	"namespacePrefix": "nc",
+"LocationCountry": {
 	"description": "A country, territory, dependency, or other such geopolitical subdivision of a location.",
 	"type": "string"
 }
 
 //////////////////////////
 
-//////// Currency ////////
+//////// CURRENCY ////////
 
-"iso_4217:CurrencyCodeType": {
+"CurrencyCodeType": {
 	"description": "A data type for a currency that qualifies a monetary amount.",
 	"allOf": [
 	  {
@@ -49,9 +41,18 @@
 	  }
 	]
 },
-"iso_4217:CurrencyCodeSimpleType": {
+"CurrencyCodeSimpleType": {
 	"description": "A data type for a currency that qualifies a monetary amount.",
 	"enum": ["EUR","GBP","USD", "CNY"]
+}
+
+//////////////////////////
+
+////////// UNIT //////////
+
+"Unit": {
+	"description": "A quantity chosen as a standard in terms of which other quantities may be expressed.",
+	"type": "string"
 }
 
 //////////////////////////
