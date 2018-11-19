@@ -394,7 +394,7 @@
 		  "Other": {
 			"additionalProperties": false,
 			"type": "object",
-			"description": "",
+			"description": "Additional information regarding a warehouse tariff.",
 			"properties": {
 			  	"HandlingCharge": { 
 					"type": "number",

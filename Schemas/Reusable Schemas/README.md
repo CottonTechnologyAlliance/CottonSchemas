@@ -13,3 +13,6 @@
 
 #### List of World Currency
 * https://tools.niem.gov/niemtools/ssgt/SSGT-GetType.iepd?typeKey=o1-2t
+
+#### Search Engine for NIEM library
+* https://tools.niem.gov/niemtools/ssgt/SSGT-SearchSubmit.iepd
