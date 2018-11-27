@@ -1,0 +1,545 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"WarehouseIdentity": {
+			"additionalProperties": false,
+			"type": "object",
+			"description": "The identity of the warehouse.",
+			"properties": {
+				"WarehouseCode": {
+					"description": "The code that identifies the warehouse.",
+					"type": "integer"
+				},
+				"WarehouseName": {
+					"description": "The name of the cotton distributor.",
+					"$ref": "#/definitions/OrganizationName"
+				},
+				"WarehouseAddress": {
+					"description": "The address of the warehouse.",
+					"allOf": [
+						{
+							"$ref": "#/definitions/AddressFullText"
+						},
+						{
+							"$ref": "#/definitions/LocationCountry"
+						}
+					]
+					
+				}
+			},
+			"required": [
+				"WarehouseCode",
+				"WarehouseName",
+				"WarehouseAddress"
+			]
+		},
+		"CurrencyType": {
+			"additionalProperties": true,
+			"type": "object",
+			"description": "The type of currency this warehouse uses.",
+			"properties": {
+				"CurrencyCode": {
+					"description": "A unit of money or exchange.",
+					"$ref": "#/definitions/CurrencyCodeType"
+				}
+			},
+			"required": [
+				"CurrencyCode"
+			]
+		},
+		"Unit": {
+			"additionalProperties": false,
+			"type": "object",
+			"description": "The unit each price is set to.",
+			"properties": {
+				"UnitType": {
+					"description": "The quantity things are measured at.",
+					"$ref": "#/definitions/Unit"
+				}
+			},
+			"required": [
+				"UnitType"
+			]
+		},
+
+		"WarehouseTariffDate": {
+			"additionalProperties": false,
+			"type": "object",
+			"description": "The begin and end date for a warehouse tariff.",
+			"properties": {
+				"BeginDate": {
+					"description": "The effective date of the warehouse tariff.",
+					"$ref": "#/definitions/Date"
+				},
+				"EndDate": {
+					"description": "The day before the effective date of the new year.",
+					"$ref": "#/definitions/Date"
+				}
+			},
+			"required": [
+				"BeginDate",
+				"EndDate"
+			]
+		},
+		"WarehouseReceiving": {
+			"additionalProperties": false,
+			"type": "object",
+			"description": "Defines receiving cotton in a warehouse.",
+			"properties": {
+				"Receiving": { 
+					"type": "number",
+					"description": "Receiving, tagging, weighing on arrival, drawing one set of samples, if requested, issuing warehouse receipts and placing in storage.",
+					"minimum": 0,
+					"maximum": 50
+			  	}
+			},
+			"required": [
+			  "Receiving"
+			]
+		},
+		"WarehouseStorage": {
+			"additionalProperties": false,
+			"type": "object",
+			"description": "Defines storing cotton in a warehouse.",
+			"properties": {
+			  	"Storage": { 
+					"type": "number",
+					"description": "Each storage month or fractional part thereof, including fire insurance.",
+					"minimum": 0,
+					"maximum": 50
+			  	}
+			},
+			"required": [
+			  "Storage"
+			]
+		  },
+		  "WarehouseWeighing": {
+			"additionalProperties": false,
+			"type": "object",
+			"description": "Defines weighing cotton in a warehouse.",
+			"properties": {
+			  	"ExtraCopies": { 
+					"type": "number",
+					"description": "Extra copies of weight sheets.",
+					"minimum": 0,
+					"maximum": 50
+				},
+			  	"WeighingAtShipment": { 
+					"type": "number",
+					"description": "Weighing or reweighing, including removing cotton from and returning it to storage and furnishing original and three copies of certified weight sheets.",
+					"minimum": 0,
+					"maximum": 50
+			  	},
+			  	"WeighingFromStorage": { 
+					"type": "number",
+					"description": "Reweighing and resampling at time of shipment, per bale.",
+					"minimum": 0,
+					"maximum": 50
+			  	}
+			},
+			"required": [
+			  "ExtraCopies", 
+			  "WeighingAtShipment", 
+			  "WeighingFromStorage"
+			]
+		  },
+		  "WarehouseSampling": {
+			"additionalProperties": false,
+			"type": "object",
+			"description": "Defines sampling cotton at a warehouse.",
+			"properties": {
+			  	"SamplingAtShipment": { 
+					"type": "number",
+					"description": "Sampling or resampling at time of shipment.",
+					"minimum": 0,
+					"maximum": 50
+			  	},
+			  	"SamplingFromStorage": { 
+					"type": "number",
+					"description": "Sampling or resampling, Including removing cotton from and returning it to storage.",
+					"minimum": 0,
+					"maximum": 50
+			  	},
+			  	"AdditionalSampling": { 
+					"type": "number",
+					"description": "Drawing an extra set of samples, at time of any sampling.",
+					"minimum": 0,
+					"maximum": 50
+			  	},
+			  	"OneSideSamples": { 
+					"type": "number",
+					"description": "Samples from one side only, (not removing cotton from storage).",
+					"minimum": 0,
+					"maximum": 50
+			  	},
+			  	"SampleSacks": { 
+					"type": "number",
+					"description": "Sample sacks (each).",
+					"minimum": 0,
+					"maximum": 50
+			  	}
+			},
+			"required": [
+			  "SamplingAtShipment", 
+			  "SamplingFromStorage", 
+			  "AdditionalSampling", 
+			  "OneSideSamples", 
+			  "SampleSacks"
+			]
+		  },
+		  "WarehouseDelivery": {
+			"additionalProperties": false,
+			"type": "object",
+			"description": "Defines delivering cotton from a warehouse.",
+			"properties": {
+			  	"MarkOrBrand": { 
+					"type": "number",
+					"description": "Applying mark/brand (5 characters) on bagging without a patch.",
+					"minimum": 0,
+					"maximum": 50
+			  	},
+			  	"AdditionalMarkOrBrand": { 
+					"type": "number",
+					"description": "Additional marking/branding in excess of five (5) characters.",
+					"minimum": 0,
+					"maximum": 50
+			  	},
+			  	"Rehandling": { 
+					"type": "number",
+					"description": "Re-handling after breakout because of delayed pick up, cancellation of order, or for any other reason.",
+					"minimum": 0,
+					"maximum": 50
+			  	},
+			  	"StandardDelivery": { 
+					"type": "number",
+					"description": "Standard Delivery, including picking out by tag number from storage, delivery to warehouse platform, six letter mark, and loading boxcars, trucks or containers.",
+					"minimum": 0,
+					"maximum": 50
+			  	},
+			  	"ExpeditedOrders": { 
+					"type": "number",
+					"description": "Expedited orders (when expedited service is available).",
+					"minimum": 0,
+					"maximum": 50
+			  	},
+			  	"Car": { 
+					"type": "number",
+					"description": "Per bale car.",
+					"minimum": 0,
+					"maximum": 50
+			  	},
+			  	"Truck": { 
+					"type": "number",
+					"description": "Per bale truck.",
+					"minimum": 0,
+					"maximum": 50
+			  	},
+			  	"Drayage": { 
+					"type": "number",
+					"description": "Drayage, where necessary, to rail.",
+					"minimum": 0,
+					"maximum": 50
+			  	},
+			  	"CancelOrder": { 
+					"type": "number",
+					"description": "Charge for cancellation of order and return to stock after breakout.",
+					"minimum": 0,
+					"maximum": 50
+			  	},
+			  	"DelayedPickUp": { 
+					"type": "number",
+					"description": "Delayed Pick-up: If cotton is not picked up by the 1st business day following the agreed scheduled pick-up date, a charge will be assessed. Storage will continue until the pick-up date. Cotton not picked-up within 10 days after the agreed scheduled pick-up date will be returned to stock and subject to a restocking fee, per bale.",
+					"minimum": 0,
+					"maximum": 50
+			  	},
+			  	"ShipperTag": { 
+					"type": "number",
+					"description": "Apply shipper's tags.",
+					"minimum": 0,
+					"maximum": 50
+			  	}
+			},
+			"required": [
+			  "MarkOrBrand", 
+			  "AdditionalMarkOrBrand", 
+			  "Rehandling", 
+			  "StandardDelivery", 
+			  "ExpeditedOrders", 
+			  "Car", 
+			  "Truck", 
+			  "Drayage", 
+			  "CancelOrder", 
+			  "DelayedPickUp", 
+			  "ShipperTag"
+			]
+		  },
+		  "WarehouseCompression": {
+			"additionalProperties": false,
+			"type": "object",
+			"description": "Defines compression of cotton in a warehouse.",
+			"properties": {
+			  	"Patch": { 
+					"type": "number",
+					"description": "Includes application of patch where necessary.",
+					"minimum": 0,
+					"maximum": 50
+			  	},
+			  	"Density": { 
+					"type": "number",
+					"description": "Universal Density (8 ties and no patch).",
+					"minimum": 0,
+					"maximum": 50
+			  	},
+			  	"ExtraCompression": { 
+					"type": "number",
+					"description": "Extra compression charge - all bales weighing more than 600 pounds net.",
+					"minimum": 0,
+					"maximum": 50
+			  	}
+			},
+			"required": [
+			  "Patch", 
+			  "Density", 
+			  "ExtraCompression"
+			]
+		  },
+		  "Miscellaneous": {
+			"additionalProperties": false,
+			"type": "object",
+			"description": "Additional information about warehouse tariff's.",
+			"properties": {
+			  	"DeliveryOfSamples": { 
+					"type": "number",
+					"description": "Delivery of samples or types by postage, freight or express carrier.",
+					"minimum": 0,
+					"maximum": 50
+			  	},
+			  	"Typing": { 
+					"type": "number",
+					"description": "Typing - 25 pounds and under, and reweighing.",
+					"minimum": 0,
+					"maximum": 50
+			  	},
+			  	"Ranging": { 
+					"type": "number",
+					"description": "Ranging for inspection and return to storage if necessary. (This charge not applicable in connection with any other service.)",
+					"minimum": 0,
+					"maximum": 50
+			  	},
+			  	"Bailing": { 
+					"type": "number",
+					"description": "Bailing loose, pickings or sweepings.",
+					"minimum": 0,
+					"maximum": 50
+			  	},
+			  	"HandlingCotton": { 
+					"type": "number",
+					"description": "Handling transit cotton for consolidation or any purpose other than compression (includes in and out handling and loading).",
+					"minimum": 0,
+					"maximum": 50
+			  	},
+			  	"DamagedCotton": { 
+					"type": "number",
+					"description": "Reconditioning, Repairing plated, water packed or gin fall bales or picking damaged cotton.",
+					"minimum": 0,
+					"maximum": 50
+			  	},
+			  	"Consolidation": { 
+					"type": "number",
+					"description": "Consolidation including unloading, checking and reloading to outbound conveyance.",
+					"minimum": 0,
+					"maximum": 50
+			  	},
+			  	"MatchingTags": { 
+					"type": "number",
+					"description": "Matching special tags to bales by bale number.",
+					"minimum": 0,
+					"maximum": 50
+			  	},
+			  	"Segregating": { 
+					"type": "number",
+					"description": "Segregating samples by tag numbers, packaging and delivering locally or to carrier.",
+					"minimum": 0,
+					"maximum": 50
+			  	},
+			  	"BrushingOrBlowing": { 
+					"type": "number",
+					"description": "Reconditioning, Brushing and/or blowing dirt and/or sand off cotton at time of receipt or compression.",
+					"minimum": 0,
+					"maximum": 50
+			  	},
+			  	"DryingCotton": { 
+					"type": "number",
+					"description": "Reconditioning, Drying cotton received wet but undamaged.",
+					"minimum": 0,
+					"maximum": 50
+			  	}
+			},
+			"required": [
+			  "DeliveryOfSamples", 
+			  "Typing", 
+			  "Ranging", 
+			  "Bailing", 
+			  "HandlingCotton", 
+			  "DamagedCotton", 
+			  "Consolidation", 
+			  "MatchingTags", 
+			  "Segregating", 
+			  "BrushingOrBlowing", 
+			  "DryingCotton" 
+			]
+		  },
+		  "Other": {
+			"additionalProperties": false,
+			"type": "object",
+			"description": "Additional information regarding a warehouse tariff.",
+			"properties": {
+			  	"HandlingCharge": { 
+					"type": "number",
+					"description": "A handling charge will be made when shipping order is not picked up within 7 days of original ship date per bale.",
+					"minimum": 0,
+					"maximum": 50
+			  	},
+			  	"MoveShippingDate": { 
+					"type": "number",
+					"description": "Request to cancel or move ship date, must by made 14 days prior to original ship date. Failure to do so , charge per bale.",
+					"minimum": 0,
+					"maximum": 50
+			  	},
+			  	"TransitCotton": { 
+					"type": "number",
+					"description": "Transit cotton: Receiving, marking, storing, and loading by lot.",
+					"minimum": 0,
+					"maximum": 50
+			  	},
+			  	"Receipts": { 
+					"type": "number",
+					"description": "Converting electronic receipts to paper receipts of paper receipts to electronic receipts.",
+					"minimum": 0,
+					"maximum": 50
+			  	},
+			  	"Surcharge": { 
+					"type": "number",
+					"description": "Surcharge on orders containing 10 bales or less per order.",
+					"minimum": 0,
+					"maximum": 50
+			  	},
+			  	"Resale": { 
+					"type": "number",
+					"description": "Resale of shipping order per side, with retention of agreed upon load date.",
+					"minimum": 0,
+					"maximum": 50
+			  	},
+			  	"Swapping": { 
+					"type": "number",
+					"description": "Swapping of shipping order per bale on any shipping order swapped.",
+					"minimum": 0,
+					"maximum": 50
+			  	},
+			  	"Phytosanitary": { 
+					"type": "number",
+					"description": "Phytosanitary Certificates of cotton for export.",
+					"minimum": 0,
+					"maximum": 50
+			  	},
+			  	"FlatbedTrucks": { 
+					"type": "number",
+					"description": "Loading outbound flatbed trucks, per bale.",
+					"minimum": 0,
+					"maximum": 50
+			  	},
+			  	"Unloading": { 
+					"type": "number",
+					"description": "Unloading, per request of truck line or shipper.",
+					"minimum": 0,
+					"maximum": 50
+			  	},
+			  	"OnHold": { 
+					"type": "number",
+					"description": "On-hold Option.",
+					"minimum": 0,
+					"maximum": 50
+			  	}
+			},
+			"required": [
+			  "HandlingCharge", 
+			  "MoveShippingDate", 
+			  "TransitCotton", 
+			  "Receipts", 
+			  "Surcharge", 
+			  "Resale", 
+			  "Swapping", 
+			  "Phytosanitary", 
+			  "FlatbedTrucks", 
+			  "Unloading", 
+			  "OnHold"
+			]
+		  },
+		  "WarehouseLatePickUp": {
+			"type": "object",
+			"description": "Defines late pick-up of cotton from a warehouse.",
+			"properties": {
+			  	"ConversionOfOrders": { 
+					"type": "number",
+					"description": "Conversion of early shipping orders to complete shipping orders.",
+					"minimum": 0,
+					"maximum": 50
+			  	},
+			  	"ChangeDate": { 
+					"type": "number",
+					"description": "Changes in pickup date made less than 4 days prior to scheduled ship date will be considered late pickup.",
+					"minimum": 0,
+					"maximum": 50
+			  	},
+			  	"LateCancel": { 
+					"type": "number",
+					"description": "Cancellation of order after scheduled ship date will be assessed a late fee in addition to a restocking fee.",
+					"minimum": 0,
+					"maximum": 50
+			  	}
+			},
+			"required": [
+			  "ConversionOfOrders", 
+			  "ChangeDate", 
+			  "LateCancel"
+			]
+		  }
+	},
+	"definitions": {
+		"Date": {
+			"description": "A full date.",
+			"type": "string",
+			"format": "date"
+		},
+		"OrganizationName": {
+			"description": "A name of an organization.",
+			"type": "string"
+		},
+		"AddressFullText": {
+			"description": "A complete address.",
+			"type": "string"
+		},
+		"LocationCountry": {
+			"description": "A country, territory, dependency, or other such geopolitical subdivision of a location.",
+			"type": "string"
+		},
+		"CurrencyCodeType": {
+			"description": "A data type for a currency that qualifies a monetary amount.",
+			"allOf": [
+			  {
+				"$ref": "#/definitions/CurrencyCodeSimpleType"
+			  }
+			]
+		},
+		"CurrencyCodeSimpleType": {
+			"description": "A data type for a currency that qualifies a monetary amount.",
+			"enum": ["EUR","GBP","USD", "CNY"]
+		},
+		"Unit": {
+			"description": "A quantity chosen as a standard in terms of which other quantities may be expressed.",
+			"type": "string"
+		}
+	}
+}

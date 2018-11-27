@@ -1,0 +1,58 @@
+////////// DATE //////////
+
+"Date": {
+	"description": "A full date.",
+	"type": "string",
+	"format": "date"
+}
+
+//////////////////////////
+
+//// ORGANIZATION NAME ////
+
+"OrganizationName": {
+	"description": "A name of an organization.",
+	"type": "string"
+}
+
+//////////////////////////
+
+//////// ADDRESS ////////
+
+"AddressFullText": {
+	"description": "A complete address.",
+	"type": "string"
+}
+
+"LocationCountry": {
+	"description": "A country, territory, dependency, or other such geopolitical subdivision of a location.",
+	"type": "string"
+}
+
+//////////////////////////
+
+//////// CURRENCY ////////
+
+"CurrencyCodeType": {
+	"description": "A data type for a currency that qualifies a monetary amount.",
+	"allOf": [
+	  {
+		"$ref": "#/definitions/iso_4217:CurrencyCodeSimpleType"
+	  }
+	]
+},
+"CurrencyCodeSimpleType": {
+	"description": "A data type for a currency that qualifies a monetary amount.",
+	"enum": ["EUR","GBP","USD", "CNY"]
+}
+
+//////////////////////////
+
+////////// UNIT //////////
+
+"Unit": {
+	"description": "A quantity chosen as a standard in terms of which other quantities may be expressed.",
+	"type": "string"
+}
+
+//////////////////////////

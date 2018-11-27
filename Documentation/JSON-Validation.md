@@ -100,3 +100,11 @@
 * [JSON Schema](http://json-schema.org/)
 * [JSON Spec Documentation](http://www.json.org/)
 * [JSON Information](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)
+
+json schema with niem http://niem.github.io/json/reference/json-schema/
+
+#### Niem
+
+* https://tools.niem.gov/niemtools/ssgt/SSGT-GetNamespace.iepd?namespaceKey=o1-15
+* http://niem.github.io/movement/json-schema-output/
+* https://www.astcorporation.com/pdf/Soa/Building_an_IEPD_for_NIEM_Data_Model.pdf
