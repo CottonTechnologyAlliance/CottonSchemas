@@ -1,84 +1,54 @@
 {
-	"WarehouseIdentity": {
-		"WarehouseCode": 1234,
-		"WarehouseName": "Test Warehouse",
-		"WarehouseAddress": "1234 abc ln. Memphis, TN 12345 United States"
+	"warehouseIdentity": {
+		"warehouseLicense": "2-2812",
+		"warehouseCode": 1234,
+		"warehouseName": "Test Warehouse",
+		"warehouseAddress": "1234 abc ln. Memphis, TN 12345 United States",
+		"warehouseCert": false
 	},
-	"CurrencyType": {
-		"CurrencyCode": "USD"
+	"currencyType": {
+		"currencyCode": "USD"
 	},
-	"Unit": {
-		"UnitType": "bale"
+	"unit": {
+		"unitType": "bale"
 	},
-	"WarehouseTariffDate": {
-		"BeginDate": "2018-11-06",
-		"EndDate": "2019-11-05"
+	"warehouseTariffDate": {
+		"beginDate": "2018-11-06",
+		"endDate": "2019-11-05"
 	},
-	"WarehouseReceiving": {
-		"Receiving": 2.25
+	"warehouseReceiving": {
+		"receivingRate": 2.25
 	},
-	"WarehouseStorage": {
-		"Storage": 4.00
+	"warehouseStorage": {
+		"storageRate": 4.00
 	},
-	"WarehouseWeighing": {
-		"ExtraCopies": 2.50,
-		"WeighingAtShipment": 2.00,
-		"WeighingFromStorage": 3.25
+	"warehouseLoading": {
+		"loadingRate": 2.50
 	},
-	"WarehouseSampling": {
-		"SamplingAtShipment": 4.25,
-		"SamplingFromStorage": 6.00,
-		"AdditionalSampling": 1.00,
-		"OneSideSamples": 2.50,
-		"SampleSacks": 0.75
+	"warehouseCompression": {
+		"compressionRate": 9.50,
+		"compressionExtraRate": 4.50
 	},
-	"WarehouseDelivery": {
-		"MarkOrBrand": 0.40,
-		"AdditionalMarkOrBrand": 0.25,
-		"Rehandling": 1.50,
-		"StandardDelivery": 4.25,
-		"ExpeditedOrders": 7.50,
-		"Car": 1.50,
-		"Truck": 1.50,
-		"Drayage": 1.50,
-		"CancelOrder": 3.00,
-		"DelayedPickUp": 6.25,
-		"ShipperTag": 0.50
+	"warehouseMarking": {
+		"markingRate": 0.40
 	},
-	"WarehouseCompression": {
-		"Patch": 1.00,
-		"Density": 9.50,
-		"ExtraCompression": 2.00
+	"warehouseClassing": {
+		"samplingShipmentRate": 4.25,
+		"samplingStorageRate": 6.00,
+		"samplingOneSideRate": 2.50
 	},
-	"Miscellaneous": {
-		"DeliveryOfSamples": 3.25,
-		"Typing": 15.00,
-		"Ranging": 1.50,
-		"Bailing": 1.00,
-		"HandlingCotton": 2.25,
-		"DamagedCotton": 1.25,
-		"Consolidation": 4.00,
-		"MatchingTags": 1.00,
-		"Segregating": 1.50,
-		"BrushingOrBlowing": 3.50,
-		"DryingCotton": 2.00
+	"warehouseWeighing": {
+		"weighingShipmentRate": 2.00,
+		"weighingStorageRate": 3.25,
+		"weighingAndSamplingRate": 7.50
 	},
-	"Other": {
-		"HandlingCharge": 4.00,
-		"MoveShippingDate": 4.00,
-		"TransitCotton": 2.50,
-		"Receipts": 3.00,
-		"Surcharge": 3.00,
-		"Resale": 5.00,
-		"Swapping": 2.50,
-		"Phytosanitary": 7.50,
-		"FlatbedTrucks": 1.00,
-		"Unloading": 2.00,
-		"OnHold": 1.00
-	},
-	"WarehouseLatePickUp": {
-		"ConversionOfOrders": 18.00,
-		"ChangeDate": 4.20,
-		"LateCancel": 2.40
+	"miscellaneous": {
+		"markingExtraRate": 0.50,
+		"samplingDeliveryRate": 5.00,
+		"weighingSheetsRate": 0.75,
+		"loadingFlatbedRate": 1.00,
+		"surchargeFee": 3.00,
+		"shippingDelayedPickUpRate": 7.50,
+		"shippingCancellationRate": 18.00
 	}
 }
