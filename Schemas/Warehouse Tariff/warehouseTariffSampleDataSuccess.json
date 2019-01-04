@@ -1,0 +1,54 @@
+{
+	"warehouseIdentity": {
+		"warehouseLicense": "2-2812",
+		"warehouseCode": 1234,
+		"warehouseName": "Test Warehouse",
+		"warehouseAddress": "1234 abc ln. Memphis, TN 12345 United States",
+		"warehouseCert": false
+	},
+	"currencyType": {
+		"currencyCode": "USD"
+	},
+	"unit": {
+		"unitType": "bale"
+	},
+	"warehouseTariffDate": {
+		"beginDate": "2018-11-06",
+		"endDate": "2019-11-05"
+	},
+	"warehouseReceiving": {
+		"receivingRate": 2.25
+	},
+	"warehouseStorage": {
+		"storageRate": 4.00
+	},
+	"warehouseLoading": {
+		"loadingRate": 2.50
+	},
+	"warehouseCompression": {
+		"compressionRate": 9.50,
+		"compressionExtraRate": 4.50
+	},
+	"warehouseMarking": {
+		"markingRate": 0.40
+	},
+	"warehouseClassing": {
+		"samplingShipmentRate": 4.25,
+		"samplingStorageRate": 6.00,
+		"samplingOneSideRate": 2.50
+	},
+	"warehouseWeighing": {
+		"weighingShipmentRate": 2.00,
+		"weighingStorageRate": 3.25,
+		"weighingAndSamplingRate": 7.50
+	},
+	"miscellaneous": {
+		"markingExtraRate": 0.50,
+		"samplingDeliveryRate": 5.00,
+		"weighingSheetsRate": 0.75,
+		"loadingFlatbedRate": 1.00,
+		"surchargeFee": 3.00,
+		"shippingDelayedPickUpRate": 7.50,
+		"shippingCancellationRate": 18.00
+	}
+}
