@@ -26,9 +26,9 @@
             "type": "number"
         },
         "currencyCode": {
-			"title": "Currency Code",
-			"description": "The currency code for this commodity.",
-			"$ref": "#/definitions/CurrencyCodeSimpleType"
+            "title": "Currency Code",
+            "description": "The currency code for this commodity.",
+            "$ref": "#/definitions/CurrencyCodeSimpleType"
         }
     },
 
