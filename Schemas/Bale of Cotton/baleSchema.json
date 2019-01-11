@@ -253,5 +253,11 @@
 				"recordStatus"
 			]
 		}
-	}
+	},
+	"required": [
+		"permanentBaleIdentification",
+		"classificationDate",
+		"baleReceiving",
+		"baleClassing"
+	]
 }
