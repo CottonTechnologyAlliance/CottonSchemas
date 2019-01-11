@@ -1,10 +1,23 @@
 {
-	"warehouseIdentity": {
-		"warehouseLicense": "2-2812",
-		"warehouseCode": 1234,
-		"warehouseName": "Test Warehouse",
-		"warehouseAddress": "1234 abc ln. Memphis, TN 12345 United States",
-		"warehouseCert": false
+	"entityIdentity": {
+		"entityWarehouse": {
+			"entityID": 1,
+			"entityName": "Test Warehouse",
+			"entityAddress": {
+				"physicalAddress": {
+					"addressLine1": "1234 abc ln.",
+					"city": "Memphis",
+					"stateProvince": "TN",
+					"zipPostalCode": "38111",
+					"locationCountry": "United States"
+				}
+			},
+			"entityType": {
+				"warehouseCode": 123456,				//wrong value type -- has to be entered as string "123456"
+				"warehouseLicense": "1-1234",
+				"warehouseCert": false
+			}
+		}
 	},
 	"currencyType": {
 		"currencyCode": "USD"

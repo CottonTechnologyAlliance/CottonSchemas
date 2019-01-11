@@ -1,0 +1,115 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+  	"$id": "https://cottontechnologyalliance.github.io/Documentation/Common/entitySchema.json",
+	"title": "Entity Schema",
+	"type": "object",
+	"additionalProperties": true,
+	"properties": {
+		"entityID": {
+			"title": "Entity ID",
+			"description": "The ID number of the specific entity",
+			"type": "number"
+		},
+		"entityName": {
+			"title": "Entity Name",
+			"description": "The name of the entity.",
+			"$ref": "generalSchema.json#/properties/name"
+		},
+		"entityAddress": {
+			"title": "Entity Address",
+			"description": "The address of the entity.",
+			"type": "object",
+			"additionalProperties": true,
+			"properties": {
+				"physicalAddress": {
+					"title": "Physical Address",
+					"description": "The full address of the warehouse headquarters.",
+					"$ref": "generalSchema.json#/properties/addressFullText"
+				},
+				"mailingAddress": {
+					"title": "Mailing Address",
+					"description": "The full mailing address of the warehouse, if different from the physical address.",
+					"$ref": "generalSchema.json#/properties/addressFullText"
+				}
+			},
+			"required": [
+				"physicalAddress"
+			]					
+		},
+		"entityTelephoneNumber": {
+			"title": "Entity Telephone Number",
+			"description": "The telephone number of the entity",
+			"type": "string",
+			"additionalProperties": true,
+			"properties": {
+				"primaryTelephoneNumber": {
+					"title": "Primary Telephone Number",
+					"description": "The primary telephone number of the entity",
+					"$ref": "generalSchema.json#/properties/telephoneNumber"
+				},
+				"secondaryTelephoneNumber": {
+					"title": "Secondary Telephone Number",
+					"description": "The secondary telephone number of the entity",
+					"$ref": "generalSchema.json#/properties/telephoneNumber"
+				},
+				"faxNumber": {
+					"title": "Fax Number",
+					"description": "The fax number of the entity",
+					"$ref": "generalSchema.json#/properties/telephoneNumber"
+				}
+			},
+			"required": [
+				"primaryTelephoneNumber"
+			]
+		},
+		"entityEmailAddress": {
+			"title": "Entity Email Address",
+			"description": "The email address of the entity",
+			"type": "string",
+			"additionalProperties": true,
+			"$ref": "generalSchema.json#/properties/email"
+
+		},
+		"entityType": {
+			"title": "Entity Type",
+			"description": "The type of entity being used.",
+			"type": "object",
+			"oneOf": [
+				{"$ref": "#/definitions/warehouseIdentity"}
+			]
+		}
+	},
+	"required": [
+		"entityID",
+		"entityName"
+	],
+	"definitions": {
+		"warehouseIdentity": {
+			"title": "Warehouse Identity",
+			"description": "The identity of a warehouse.",
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"warehouseCode": {
+					"title": "Warehouse Code",
+					"description": "The code that identifies the warehouse.",
+					"type": "string"
+				},
+				"warehouseLicense": {
+					"title": "Warehouse License",
+					"description": "The USDA license number of the warehouse.",
+					"type": "string"
+				},
+				"warehouseCert": {
+					"title": "Warehouse Certificated",
+					"description": "Indicates whether the warehouse is ICE certificated or not.",
+					"type": "boolean"
+				}
+			},
+			"required": [
+				"warehouseCode",
+				"warehouseCert"
+			]
+		}
+	}
+}

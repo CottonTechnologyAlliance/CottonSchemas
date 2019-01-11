@@ -1,0 +1,84 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+  	"$id": "https://cottontechnologyalliance.github.io/Documentation/Common/generalSchema.json",
+	"title": "General Schema",
+	"type": "object",
+	"properties": {
+		"date": {
+			"title": "Date",
+			"description": "A full date.",
+			"type": "string",
+			"format": "date"
+		},
+		"name": {
+			"title": "Name",
+			"description": "The name of a person or organization.",
+			"type": "string"
+		},
+		"addressFullText": {
+			"title": "Address",
+			"description": "A complete address.",
+			"type": "object",
+			"additionalProperties": true,
+			"properties": {
+				"addressLine1": {
+					"title": "Address Line 1",
+					"description": "The first line of the address.",
+					"type": "string"
+				},
+				"addressLine2": {
+					"title": "Address Line 2",
+					"description": "The second line of the address, if needed.",
+					"type": "string"
+				},
+				"city": {
+					"title": "City",
+					"description": "The city the address is located in.",
+					"type": "string"
+				},
+				"stateProvince": {
+					"title": "State or Province",
+					"description": "The state or province the address is located in.",
+					"type": "string"
+				},
+				"zipPostalCode": {
+					"title": "ZIP or Postal Code",
+					"description": "The ZIP or postal code of the address.",
+					"type": "string"
+				},
+				"locationCountry": {
+					"title": "Country",
+					"description": "A country, territory, dependency, or other such geopolitical subdivision of a location.",
+					"type": "string"
+				}
+			},
+			"required": [
+				"addressLine1",
+				"city",
+				"stateProvince",
+				"zipPostalCode",
+				"locationCountry"
+			]
+		},
+		"telephoneNumber": {
+			"title": "Telephone Number",
+			"description": "A full telephone number.",
+			"type": "string"
+		},
+		"email": {
+			"title": "Email Address",
+			"description": "An email address for a contact.",
+			"type": "string"
+		},
+		"currencyCodeType": {
+			"title": "Currency Code Type",
+			"description": "A data type for a currency that qualifies a monetary amount.",
+			"enum": ["EUR","GBP","USD", "CNY"]
+		},
+		"unitStandard": {
+			"title": "Unit Standard",
+			"description": "A quantity chosen as a standard in terms of which other quantities may be expressed.",
+			"type": "string"
+		}
+	}
+}

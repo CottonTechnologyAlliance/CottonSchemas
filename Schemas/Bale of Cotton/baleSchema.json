@@ -1,193 +1,257 @@
 {
     "$schema": "http://json-schema.org/schema#",
-    "$id": "https://cottontechnologyalliance.github.io/schemas/Bales/bale.json",
-    "definitions" :{
-      "colorGrade": {
-        "type": "string",
-        "title": "Official Color Grade",
-        "description": "The official Upland or Pima color grade that appears on the classification record is determined by instrument based measurements of Rd and +b. Color refers to the gradations of grayness and yellowness in the cotton.",
-        "enum": [
-          "11", "21", "31", "41", "51", "61", "71", "81",
-          "12", "22", "32", "42", "52", "62", "82",
-          "13", "23", "33", "43", "53", "63", "83",
-          "24", "34", "44", "54", "84" ,
-          "25", "35", "85",
-          "1", "2", "3", "4", "5", "6", "7",
-          "93", "94", "95",
-          "96", "97", "98"
-        ]
-      },
-      "permanentBaleIdentification": {
-        "type": "object",
-        "title": "Permanent Bale Identification",
-        "description": "A bar-coded bale identification tag, preprinted with the gin code number and gin bale number (individually referenced below), is placed between the two halves of the sample for identification purposes.  This is a Permanent Bale Identification (PBI) tag, which gives each bale a unique 12-digit number that is not repeated within a five year period.  The Classing Office scans the bar codes to enter the PBI into its computer prior to classing the sample.",
-        "properties": {
-          "ginCodeNumber": { 
-            "type": "string",
-            "pattern": "^[0-9]{5}$",
-            "title": "Gin Code Number",
-            "description": "The gin code number is composed of the first five digits of the PBI.  The first two digits denote the Classing Office, and the last three digits identify the gin.  The local Classing Office assigns this code number."
-          },
-          "ginBaleNumber": { 
-            "type": "string",
-            "pattern": "^[0-9]{7}$",
-            "title": "Gin Bale Number",
-            "description": "The gin bale number is composed of the last seven-digits of the PBI and is assigned by the gin."
-          }
-        },
-        "required": [
-          "ginCodeNumber", "ginBaleNumber"
-        ]
-      },
-      "colorGrading": {
-        "type": "object",
-        "title": "Color Grading",
-        "description": "Instrument color grade and color grade subdivisions.",
-        "properties": {
-          "colorGrade": { "$ref": "#/definitions/colorGrade"},
-          "colorQuadrant": {
-            "title": "Color Quadrant",
-            "description": "The color quadrant.",
-            "enum": [
-              1, 2, 3, 4, 5, 6, 7, null
-            ]
-          },
-          "colorRd": {
-            "type": "integer",
-            "title": "Color Rd",
-            "description": "Grayness indicates how light or dark the sample is.",
-            "minimum": 40,
-            "maximum": 90
-          },
-          "colorPlusB": {
-            "type": "integer",
-            "title": "Color +b",
-            "description": "Yellowness indicates how much yellow color is in the sample.",
-            "minimum": 4,
-            "maximum": 18
-          }
-        }
-      },
-      "remarks": {
-        "type":"string",
-        "title": "Remarks",
-        "description": "The instrument assigns the remarks code 75 where applicable.  Classers identify other special conditions that may cause processing problems and lower yarn quality.",
-        "enum": [
-          "75", "76", "77", "78", "92"
-        ]
-      },
-      "cottonType": {
-        "type": "string",
-        "title": "Upland or Pima Cotton",
-        "description": "Enumeration for the type of cotton (Upland or Pima).",
-        "enum": [
-          "Upland", "Pima"
-        ]
-      },
-      "extraneousMatter": {
-        "type": "string",
-        "title": "Extraneous Matter",
-        "description": "Extraneous matter is any substance in the cotton other than fiber or leaf.",
-        "enum": [
-          "01", "02", "11", "12", "21", "22", "31", "32", "41", "42", "51", "52", "61", "62", "71", "72"
-        ]
-      }
-    },
-    "required": [
-      "permanentBaleIdentification", "cropYear", "dateClassed", "officialColorGrade", "length", "length100", "micronaire", "strength", "leafGrade", "extraneousMatter",
-      "remarks", "instrumentColorGrade", "trashPercentArea", "lengthUniformityIndex", "uplandOrPima", "recordType", "recordStatus", "cccLoanPremium"
-    ],
-    "type": "object",
-    "properties": {
-      "permanentBaleIdentification": { "$ref": "#/definitions/permanentBaleIdentification"},
-      "cropYear": {
-        "title": "Crop Year",
-        "description": "The crop year.",
-        "type": "integer",
-        "pattern": "^[0-9]{4}$"
-      },
-      "dateClassed": {
-        "title": "Date Classed",
-        "description": "This is the date the classification data for the bale was released by the Classing Office.",
-        "type": "string",
-        "format": "date"
-      },
-      "officialColorGrade" : { "$ref": "#/definitions/colorGrade"},
-      "length": {
-        "type": "integer",
-        "title": "Length",
-        "description": "Staple length measured in 32nds of an inch.",
-        "minimum": 24,
-        "maximum": 100
-      },
-      "length100": {
-        "type": "integer",
-        "title": "Length in 100",
-        "description": "Staple length measured in 100ths of an inch.",
-        "minimum": 70,
-        "maximum": 200
-      },
-      "micronaire": {
-        "type":"number",
-        "title": "Micronaire",
-        "description": "Micronaire is a measure of the cotton’s fineness and is reported to the nearest tenth.",
-        "minimum": 0,
-        "maximum": 10
-      },
-      "strength": {
-        "type":"number",
-        "title": "Strength",
-        "description": "The force in grams required to break a bundle of fibers one tex unit in size.",
-        "minimum": 0,
-        "maximum": 100
-      },
-      "leafGrade": {
-        "type":"integer",
-        "title": "Leaf Grade",
-        "description": "Leaf refers to particles of the cotton plant’s leaf which remain in the lint after the ginning process.",
-        "minimum": 1,
-        "maximum": 8
-      },
-      "extraneousMatter": { "$ref": "#/definitions/extraneousMatter"},
-      "remarks": { "$ref": "#/definitions/remarks" },
-      "instrumentColorGrade" : {"$ref": "#/definitions/colorGrading"},
-      "trashPercentArea": {
-        "type":"integer",
-        "title": "Trash Meter Percent",
-        "description": "The two-digit trash percent area reported on the classification record is the percent of the sample surface covered by trash particles as determined by the instrument to the nearest tenth. Trash particles include extraneous matter such as grass, bark, etc., but these particles cannot be distinguished one from another by this measurement.",
-        "minimum": 0,
-        "maximum": 99
-      },
-      "lengthUniformityIndex": {
-        "type":"number",
-        "title": "Length Uniformity Index",
-        "description": "Length uniformity index is a three-digit number that is a measure of the degree of uniformity of the fibers in a sample to the nearest tenth.",
-        "minimum": 0,
-        "maximum": 99
-      },
-      "uplandOrPima": {"$ref": "#/definitions/cottonType"},
-      "recordType": {
-        "type": "integer",
-        "title": "Record Type",
-        "description": "The type of record.",
-        "enum": [
-          0, 1, 2
-        ]
-      },
-      "recordStatus": {
-        "type":"integer",
-        "title": "Record Status",
-        "description": "This one digit code indicates whether or not the manual classing information has been corrected.",
-        "enum": [
-          0, 1
-        ]
-      },
-      "cccLoanPremium": {
-        "type": "integer",
-        "title": "CCC Loan Premium and Discounts",
-        "description": "This five-digit code gives the CCC loan premium and discount points for Upland cotton. The physical loan price for Pima cotton is shown in cents per pound",
-        "minimum": -9999,
-        "maximum": 9999
-      }
-    }
-  }
+	"$id": "https://cottontechnologyalliance.github.io/schemas/Bales/bale.json",
+	"title": "Cotton Bale Schema",
+	"type": "object",
+	"properties": {
+		"permanentBaleIdentification": {
+			"title": "Permament Bale Identification (PBI)",
+			"description":"A bar-coded bale identification tag, preprinted with the gin code number and gin bale number (individually referenced below), that is placed between the two halves of the sample for identification purposes.  The Permanent Bale Identification (PBI) tag gives each bale a unique 12-digit number that is not repeated within a five year period.",
+			"type": "object",
+			"properties": {
+				"ginCodeNumber": {
+					"title": "Gin Code Number",
+					"description": "A number that composes the first five digits of the PBI. The first two digits denote the Classing Office, and the last three digits identify the gin. The local Classing Office assigns this code number.",
+					"type": "integer",
+					"pattern": "^[0-9]{5}$"
+				},
+				"ginBaleNumber": {
+					"title": "Gin Bale Number",
+					"description": "A number that composes the last seven-digits of the PBI and is assigned by the gin.",
+					"type": "integer",
+					"pattern": "^[0-9]{7}$"
+				}
+			},
+			"required": [
+				"ginCodeNumber",
+				"ginBaleNumber"
+			]
+		},
+		"classificationDate": {
+			"title": "Classification Date",
+			"description": "Describes the date of classification of the cotton sample.",
+			"type": "object",
+			"properties": {
+				"classedDate": {
+					"title": "Date Classed",
+					"description": "The date the classification data for the bale was released by the Classing Office.",
+					"$ref": "generalSchema.json#/properties/date"
+				},
+				"cropYear": {
+					"title": "Crop Year",
+					"description" : "The crop year of the cotton sample.",
+					"type": "integer",
+					"pattern": "^[0-9]{4}$"
+				}
+			},
+			"required": [
+				"classedDate",
+				"cropYear"
+			]
+		},
+		"baleReceiving": {
+			"title": "Bale Receiving",
+			"description": "Describes how the sample was received and the module or trailer identification associated with it.",
+			"type": "object",
+			"properties": {
+				"receivingType": {
+					"title": "Receiving Type",
+					"description": "A one-digit code that indicates whether the sample was outturned as a single bale or as a bale that was module or trailer averaged. The codes are described as follows: 0 = Single Bale, 1 = Module, 2 = Trailer",
+					"type": "integer",
+					"enum": [0, 1, 2]
+				},
+				"moduleTrailerNumber": {
+					"title": "Module/Trailer Number",
+					"description": "A five-digit number that identifies the module/trailer number assigned at the gin.",
+					"type": "integer",
+					"pattern": "^[0-9]{5}$"
+				},
+				"numberOfBales": {
+					"title": "Number Of Bales",
+					"description": "The number of bales in the module/trailer that were released with the module average calculations.",
+					"type": "integer",
+					"minimum": 0,
+					"maximum": 99
+				}
+			},
+			"required": [
+				"receivingType",
+				"moduleTrailerNumber",
+				"numberOfBales"
+			]
+		},
+		"baleClassing": {
+			"title": "Bale Classing",
+			"description": "Describes the classification data of the sample.",
+			"type": "object",
+			"properties": {
+				"colorGrading": {
+					"title": "Color Grading",
+					"description": "Describes how the color of the sample is defined.",
+					"type": "object",
+					"properties": {
+						"officialColorGrade": {
+							"title": "Official Color Grade",
+							"description": "The two-digit official Upland or Pima color grade that appears on the classification record that is determined by instrument based measurements of Rd and +b. Color grades between 11-85 refer to Upland cotton and color grades between 1-7 refer to Pima cotton. Certain special condition codes may replace the instrument based measurement for color grade in the Official Color Grade columns if manually identified by a cotton classer. These codes are as follows: Pima Cotton: 93 - Mixture of Pima and Upland, 94 - Fire Damaged, 95 - Water Damaged. Upland Cotton: 96 - Mixture of Upland and Pima, 97 - Fire Damaged, 98 - Water Damaged",
+							"type": "string",
+							"enum": ["11", "21", "31", "41", "51", "61", "71", "81",
+								"12", "22", "32", "42", "52", "62", "82",
+								"13", "23", "33", "43", "53", "63", "83",
+								"24", "34", "44", "54", "84",
+								"25", "35", "85",
+								"1", "2", "3", "4", "5", "6", "7",
+								"93", "94", "95",
+								"96", "97", "98"]
+						},
+						"instrumentColorGrade": {
+							"title": "Instrument Color Grade",
+							"description": "The two-digit color grade that is used to determine the offical color grade for Upland or Pima cotton unless superseded by a special condition code.",
+							"type": "string",
+							"enum": ["11", "21", "31", "41", "51", "61", "71", "81",
+								"12", "22", "32", "42", "52", "62", "82",
+								"13", "23", "33", "43", "53", "63", "83",
+								"24", "34", "44", "54", "84",
+								"25", "35", "85",
+								"1", "2", "3", "4", "5", "6", "7"]
+						},
+						"colorQuadrant": {
+							"title": "Color Quadrant",
+							"description": "The color quadrant, according to USDA color diagrams.",
+							"type": "integer",
+							"minimum": 1,
+							"maximum": 7
+						},
+						"colorRd": {
+							"title": "Color Rd",
+							"description": "Measurement of the grayness of the sample, reported to the nearest 10th. Grayness indicates how light or dark the sample is.",
+							"type": "number",
+							"minimum": 40.0,
+							"maximum": 90.0  
+						},
+						"colorPlusB": {
+							"title": "Color +b",
+							"description": "Measurement of the yellowness of the sample, reported to the nearest 10th.",
+							"type": "number",
+							"minimum": 4.0,
+							"maximum": 18.0
+						}
+					},
+					"required": [
+						"officialColorGrade",
+						"instrumentColorGrade",
+						"colorRd",
+						"colorPlusB"
+					]
+				},
+				"stapleLength": {
+					"title": "Staple Length",
+					"description": "Describes the length of the cotton staple.",
+					"type": "object",
+					"properties": {
+						"length32": {
+							"title": "Length in 32nds of an Inch",
+							"description": "Staple length measured in 32nds of an inch.",
+							"type": "number",
+							"minimum": 10,
+							"maximum": 99
+						},
+						"length100": {
+							"title": "Length in 100ths of an Inch",
+							"description": "Staple length measured in 100ths of an inch.",
+							"type": "number",
+							"minimum": 0.00,
+							"maximum": 2.00
+						}
+					},
+					"required": [
+						"length32",
+						"length100"
+					]
+				},
+				"micronaire": {
+					"title": "Micronaire",
+					"description": "Micronaire is a measure of the cotton’s fineness and is determined by measuring the cotton's resistance to air flow per unit mass. It is reported to the nearest 10th.",
+					"type": "number",
+					"minimum": 0.1,
+					"maximum": 9.9
+				},
+				"strength": {
+					"title": "Strength",
+					"description": "Describes the fiber strength of the sample. It is reported as the force in grams required to break a bundle of fibers one tex unit in size.",
+					"type": "number",
+					"minimum": 0.0,
+					"maximum": 99.9
+				},
+				"leafGrade": {
+					"title": "Leaf Grade",
+					"description": "A one-digit grade that refers to the measurement of the cotton plant’s leaf particles that remain in the lint after the ginning process. Upland leaf grades are identified as numbers 1-8 where leaf grade 8 is considered below grade, meaning it is identified as having more leaf than leaf grade 7. Pima leaf grades are identified as numbers 1-7 where leaf grade 7 is considered below grade.",
+					"type": "string",
+					"enum": ["1", "2", "3", "4", "5", "6", "7", "8"]
+				},
+				"extraneousMatter": {
+					"title": "Extraneous Matter",
+					"description": "A two-digit code that describes any substance in the cotton other than fiber or leaf and is determined by the classer. Extraneous matter is reported as level 1 or level 2, with level 2 indicating the heavier contamination. The code numbers are described as follows: 01 - Prep Level 1, 02 - Prep Level 2, 11 - Bark Level 1, 12 - Bark Level 2, 21 - Grass Level 1, 22 - Grass Level 2, 31 - Seed Coat Fragments Level 1, 32 - Seed Coat Fragments Level 2, 41 - Oil Level 1, 42 - Oil Level 2, 51 - Spindle Twist Level 1, 52 - Spindle Twist Level 2, 61 - Other Level 1, 62 - Other Level 2, 71 - Plastic Level 1, 72 - Plastic Level 2",
+					"type": "string",
+					"enum": ["01", "02", "11", "12", "21", "22", "31", "32", "41", "42", "51", "52", "61", "62", "71", "72"]
+				},
+				"remarks": {
+					"title": "Remarks",
+					"description": "A two-digit code that classers assign when special conditions may cause processing problems and lower yarn quality. The instrument assigns the remark code 75 where applicable. The special condition codes are defined as follows: 75 - Other Side Two or More Color Grades and/or Color Groups or One Color Grade and One Color Group Higher, 76 - Reginned, 77 - Repacked, 78 - Redder Than Normal (Pima), 92 - Pima Ginned on Saw Gin",
+					"type": "string",
+					"enum": ["75", "76", "77", "78", "92"]
+				},
+				"trashPercentArea": {
+					"title": "Trash Percent Area",
+					"description": "The percent of the sample surface covered by trash particles as determined by the instrument to the nearest tenth. Trash particles include extraneous matter such as grass, bark, etc., but these particles cannot be distinguished one from another by this measurement.",
+					"type": "number",
+					"minimum": 0,
+					"maximum": 99
+				},
+				"lengthUniformityIndex": {
+					"title": "Length Uniformity Index",
+					"description": "Measurement of the degree of uniformity of the fibers in a sample to the nearest tenth, described as a percent.",
+					"type": "number",
+					"minimum": 0,
+					"maximum": 99.9
+				},
+				"cottonType": {
+					"title": "Upland or Pima Cotton",
+					"description": "A one-digit code that indicates whether the sample is Upland or American Pima, with 1 being Upland and 2 being Pima.",
+					"type": "integer",
+					"enum": [1, 2]
+				},
+				"recordType": {
+					"title": "Record Type",
+					"description": "A one digit code that indicates the type of record, as follows: 0 - Original, 1 - Review, 2 - Rework",
+					"type": "integer",
+					"enum": [0, 1, 2]
+				},
+				"recordStatus": {
+					"title": "Record Status",
+					"description": "A one-digit code that indicates whether or not the manual classing information has been corrected, with 0 indicating not a correction and 1 indicating a correction.",
+					"type": "integer",
+					"enum": [0, 1]
+				},
+				"cccLoanPoints": {
+					"title": "CCC Loan Premiums and Discounts",
+					"description": "A five-digit code that gives the CCC loan premium and discount points for the cotton. For Upland cotton, a positive value indicates a premium while a negative value indicates a discount. The physical loan price for Pima cotton is shown in cents per pound.",
+					"type": "integer",
+					"minimum": -99999,
+					"maximum": 99999
+				}
+			},
+			"required": [
+				"colorGrading",
+				"stapleLength",
+				"micronaire",
+				"strength",
+				"leafGrade",
+				"trashPercentArea",
+				"lengthUniformityIndex",
+				"cottonType",
+				"recordType",
+				"recordStatus"
+			]
+		}
+	}
+}
