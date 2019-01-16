@@ -8,9 +8,9 @@
 		"cropYear": 2018 
 	},
 	"baleReceiving": {
-		"receivingType": 2,
+		"receivingType": "2",
 		"moduleTrailerNumber": 11111,
-		"numberOfBales": 25
+		"baleCount": 25
 	},
 	"baleClassing": {
 		"colorGrading": {
@@ -29,9 +29,9 @@
 		"extraneousMatter": "02",
 		"trashPercentArea": 10,
 		"lengthUniformityIndex": 78,
-		"cottonType": 1,
-		"recordType": 0,
-		"recordStatus": 1,
+		"cottonType": "1",
+		"recordType": "0",
+		"recordStatus": "1",
 		"cccLoanPoints": -45676
 	}
 }

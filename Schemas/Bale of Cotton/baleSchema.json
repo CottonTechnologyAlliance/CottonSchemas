@@ -57,8 +57,8 @@
 				"receivingType": {
 					"title": "Receiving Type",
 					"description": "A one-digit code that indicates whether the sample was outturned as a single bale or as a bale that was module or trailer averaged. The codes are described as follows: 0 = Single Bale, 1 = Module, 2 = Trailer",
-					"type": "integer",
-					"enum": [0, 1, 2]
+					"type": "string",
+					"enum": ["0", "1", "2"]
 				},
 				"moduleTrailerNumber": {
 					"title": "Module/Trailer Number",
@@ -66,8 +66,8 @@
 					"type": "integer",
 					"pattern": "^[0-9]{5}$"
 				},
-				"numberOfBales": {
-					"title": "Number Of Bales",
+				"baleCount": {
+					"title": "Bale Count",
 					"description": "The number of bales in the module/trailer that were released with the module average calculations.",
 					"type": "integer",
 					"minimum": 0,
@@ -77,7 +77,7 @@
 			"required": [
 				"receivingType",
 				"moduleTrailerNumber",
-				"numberOfBales"
+				"baleCount"
 			]
 		},
 		"baleClassing": {
@@ -217,20 +217,20 @@
 				"cottonType": {
 					"title": "Upland or Pima Cotton",
 					"description": "A one-digit code that indicates whether the sample is Upland or American Pima, with 1 being Upland and 2 being Pima.",
-					"type": "integer",
-					"enum": [1, 2]
+					"type": "string",
+					"enum": ["1", "2"]
 				},
 				"recordType": {
 					"title": "Record Type",
 					"description": "A one digit code that indicates the type of record, as follows: 0 - Original, 1 - Review, 2 - Rework",
-					"type": "integer",
-					"enum": [0, 1, 2]
+					"type": "string",
+					"enum": ["0", "1", "2"]
 				},
 				"recordStatus": {
 					"title": "Record Status",
 					"description": "A one-digit code that indicates whether or not the manual classing information has been corrected, with 0 indicating not a correction and 1 indicating a correction.",
-					"type": "integer",
-					"enum": [0, 1]
+					"type": "string",
+					"enum": ["0", "1"]
 				},
 				"cccLoanPoints": {
 					"title": "CCC Loan Premiums and Discounts",
