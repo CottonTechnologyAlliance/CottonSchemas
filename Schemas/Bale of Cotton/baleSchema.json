@@ -12,13 +12,13 @@
 				"ginCodeNumber": {
 					"title": "Gin Code Number",
 					"description": "A number that composes the first five digits of the PBI. The first two digits denote the Classing Office, and the last three digits identify the gin. The local Classing Office assigns this code number.",
-					"type": "integer",
+					"type": "string",
 					"pattern": "^[0-9]{5}$"
 				},
 				"ginBaleNumber": {
 					"title": "Gin Bale Number",
 					"description": "A number that composes the last seven-digits of the PBI and is assigned by the gin.",
-					"type": "integer",
+					"type": "string",
 					"pattern": "^[0-9]{7}$"
 				}
 			},
@@ -40,7 +40,7 @@
 				"cropYear": {
 					"title": "Crop Year",
 					"description" : "The crop year of the cotton sample.",
-					"type": "integer",
+					"type": "string",
 					"pattern": "^[0-9]{4}$"
 				}
 			},
@@ -63,7 +63,7 @@
 				"moduleTrailerNumber": {
 					"title": "Module/Trailer Number",
 					"description": "A five-digit number that identifies the module/trailer number assigned at the gin.",
-					"type": "integer",
+					"type": "string",
 					"pattern": "^[0-9]{5}$"
 				},
 				"baleCount": {

@@ -1,15 +1,15 @@
 {
     "permanentBaleIdentification": {
-      "ginCodeNumber": 14842,
-      "ginBaleNumber": 3188009
+      "ginCodeNumber": "14842",
+      "ginBaleNumber": "3188009"
 	},
 	"classificationDate": {
 		"classedDate": "2019-01-07",
-		"cropYear": 2018 
+		"cropYear": "2018" 
 	},
 	"baleReceiving": {
 		"receivingType": "2",
-		"moduleTrailerNumber": 11111,
+		"moduleTrailerNumber": "11111",
 		"baleCount": 25
 	},
 	"baleClassing": {
