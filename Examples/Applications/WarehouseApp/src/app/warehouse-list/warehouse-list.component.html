@@ -1,0 +1,13 @@
+<h1>Warehouse Tariffs</h1>
+
+<div class="container">
+  <div>
+    <app-warehouse *ngFor="let warehouse of warehouses; index as i" [warehouse]="warehouse" [i]="i"></app-warehouse>
+  </div>
+
+  <div *ngIf="isVisible">
+      <p><app-warehouse-form (warehouseAdded)="warehouseAdded($event)"></app-warehouse-form></p>
+  </div>
+
+  <button (click)="onClickAdd($event)">Add</button>
+</div>

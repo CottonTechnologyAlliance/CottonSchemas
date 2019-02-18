@@ -1,0 +1,526 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "tariffSchema.json",
+  "title": "Warehouse Tariffs",
+  "type": "object",
+	"properties": {
+		"warehouseIdentity": {
+			"title": "Warehouse Identity",
+      "description": "Describes the warehouse involved.",
+      "type": "object",
+      "allOf": [{"$ref": "entitySchema.json#/definitions/entity"}]
+		},
+		"currency": {
+			"title": "Currency",
+			"description": "The type of currency this warehouse uses.",
+			"type": "object",
+			"properties": {
+				"currencyType": {
+					"title": "Currency Type",
+          "description": "A unit of money or exchange.",
+          "type": "string",
+					"$ref": "generalSchema.json#/definitions/currencyCodeType"
+				}
+			},
+			"required": [
+				"currencyType"
+			]
+		},
+		"unit": {
+			"title": "Unit",
+			"description": "The unit each price is set to.",
+			"type": "object",
+			"properties": {
+				"unitType": {
+					"title": "Unit Type",
+          "description": "The quantity things are measured in.",
+          "type": "string",
+					"$ref": "generalSchema.json#/definitions/unitStandard"
+				}
+			},
+			"required": [
+				"unitType"
+			]
+		},
+		"warehouseTariffDate": {
+			"title": "Warehouse Tariff Date",
+			"description": "The begin and end date for a warehouse tariff.",
+			"type": "object",
+			"properties": {
+				"beginDate": {
+					"title": "Tariff Begin Date",
+          "description": "The effective date of the warehouse tariff.",
+          "type": "string",
+					"$ref": "generalSchema.json#/definitions/date"
+				},
+				"endDate": {
+					"title": "Tariff End Date",
+          "description": "The day before the effective date of the new year.",
+          "type": "string",
+					"$ref": "generalSchema.json#/definitions/date"
+				}
+			},
+			"required": [
+				"beginDate",
+				"endDate"
+			]
+		},
+		"warehouseReceiving": {
+			"title": "Warehouse Receiving",
+			"description": "Defines receiving cotton in a warehouse.",
+			"type": "object",
+			"properties": {
+				"receivingRate": {
+					"title": "Receiving",
+          "description": "Cost of receiving, issuing of warehouse receipt, and placing in storage, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"receivingCertRate": {
+					"title": "Certificated Receiving",
+          "description": "Cost of receiving, issuing of warehouse receipt, and placing in storage for certificated cotton, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				}
+			},
+			"required": [
+			  "receivingRate"
+			]
+		},
+		"warehouseStorage": {
+			"title": "Warehouse Storage",
+			"description": "Defines storing cotton in a warehouse.",
+			"type": "object",
+			"properties": {
+			  "storageRate": {
+					"title": "Storage",
+          "description": "Cost of storing cotton in warehouse, per bale per unit time (day or month).",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"storageCertRate": {
+					"title": "Certificated Storage",
+          "description": "Cost of storage for certificated cotton, per bale per unit time (day or month).",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"storageInsuranceRate": {
+					"title": "Storage Insurance",
+          "description": "Additional charge for insurance while in storage, per bale per unit time (day or month).",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				}
+			},
+			"required": [
+			  "storageRate"
+			]
+		},
+		"warehouseLoading": {
+			"title": "Warehouse Loading",
+			"description": "Defines loading cotton at a warehouse.",
+			"type": "object",
+			"properties": {
+				"loadingRate": {
+					"title": "Loading",
+          "description": "Cost of picking out by tag number, removing cotton from storage, delivering to warehouse platform, and loading, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				}
+			},
+			"required": [
+			  "loadingRate"
+			]
+		},
+		"warehouseCompression": {
+			"title": "Warehouse Compression",
+			"description": "Defines compression of cotton in a warehouse.",
+			"type": "object",
+			"properties": {
+        "compressionRate": {
+          "title": "Compression",
+          "description": "Cost of compression of cotton at a warehouse, per bale.",
+          "type": "number",
+          "$ref": "#/definitions/rateAmount"
+        },
+        "compressionPatchRate": {
+          "title": "Application of Patch",
+          "description": "Cost of application of patch where necessary, per bale.",
+          "type": "number",
+          "$ref": "#/definitions/rateAmount"
+        },
+        "compressionExtraRate": {
+          "title": "Extra Compression",
+          "description": "Cost of extra compression for bales weighing over the weight limit, per bale.",
+          "type": "number",
+          "$ref": "#/definitions/rateAmount"
+        }
+			},
+			"required": [
+			  "compressionRate"
+			]
+		},
+		"warehouseMarking": {
+			"title": "Warehouse Marking",
+			"description": "Defines marking or branding cotton.",
+			"type": "object",
+			"properties": {
+				"markingRate": {
+					"title": "Marking",
+          "description": "Cost to apply mark or brand to cotton, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"markingExtraRate": {
+					"title": "Extra Marking",
+          "description": "Cost of additional marking or branding in excess of character limit, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				}
+			},
+			"required": [
+				"markingRate"
+			]
+		},
+		"warehouseClassing": {
+			"title": "Warehouse Classing",
+			"description": "Defines classing and sampling cotton at a warehouse.",
+			"type": "object",
+			"properties": {
+			  "samplingShipmentRate": {
+					"title": "Sampling at Shipment",
+          "description": "Cost of sampling or resampling at time of shipment, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+			  	},
+			  "samplingStorageRate": {
+					"title": "Sampling from Storage",
+          "description": "Cost of sampling or resampling, Including removing cotton from and returning it to storage, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+			  	},
+			  "samplingOneSideRate": {
+					"title": "Sampling from One Side",
+          "description": "Cost of sampling from one side only, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"classingCertRate": {
+					"title": "Certificated Classing",
+          "description": "Cost of classing for certificated cotton, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				}
+			},
+			"required": [
+			  "samplingShipmentRate",
+			  "samplingStorageRate"
+			]
+		},
+		"warehouseWeighing": {
+			"title": "Warehouse Weighing",
+			"description": "Defines weighing cotton in a warehouse.",
+			"type": "object",
+			"properties": {
+			  "weighingShipmentRate": {
+					"title": "Weighing at Shipment",
+          "description": "Cost of weighing or reweighing at time of shipment including furnishing original and copies of certified weight sheets, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+			  },
+			  "weighingStorageRate": {
+					"title": "Weighing from Storage",
+          "description": "Cost of weighing or reweighing, including removing cotton from and returning it to storage and furnishing original and copies of certified weight sheets, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"weighingAndSamplingRate": {
+					"title": "Weighing and Sampling",
+          "description": "Cost of weighing or reweighing at time of sampling from storage, including removing cotton from and returning it to storage and furnishing original and copies of certified weight sheets, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				}
+			},
+			"required": [
+			  "weighingShipmentRate",
+			  "weighingStorageRate",
+			  "weighingAndSamplingRate"
+			]
+		},
+		"miscellaneous": {
+			"title": "Miscellaneous Tariffs",
+			"description": "Additional warehouse tariffs.",
+			"type": "object",
+			"additionalProperties": true,
+			"properties": {
+				"receivingAdditionalFee": {
+					"title": "Additional Receiving Fee",
+          "description": "Cost of any fees added while receiving order, such as any classing or program fees, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"samplingExtraRate": {
+					"title": "Extra Sampling",
+          "description": "Cost of drawing an extra set of samples, at time of any sampling, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"samplingSortingRate": {
+					"title": "Special Sorting of Samples",
+          "description": "Cost of special sorting of samples, per sample.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"samplingDeliveryRate": {
+					"title": "Delivery of Samples",
+          "description": "Cost of delivery of samples or types by postage, freight or express carrier, actual cost.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"samplingSackRate": {
+					"title": "Sample Sacks",
+          "description": "Cost of furnishing sacks for samples, per sack.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"samplingHolesRate": {
+					"title": "Closing Sample Holes",
+          "description": "Cost of closing holes on samples, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"weighingSheetsRate": {
+					"title": "Weight Sheets",
+          "description": "Cost of providing extra copies of weight sheets, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"typingUnderRate": {
+					"title": "Typing Under Weight",
+          "description": "Cost of typing - 25 pounds and under, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"typingOverRate": {
+					"title": "Typing Over Weight",
+          "description": "Cost of typing - over 25 pounds, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"reconditioningBrushingRate": {
+					"title": "Brushing Cotton",
+          "description": "Cost of brushing and/or blowing dirt and/or sand off cotton, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"reconditioningDryingRate": {
+					"title": "Drying Wet Cotton",
+          "description": "Cost of drying cotton received wet but undamaged, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"reconditioningDamagedRate": {
+					"title": "Damaged Cotton",
+          "description": "Cost of repairing plated, water packed or gin fall bales or picking damaged cotton, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"reconditioningBailingRate": {
+					"title": "Bailing",
+          "description": "Cost of bailing loose, pickings or sweepings, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"reconditioningFumigationRate": {
+					"title": "Fumigation",
+          "description": "Cost of removal from platform, non-vacuum fumigation, and the immediate return to warehouse platform, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"phytosanitaryRate": {
+					"title": "Phytosanitary Certificate",
+          "description": "Cost of Phytosanitary Certificates of cotton for export, per load.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"receivingBlockRate": {
+					"title": "Receiving Block Storage",
+          "description": "Cost of receiving block storage, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"storageBlockRate": {
+					"title": "Block Storage",
+          "description": "Cost of block storage, per bale per unit time (day or month).",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"loadingBlockRate": {
+					"title": "Loading Block Storage",
+          "description": "Cost of loading out of block storage, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"loadingExpeditedRate": {
+					"title": "Expedited Loading",
+          "description": "Cost of expedited loading of order, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"loadingFlatbedRate": {
+					"title": "Flatbed Loading",
+          "description": "Cost of loading outbound flatbed trucks, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"handlingTransitRate": {
+					"title": "Handling Transit Cotton",
+          "description": "Cost of handling transit cotton, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"unloadingRate": {
+					"title": "Unloading",
+          "description": "Cost of unloading and restocking of cotton, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"rehandlingRate": {
+					"title": "Rehandling",
+          "description": "Cost of rehandling after breakout because of delayed pickup, cancellation of order, or for any other purpose, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"rearrangingRate": {
+					"title": "Rearranging",
+          "description": "Cost of rearranging or reworking of cotton on or in truck for any purpose, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"consolidationRate": {
+					"title": "Consolidation",
+          "description": "Cost of consolidation including unloading, checking and reloading to outbound conveyance, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"surchargeFee": {
+					"title": "Surcharge Fee",
+          "description": "Cost of surcharge on orders containing 10 bales or less, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"matchingTagsRate": {
+					"title": "Matching Tags",
+          "description": "Cost of matching special tags to bales by bale number, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"shippingTagsRate": {
+					"title": "Shipping Tags",
+          "description": "Cost of applying shipper's tags, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"shippingExtraTiesRate": {
+					"title": "Extra Shipping Ties",
+          "description": "Cost of extra ties if ties on bales are not reusable and extra ties are necessary, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"shippingBoltSealRate": {
+					"title": "Bolt Seal",
+          "description": "Cost of applying bolt seal, per load.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"shippingDrayageRate": {
+					"title": "Drayage",
+          "description": "Cost of drayage, where necessary, to rail, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"shippingOnHoldRate": {
+					"title": "On-Hold",
+          "description": "Cost of on-hold option, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"shippingEarlyOrderRate": {
+					"title": "Early Shipping Order",
+          "description": "Cost of additional fee for early shipping orders, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"shippingChangeOrderRate": {
+					"title": "Change of Shipping Order",
+          "description": "Cost of any change to an order following receipt of shipping order, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"shippingConversionOrderRate": {
+					"title": "Conversion of Shipping Order",
+          "description": "Cost of conversion of early shipping order to complete shipping order, per order.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"shippingSwappingOrderRate": {
+					"title": "Swapping of Shipping Order",
+          "description": "Cost of swapping of shipping order per bale on any shipping order swapped, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"shippingResaleOrderRate": {
+					"title": "Resale of Shipping Order",
+          "description": "Cost of resale of shipping order per side, with retention of agreed upon load date, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"shippingDelayedPickUpRate": {
+					"title": "Delayed Pick-Up",
+          "description": "Cost of cotton that is picked up after the scheduled pick-up date, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"shippingCancellationRate": {
+					"title": "Cancellation of Order",
+          "description": "Cost of cancellation of order and return to stock after breakout, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"receiptConversionRate": {
+					"title": "Receipt Conversion",
+          "description": "Cost of converting electronic receipts to paper receipts or paper receipts to electronic receipts, per receipt.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				},
+				"rangingInspectionRate": {
+					"title": "Ranging for Inspection",
+          "description": "Cost of ranging cotton for inspection and return to storage if necessary, per bale.",
+          "type": "number",
+					"$ref": "#/definitions/rateAmount"
+				}
+			}
+		}
+	},
+	"required": [
+		"warehouseIdentity",
+		"currency",
+		"unit",
+		"warehouseTariffDate",
+		"warehouseReceiving",
+		"warehouseStorage",
+		"warehouseLoading",
+		"warehouseCompression",
+		"warehouseMarking",
+		"warehouseClassing",
+		"warehouseWeighing"
+	],
+	"definitions": {
+		"rateAmount": {
+			"title": "Rate Amount",
+			"description": "The monetary amount of each rate per unit",
+			"type": "number",
+			"minimum": 0,
+			"maximum": 50
+		}
+	}
+}

@@ -4,12 +4,12 @@
 			"entityID": 1,
 			"entityName": "Test Warehouse",
 			"entityAddress": {
-				"physicalAddress": {
+				"primaryAddress": {
 					"addressLine1": "1234 abc ln.",
 					"city": "Memphis",
 					"stateProvince": "TN",
 					"zipPostalCode": "38111",
-					"locationCountry": "United States"
+					"country": "United States"
 				}
 			},
 			"entityType": {
@@ -19,8 +19,8 @@
 			}
 		}
 	},
-	"currencyType": {
-		"currencyCode": "USD"
+	"currency": {
+		"currencyType": "USD"
 	},
 	"unit": {
 		"unitType": bale
@@ -44,7 +44,8 @@
 		"compressionExtraRate": 4.50
 	},
 	"warehouseMarking": {
-		"markingRate": 0.40
+		"markingRate": 0.40,
+		"markingExtraRate": 0.50
 	},
 	"warehouseClassing": {
 		"samplingShipmentRate": 4.25,
@@ -57,7 +58,6 @@
 		//missing required value 'weighingAndSamplingRate'
 	},
 	"miscellaneous": {
-		"markingExtraRate": 0.50,
 		"samplingDeliveryRate": 5.00,
 		"weighingSheetsRate": 0.75,
 		"loadingFlatbedRate": 1.00,

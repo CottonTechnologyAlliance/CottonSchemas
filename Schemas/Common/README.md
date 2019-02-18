@@ -1,15 +1,21 @@
 #  Reusable Schemas
 
-* This file holds elements that can be used in multiple schemas.
-* Search (ctrl F) to find the schema that fits your need.
+* These files hold definitions that can be used in multiple schemas.
 
-#### List of Schemas
+### List of Schemas
 
-* Date
-* Organization Name
-* Address
-* Currency
-* Unit
+* Entity
+	* Entity
+	* Entity Type
+* General
+	* Date
+	* Name
+	* Address
+	* Telephone Number
+	* Email
+	* CurrencyCodeType
+	* UnitStandard
+
 
 #### List of World Currency
 * https://tools.niem.gov/niemtools/ssgt/SSGT-GetType.iepd?typeKey=o1-2t

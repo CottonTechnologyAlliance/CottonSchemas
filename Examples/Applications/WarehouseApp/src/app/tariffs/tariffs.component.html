@@ -1,0 +1,340 @@
+<div class="tableContainer" *ngIf="isForm">
+  <table>
+    <tr>
+      <th colspan="2">Warehouse Identity</th>
+    </tr>
+    <tr>
+      <td>ID</td>
+      <td>{{warehouse.tariffs.warehouseIdentity.entityID}}</td>
+    </tr>
+    <tr>
+      <td>Warehouse Name</td>
+      <td>{{warehouse.tariffs.warehouseIdentity.entityName}}</td>
+    </tr>
+    <tr rowspan="7">
+      <td>Warehouse Address</td>
+      <td>
+        <div style="outline: thin solid black; outline-offset: -2px" *ngFor="let address of warehouse.tariffs.warehouseIdentity.entityAddress; let i = index">
+          <p>{{warehouse.tariffs.warehouseIdentity.entityAddress[i].addressType}}</p>
+          <p>{{warehouse.tariffs.warehouseIdentity.entityAddress[i].addressLine1}}</p>
+          <p>{{warehouse.tariffs.warehouseIdentity.entityAddress[i].addressLine2}}</p>
+          <p>{{warehouse.tariffs.warehouseIdentity.entityAddress[i].city}}</p>
+          <p>{{warehouse.tariffs.warehouseIdentity.entityAddress[i].stateProvince}}</p>
+          <p>{{warehouse.tariffs.warehouseIdentity.entityAddress[i].zipPostalCode}}</p>
+          <p>{{warehouse.tariffs.warehouseIdentity.entityAddress[i].country}}</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>Warehouse Code</td>
+      <td>{{warehouse.tariffs.warehouseIdentity.entityType.warehouseCode}}</td>
+    </tr>
+    <tr>
+      <td>Warehouse License</td>
+      <td>{{warehouse.tariffs.warehouseIdentity.entityType.warehouseLicense}}</td>
+    </tr>
+    <tr>
+      <td>Warehouse Certificated</td>
+      <td>{{warehouseCert}}</td>
+    </tr>
+    <tr>
+      <td>Currency Type</td>
+      <td>{{warehouse.tariffs.currency.currencyType}}</td>
+    </tr>
+    <tr>
+      <td>Unit Type</td>
+      <td>{{warehouse.tariffs.unit.unitType}}</td>
+    </tr>
+    <tr>
+      <th colspan="2">Tariff Rates (Per Unit)</th>
+    </tr>
+    <tr>
+      <td>Tariff Begin Date</td>
+      <td>{{warehouse.tariffs.warehouseTariffDate.beginDate}}</td>
+    </tr>
+    <tr>
+      <td>Tariff End Date</td>
+      <td>{{warehouse.tariffs.warehouseTariffDate.endDate}}</td>
+    </tr>
+    <tr>
+      <th class="th2" colspan="2">Receiving</th>
+    </tr>
+    <tr>
+      <td>Receiving</td>
+      <td>{{warehouse.tariffs.warehouseReceiving.receivingRate}}</td>
+    </tr>
+    <tr>
+      <td>Receiving Certificated</td>
+      <td>{{warehouse.tariffs.warehouseReceiving.receivingCertRate}}</td>
+    </tr>
+    <tr>
+      <th class="th2" colspan="2">Storage</th>
+    </tr>
+    <tr>
+      <td>Storage</td>
+      <td>{{warehouse.tariffs.warehouseStorage.storageRate}}</td>
+    </tr>
+    <tr>
+      <td>Storage Certificated</td>
+      <td>{{warehouse.tariffs.warehouseStorage.storageCertRate}}</td>
+    </tr>
+    <tr>
+      <td>Storage Insurance</td>
+      <td>{{warehouse.tariffs.warehouseStorage.storageInsuranceRate}}</td>
+    </tr>
+    <tr>
+      <th class="th2" colspan="2">Loading</th>
+    </tr>
+    <tr>
+      <td>Loading</td>
+      <td>{{warehouse.tariffs.warehouseLoading.loadingRate}}</td>
+    </tr>
+    <tr>
+      <th class="th2" colspan="2">Compression</th>
+    </tr>
+    <tr>
+      <td>Compression</td>
+      <td>{{warehouse.tariffs.warehouseCompression.compressionRate}}</td>
+    </tr>
+    <tr>
+      <td>Compression Patch</td>
+      <td>{{warehouse.tariffs.warehouseCompression.compressionPatchRate}}</td>
+    </tr>
+    <tr>
+      <td>Compression Extra</td>
+      <td>{{warehouse.tariffs.warehouseCompression.compressionExtraRate}}</td>
+    </tr>
+    <tr>
+      <th class="th2" colspan="2">Marking</th>
+    </tr>
+    <tr>
+      <td>Marking</td>
+      <td>{{warehouse.tariffs.warehouseMarking.markingRate}}</td>
+    </tr>
+    <tr>
+      <td>Marking Extra</td>
+      <td>{{warehouse.tariffs.warehouseMarking.markingExtraRate}}</td>
+    </tr>
+    <tr>
+      <th class="th2" colspan="2">Classing</th>
+    </tr>
+    <tr>
+      <td>Sampling at Shipment</td>
+      <td>{{warehouse.tariffs.warehouseClassing.samplingShipmentRate}}</td>
+    </tr>
+    <tr>
+      <td>Sampling from Storage</td>
+      <td>{{warehouse.tariffs.warehouseClassing.samplingStorageRate}}</td>
+    </tr>
+    <tr>
+      <td>Sampling One Side</td>
+      <td>{{warehouse.tariffs.warehouseClassing.samplingOneSideRate}}</td>
+    </tr>
+    <tr>
+      <td>Classing Certificated</td>
+      <td>{{warehouse.tariffs.warehouseClassing.classingCertRate}}</td>
+    </tr>
+    <tr>
+      <th class="th2" colspan="2">Weighing</th>
+    </tr>
+    <tr>
+      <td>Weighing at Shipment</td>
+      <td>{{warehouse.tariffs.warehouseWeighing.weighingShipmentRate}}</td>
+    </tr>
+    <tr>
+      <td>Weighing from Storage</td>
+      <td>{{warehouse.tariffs.warehouseWeighing.weighingStorageRate}}</td>
+    </tr>
+    <tr>
+      <td>Weighing and Sampling</td>
+      <td>{{warehouse.tariffs.warehouseWeighing.weighingAndSamplingRate}}</td>
+    </tr>
+    <tr>
+      <th class="th2" colspan="2">Miscellaneous</th>
+    </tr>
+    <tr>
+      <td>Receiving Additional Fee</td>
+      <td>{{warehouse.tariffs.miscellaneous.receivingAdditionalFee}}</td>
+    </tr>
+    <tr>
+      <td>Extra Sampling</td>
+      <td>{{warehouse.tariffs.miscellaneous.samplingExtraRate}}</td>
+    </tr>
+    <tr>
+      <td>Special Sample Sorting</td>
+      <td>{{warehouse.tariffs.miscellaneous.samplingSortingRate}}</td>
+    </tr>
+    <tr>
+      <td>Delivery of Samples</td>
+      <td>{{warehouse.tariffs.miscellaneous.samplingDeliveryRate}}</td>
+    </tr>
+    <tr>
+      <td>Sample Sacks</td>
+      <td>{{warehouse.tariffs.miscellaneous.samplingSackRate}}</td>
+    </tr>
+    <tr>
+      <td>Closing Sample Holes</td>
+      <td>{{warehouse.tariffs.miscellaneous.samplingHolesRate}}</td>
+    </tr>
+    <tr>
+      <td>Weight Sheets</td>
+      <td>{{warehouse.tariffs.miscellaneous.weighingSheetsRate}}</td>
+    </tr>
+    <tr>
+      <td>Typing Under Weight</td>
+      <td>{{warehouse.tariffs.miscellaneous.typingUnderRate}}</td>
+    </tr>
+    <tr>
+      <td>Typing Over Weight</td>
+      <td>{{warehouse.tariffs.miscellaneous.typingOverRate}}</td>
+    </tr>
+    <tr>
+      <td>Brushing Cotton</td>
+      <td>{{warehouse.tariffs.miscellaneous.reconditioningBrushingRate}}</td>
+    </tr>
+    <tr>
+      <td>Drying Wet Cotton</td>
+      <td>{{warehouse.tariffs.miscellaneous.reconditioningDryingRate}}</td>
+    </tr>
+    <tr>
+      <td>Damaged Cotton</td>
+      <td>{{warehouse.tariffs.miscellaneous.reconditioningDamagedRate}}</td>
+    </tr>
+    <tr>
+      <td>Bailing</td>
+      <td>{{warehouse.tariffs.miscellaneous.reconditioningBailingRate}}</td>
+    </tr>
+    <tr>
+      <td>Fumigation</td>
+      <td>{{warehouse.tariffs.miscellaneous.reconditioningFumigationRate}}</td>
+    </tr>
+    <tr>
+      <td>Phytosanitary Certificate</td>
+      <td>{{warehouse.tariffs.miscellaneous.phytosanitaryRate}}</td>
+    </tr>
+    <tr>
+      <td>Receiving Block Storage</td>
+      <td>{{warehouse.tariffs.miscellaneous.receivingBlockRate}}</td>
+    </tr>
+    <tr>
+      <td>Block Storage</td>
+      <td>{{warehouse.tariffs.miscellaneous.storageBlockRate}}</td>
+    </tr>
+    <tr>
+      <td>Loading Block Storage</td>
+      <td>{{warehouse.tariffs.miscellaneous.loadingBlockRate}}</td>
+    </tr>
+    <tr>
+      <td>Expedited Loading</td>
+      <td>{{warehouse.tariffs.miscellaneous.loadingExpeditedRate}}</td>
+    </tr>
+    <tr>
+      <td>Flatbed Loading</td>
+      <td>{{warehouse.tariffs.miscellaneous.loadingFlatbedRate}}</td>
+    </tr>
+    <tr>
+      <td>Handling Transit Cotton</td>
+      <td>{{warehouse.tariffs.miscellaneous.handlingTransitRate}}</td>
+    </tr>
+    <tr>
+      <td>Unloading</td>
+      <td>{{warehouse.tariffs.miscellaneous.unloadingRate}}</td>
+    </tr>
+    <tr>
+      <td>Rehandling</td>
+      <td>{{warehouse.tariffs.miscellaneous.rehandlingRate}}</td>
+    </tr>
+    <tr>
+      <td>Rearranging</td>
+      <td>{{warehouse.tariffs.miscellaneous.rearrangingRate}}</td>
+    </tr>
+    <tr>
+      <td>Consolidation</td>
+      <td>{{warehouse.tariffs.miscellaneous.consolidationRate}}</td>
+    </tr>
+    <tr>
+      <td>Surcharge Fee</td>
+      <td>{{warehouse.tariffs.miscellaneous.surchargeFee}}</td>
+    </tr>
+    <tr>
+      <td>Matching Tags</td>
+      <td>{{warehouse.tariffs.miscellaneous.matchingTagsRate}}</td>
+    </tr>
+    <tr>
+      <td>Shipping Tags</td>
+      <td>{{warehouse.tariffs.miscellaneous.shippingTagsRate}}</td>
+    </tr>
+    <tr>
+      <td>Extra Shipping Ties</td>
+      <td>{{warehouse.tariffs.miscellaneous.shippingExtraTiesRate}}</td>
+    </tr>
+    <tr>
+      <td>Bolt Seal</td>
+      <td>{{warehouse.tariffs.miscellaneous.shippingBoltSealRate}}</td>
+    </tr>
+    <tr>
+      <td>Drayage</td>
+      <td>{{warehouse.tariffs.miscellaneous.shippingDrayageRate}}</td>
+    </tr>
+    <tr>
+      <td>On-Hold</td>
+      <td>{{warehouse.tariffs.miscellaneous.shippingOnHoldRate}}</td>
+    </tr>
+    <tr>
+      <td>Early Shipping Order</td>
+      <td>{{warehouse.tariffs.miscellaneous.shippingEarlyOrderRate}}</td>
+    </tr>
+    <tr>
+      <td>Change of Shipping Order</td>
+      <td>{{warehouse.tariffs.miscellaneous.shippingChangeOrderRate}}</td>
+    </tr>
+    <tr>
+      <td>Conversion of Shipping Order</td>
+      <td>{{warehouse.tariffs.miscellaneous.shippingConversionOrderRate}}</td>
+    </tr>
+    <tr>
+      <td>Swapping of Shipping Order</td>
+      <td>{{warehouse.tariffs.miscellaneous.shippingSwappingOrderRate}}</td>
+    </tr>
+    <tr >
+      <td>Resale of Shipping Order</td>
+      <td>{{warehouse.tariffs.miscellaneous.shippingResaleOrderRate}}</td>
+    </tr>
+    <tr>
+      <td>Delayed Pick-Up</td>
+      <td>{{warehouse.tariffs.miscellaneous.shippingDelayedPickUpRate}}</td>
+    </tr>
+    <tr>
+      <td>Cancellation of Order</td>
+      <td>{{warehouse.tariffs.miscellaneous.shippingCancellationRate}}</td>
+    </tr>
+    <tr>
+      <td>Receipt Conversion</td>
+      <td>{{warehouse.tariffs.miscellaneous.receiptConversionRate}}</td>
+    </tr>
+    <tr>
+      <td>Ranging for Inspection</td>
+      <td>{{warehouse.tariffs.miscellaneous.rangingInspectionRate}}</td>
+    </tr>
+  </table>
+  <button style="float: left" (click)="onClickBack($event)">Back</button>
+  <button style="float: right" (click)="onClickEditTariffForm($event)">Edit Form</button>
+  <button style="float: right" (click)="onClickEditTariffSchema($event)">Edit Schema</button>
+</div>
+
+<div *ngIf="isEdit">
+    <div *ngIf="isSchemaEdit">
+      <app-json-editor
+      #jsonEditorComponent
+      [schema]="tariffSchema"
+      [json]="tariffsJson"
+      (jsonChange)="jsonChange($event)">
+    </app-json-editor>
+    </div>
+    <div *ngIf="isFormEdit">
+        <app-tariff-form [warehouse]="warehouse" (formSubmit)="formSubmit($event)"></app-tariff-form>
+    </div>
+</div>
+
+
+

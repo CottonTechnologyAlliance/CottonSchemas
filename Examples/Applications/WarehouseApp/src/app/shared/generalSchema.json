@@ -1,6 +1,6 @@
 {
-	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://github.com/KristiLofton/CottonSchemas/blob/master/Schemas/Common/generalSchema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "generalSchema.json",
 	"title": "General",
 	"type": "object",
 	"definitions": {
@@ -13,26 +13,26 @@
 		"name": {
 			"title": "Name",
 			"description": "The name of a person or organization.",
-			"type": "string",
-			"minLength": 1
+      "type": "string",
+      "minLength": 1
 		},
 		"addressFullText": {
 			"title": "Address",
 			"description": "A complete address.",
 			"type": "object",
 			"properties": {
-				"addressType": {
-					"title": "Address Type",
-					"description": "The type of address",
-					"type": "string",
-					"enum": ["Primary", "Mailing"],
-					"default": "Primary"
-				},
+        "addressType": {
+          "title": "Address Type",
+          "description": "The type of address",
+          "type": "string",
+          "enum": ["Primary", "Mailing"],
+          "default": "Primary"
+        },
 				"addressLine1": {
 					"title": "Address Line 1",
 					"description": "The first line of the address.",
-					"type": "string",
-					"minLength": 1
+          "type": "string",
+          "minLength": 1
 				},
 				"addressLine2": {
 					"title": "Address Line 2",
@@ -42,26 +42,26 @@
 				"city": {
 					"title": "City",
 					"description": "The city the address is located in.",
-					"type": "string",
-					"minLength": 1
+          "type": "string",
+          "minLength": 1
 				},
 				"stateProvince": {
 					"title": "State or Province",
 					"description": "The state or province the address is located in.",
-					"type": "string",
-					"minLength": 1
+          "type": "string",
+          "minLength": 1
 				},
 				"zipPostalCode": {
 					"title": "ZIP or Postal Code",
 					"description": "The ZIP or postal code of the address.",
-					"type": "string",
-					"minLength": 1
+          "type": "string",
+          "minLength": 1
 				},
 				"country": {
 					"title": "Country",
 					"description": "A country, territory, dependency, or other such geopolitical subdivision of a location.",
-					"type": "string",
-					"default": "USA"
+          "type": "string",
+          "default": "USA"
 				}
 			},
 			"required": [
@@ -74,44 +74,44 @@
 		"telephoneNumber": {
 			"title": "Telephone Number",
 			"description": "A full telephone number.",
-			"type": "object",
-			"properties": {
-				"telephoneType": {
-					"title": "Telephone Type",
-					"description": "The type of telephone number",
-					"type": "string",
-					"enum": ["Primary", "Secondary", "Cell", "Work", "Home", "Fax"],
-					"default": "Primary"
-				},
-				"number": {
-					"title": "Number",
-					"description": "The digits of the telephone number.",
-					"type": "string",
-					"minLength": 1
-				}
-			},
-			"required": [
-				"number"
-			]
+      "type": "object",
+      "properties": {
+        "telephoneType": {
+          "title": "Telephone Type",
+          "description": "The type of telephone number",
+          "type": "string",
+          "enum": ["Primary", "Secondary", "Cell", "Work", "Home", "Fax"],
+          "default": "Primary"
+        },
+        "number": {
+          "title": "Number",
+          "description": "The digits of the telephone number.",
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "number"
+      ]
 		},
 		"email": {
 			"title": "Email Address",
 			"description": "An email address for a contact.",
-			"type": "string",
-			"format": "email"
+      "type": "string",
+      "format": "email"
 		},
 		"currencyCodeType": {
 			"title": "Currency Code Type",
-			"description": "A data type for a currency that qualifies a monetary amount.",
-			"type": "string",
-			"enum": ["EUR","GBP","USD", "CNY"],
-			"default": "USD"
+      "description": "A data type for a currency that qualifies a monetary amount.",
+      "type": "string",
+      "enum": ["EUR","GBP","USD", "CNY"],
+      "default": "USD"
 		},
 		"unitStandard": {
 			"title": "Unit Standard",
 			"description": "A quantity chosen as a standard in terms of which other quantities may be expressed.",
-			"type": "string",
-			"minLength": 1
+      "type": "string",
+      "minLength": 1
 		}
 	}
 }

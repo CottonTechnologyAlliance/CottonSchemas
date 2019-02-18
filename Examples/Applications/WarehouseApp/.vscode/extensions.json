@@ -1,0 +1,43 @@
+{
+  "recommendations": [
+    /** Important */
+    "editorconfig.editorconfig",
+    "eamodio.gitlens",
+    "eg2.tslint",
+    "codezombiech.gitignore",
+    "esbenp.prettier-vscode",
+    "hookyqr.beautify",
+    "robinbentley.sass-indented",
+    "dbaeumer.vscode-eslint",
+
+    /** Optional, but recomended */
+    "zignd.html-css-class-completion",
+    "msjsdiag.debugger-for-chrome",
+    "eg2.vscode-npm-script",
+    "christian-kohler.npm-intellisense",
+    "kisstkondoros.vscode-gutter-preview",
+    "tyriar.lorem-ipsum",
+    "ryu1kn.partial-diff",
+    "ionutvmi.path-autocomplete",
+    "cssho.vscode-svgviewer",
+    "wayou.vscode-todo-highlight",
+    "tomoki1207.pdf",
+
+    /** Optional */
+
+    // There are a few snippet extensions similar to this.
+    "mikael.angular-beastcode",
+
+    // Not perfect, but usually not much to fix with the files it generates.
+    //  Maintainer doesn't seem to keep it up to date with current angular cli
+    //  generators.
+    "alexiv.vscode-angular2-files",
+
+    // I sometimes use this, but it is sometimes a little too strict.
+    // "kisstkondoros.vscode-codemetrics",
+
+    // I don't use this often, but it works well.
+    "ms-vsliveshare.vsliveshare",
+
+  ]
+}
