@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://github.com/KristiLofton/CottonSchemas/blob/master/Schemas/Common/entitySchema.json",
+	"$id": "entitySchema.json",
 	"title": "Entity",
 	"type": "object",
 	"definitions": {
