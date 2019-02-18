@@ -3,8 +3,8 @@ import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angu
 
 import { JsonEditorComponent } from '../json-editor/json-editor.component'
 
-import tariffSchema from '../shared/tariffSchema.json'
 import { Warehouse } from '../shared/warehouse.model'
+import warehouseTariffSchema from '../shared/warehouseTariffSchema.json'
 
 @Component({
   selector: 'app-tariffs',
@@ -26,7 +26,7 @@ export class TariffsComponent implements OnInit {
 
   warehouseCert: string
 
-  tariffSchema = tariffSchema
+  warehouseTariffSchema = warehouseTariffSchema
 
   tariffsJson
 
@@ -37,7 +37,7 @@ export class TariffsComponent implements OnInit {
     this.tariffsJson = this.warehouse.tariffs
 
     console.log(this.warehouse)
-    console.log(this.tariffSchema)
+    console.log(this.warehouseTariffSchema)
 
     this.warehouse.tariffs.warehouseIdentity.entityName = this.warehouse.name
     this.warehouse.tariffs.warehouseIdentity.entityType.warehouseCode = this.warehouse.code

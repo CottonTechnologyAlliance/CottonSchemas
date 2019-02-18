@@ -326,7 +326,7 @@
     <div *ngIf="isSchemaEdit">
       <app-json-editor
       #jsonEditorComponent
-      [schema]="tariffSchema"
+      [schema]="warehouseTariffSchema"
       [json]="tariffsJson"
       (jsonChange)="jsonChange($event)">
     </app-json-editor>

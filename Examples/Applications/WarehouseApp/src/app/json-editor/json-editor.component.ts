@@ -25,7 +25,7 @@ export class JsonEditorComponent implements OnInit {
   jsonEditor: any
   isLoad = false
   isChangeSchema = false
-  tariffSchema: any
+  warehouseTariffSchema: any
   tariffJson: any
   addressJson = {
     'address': [{
@@ -53,7 +53,7 @@ export class JsonEditorComponent implements OnInit {
     const options = {
       mode: 'tree',
       modes: ['tree', 'code', 'text'],
-      schema: this.tariffSchema,
+      schema: this.warehouseTariffSchema,
       schemaRefs: {
         '#/definitions/rateAmount': this.schema.definitions.rateAmount,
         'entitySchema.json#/definitions/entity': this.entitySchema.definitions.entity,
@@ -81,7 +81,7 @@ export class JsonEditorComponent implements OnInit {
 
   ngOnInit() {
     console.log(this.entitySchema)
-    this.tariffSchema = this.schema
+    this.warehouseTariffSchema = this.schema
     this.tariffJson = this.json
     this.jsonEditor = new JSONEditor(this.jsonEditorElem.nativeElement, this.setOptions(), this.tariffJson)
     this.jsonEditor.expandAll()
@@ -157,11 +157,11 @@ export class JsonEditorComponent implements OnInit {
   changeSchema(e) {
     const currentJson = this.jsonEditor.get()
     if (e.target.value === 'tariff') {
-      if (this.jsonEditor.options.schema === this.tariffSchema) {
+      if (this.jsonEditor.options.schema === this.warehouseTariffSchema) {
         this.isChangeSchema = false
       } else {
         this.addressJson = currentJson
-        this.jsonEditor.setSchema(this.tariffSchema, {
+        this.jsonEditor.setSchema(this.warehouseTariffSchema, {
           '#/definitions/rateAmount': {'type': 'number', 'minimum': 0, 'maximum': 50},
           'entitySchema.json#/definitions/entity': {'type': 'object'},
           'entitySchema.json#/definitions/entityID': {'type': 'number'},
