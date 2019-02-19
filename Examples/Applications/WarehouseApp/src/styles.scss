@@ -181,4 +181,10 @@ div.jsoneditor td {
   border: hidden;
 }
 
+.jsoneditor-text-errors td {
+  word-wrap: break-word;
+}
 
+.ace-jsoneditor, textarea.jsoneditor-text {
+  min-height: 400px;
+}
