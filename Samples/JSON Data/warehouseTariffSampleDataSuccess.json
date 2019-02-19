@@ -1,0 +1,72 @@
+{
+	"warehouseIdentity": {
+		"entityID": 10,
+		"entityName": "Test Warehouse",
+		"entityAddress": [{
+			"addressType": "Primary",
+			"addressLine1": "1234 Abc Ln.",
+			"city": "Memphis",
+			"stateProvince": "TN",
+			"zipPostalCode": "38111",
+			"country": "United States"
+		},
+		{
+			"addressType": "Mailing",
+			"addressLine1": "5678 Abc Ln.",
+			"city": "Memphis",
+			"stateProvince": "TN",
+			"zipPostalCode": "38111",
+			"country": "United States"	
+		}],
+		"entityType": {
+			"warehouseCode": "123456",
+			"warehouseLicense": "1-1234",
+			"warehouseCert": false
+		}
+	},
+	"currency": {
+		"currencyType": "USD"
+	},
+	"unit": {
+		"unitType": "bale"
+	},
+	"warehouseTariffDate": {
+		"beginDate": "2018-11-06",
+		"endDate": "2019-11-05"
+	},
+	"warehouseReceiving": {
+		"receivingRate": 2.25
+	},
+	"warehouseStorage": {
+		"storageRate": 4.00
+	},
+	"warehouseLoading": {
+		"loadingRate": 2.50
+	},
+	"warehouseCompression": {
+		"compressionRate": 9.50,
+		"compressionExtraRate": 4.50
+	},
+	"warehouseMarking": {
+		"markingRate": 0.40
+	},
+	"warehouseClassing": {
+		"samplingShipmentRate": 4.25,
+		"samplingStorageRate": 6.00,
+		"samplingOneSideRate": 2.50
+	},
+	"warehouseWeighing": {
+		"weighingShipmentRate": 2.00,
+		"weighingStorageRate": 3.25,
+		"weighingAndSamplingRate": 7.50
+	},
+	"miscellaneous": {
+		"markingExtraRate": 0.50,
+		"samplingDeliveryRate": 5.00,
+		"weighingSheetsRate": 0.75,
+		"loadingFlatbedRate": 1.00,
+		"surchargeFee": 3.00,
+		"shippingDelayedPickUpRate": 7.50,
+		"shippingCancellationRate": 18.00
+	}
+}

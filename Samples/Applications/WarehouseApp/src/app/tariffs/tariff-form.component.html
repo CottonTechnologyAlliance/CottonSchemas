@@ -28,20 +28,20 @@
           <div *ngFor="let address of entityAddress.controls; let i = index" formGroupName="{{i}}">
             <p><input type="text" formControlName="addressType" placeholder="Primary"></p>
             <p><input type="text" formControlName="addressLine1" placeholder="Address Line 1"></p>
-              <p class="invalid-feedback" *ngIf="address.get('addressLine1').errors?.required && address.errors?.isDirty">
+              <p class="invalid-feedback" *ngIf="address.errors?.isDirty">
                 Address Required.
               </p>
             <p><input type="text" formControlName="addressLine2" placeholder="Address Line 2"></p>
             <p><input type="text" formControlName="city" placeholder="City"></p>
-              <p class="invalid-feedback" *ngIf="address.get('city').errors?.required && address.errors?.isDirty">
+              <p class="invalid-feedback" *ngIf="address.errors?.isDirty">
                 City Required.
               </p>
             <p><input type="text" formControlName="stateProvince" placeholder="State or Province"></p>
-              <p class="invalid-feedback" *ngIf="address.get('stateProvince').errors?.required && address.errors?.isDirty">
+              <p class="invalid-feedback" *ngIf="address.errors?.isDirty">
                 State or Province Required.
               </p>
             <p><input type="text" formControlName="zipPostalCode" placeholder="ZIP or Postal Code"></p>
-              <p class="invalid-feedback" *ngIf="address.get('zipPostalCode').errors?.required && address.errors?.isDirty">
+              <p class="invalid-feedback" *ngIf="address.errors?.isDirty">
                 Zip or Postal Code Required.
               </p>
             <p><input type="text" formControlName="country" placeholder="Country"></p>
@@ -116,7 +116,7 @@
         <td>Receiving</td>
         <td><input type="number" formControlName="receivingRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('warehouseReceiving.receivingRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -124,7 +124,7 @@
         <td>Receiving Certificated</td>
         <td><input type="number" formControlName="receivingCertRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('warehouseReceiving.receivingCertRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -135,7 +135,7 @@
         <td>Storage</td>
         <td><input type="number" formControlName="storageRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('warehouseStorage.storageRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -143,7 +143,7 @@
         <td>Storage Certificated</td>
         <td><input type="number" formControlName="storageCertRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('warehouseStorage.storageCertRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -151,7 +151,7 @@
         <td>Storage Insurance</td>
         <td><input type="number" formControlName="storageInsuranceRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('warehouseStorage.storageInsuranceRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -162,7 +162,7 @@
         <td>Loading</td>
         <td><input type="number" formControlName="loadingRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('warehouseLoading.loadingRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -173,7 +173,7 @@
         <td>Compression</td>
         <td><input type="number" formControlName="compressionRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('warehouseCompression.compressionRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -181,7 +181,7 @@
         <td>Compression Patch</td>
         <td><input type="number" formControlName="compressionPatchRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('warehouseCompression.compressionPatchRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -189,7 +189,7 @@
         <td>Compression Extra</td>
         <td><input type="number" formControlName="compressionExtraRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('warehouseCompression.compressionExtraRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -200,7 +200,7 @@
         <td>Marking</td>
         <td><input type="number" formControlName="markingRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('warehouseMarking.markingRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -208,7 +208,7 @@
         <td>Marking Extra</td>
         <td><input type="number" formControlName="markingExtraRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('warehouseMarking.markingExtraRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -219,7 +219,7 @@
         <td>Sampling at Shipment</td>
         <td><input type="number" formControlName="samplingShipmentRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('warehouseClassing.samplingShipmentRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -227,7 +227,7 @@
         <td>Sampling from Storage</td>
         <td><input type="number" formControlName="samplingStorageRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('warehouseClassing.samplingStorageRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -235,7 +235,7 @@
         <td>Sampling One Side</td>
         <td><input type="number" formControlName="samplingOneSideRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('warehouseClassing.samplingOneSideRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -243,7 +243,7 @@
         <td>Classing Certificated</td>
         <td><input type="number" formControlName="classingCertRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('warehouseClassing.classingCertRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50..
           </p>
         </td>
       </tr>
@@ -254,7 +254,7 @@
         <td>Weighing at Shipment</td>
         <td><input type="number" formControlName="weighingShipmentRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('warehouseWeighing.weighingShipmentRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -262,7 +262,7 @@
         <td>Weighing from Storage</td>
         <td><input type="number" formControlName="weighingStorageRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('warehouseWeighing.weighingStorageRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -270,7 +270,7 @@
         <td>Weighing and Sampling</td>
         <td><input type="number" formControlName="weighingAndSamplingRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('warehouseWeighing.weighingAndSamplingRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -281,7 +281,7 @@
         <td>Receiving Additional Fee</td>
         <td><input type="number" formControlName="receivingAdditionalFee">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.receivingAdditionalFee').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -289,7 +289,7 @@
         <td>Extra Sampling</td>
         <td><input type="number" formControlName="samplingExtraRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.samplingExtraRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -297,7 +297,7 @@
         <td>Special Sample Sorting</td>
         <td><input type="number" formControlName="samplingSortingRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.samplingSortingRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -305,7 +305,7 @@
         <td>Delivery of Samples</td>
         <td><input type="number" formControlName="samplingDeliveryRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.samplingDeliveryRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -313,7 +313,7 @@
         <td>Sample Sacks</td>
         <td><input type="number" formControlName="samplingSackRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.samplingSackRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -321,7 +321,7 @@
         <td>Closing Sample Holes</td>
         <td><input type="number" formControlName="samplingHolesRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.samplingHolesRate').errors?.invalidNumber">
-              Please enter a valid number.
+              Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -329,7 +329,7 @@
         <td>Weight Sheets</td>
         <td><input type="number" formControlName="weighingSheetsRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.weighingSheetsRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -337,7 +337,7 @@
         <td>Typing Under Weight</td>
         <td><input type="number" formControlName="typingUnderRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.typingUnderRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -345,7 +345,7 @@
         <td>Typing Over Weight</td>
         <td><input type="number" formControlName="typingOverRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.typingOverRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -353,7 +353,7 @@
         <td>Brushing Cotton</td>
         <td><input type="number" formControlName="reconditioningBrushingRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.reconditioningBrushingRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -361,7 +361,7 @@
         <td>Drying Wet Cotton</td>
         <td><input type="number" formControlName="reconditioningDryingRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.reconditioningDryingRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -369,7 +369,7 @@
         <td>Damaged Cotton</td>
         <td><input type="number" formControlName="reconditioningDamagedRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.reconditioningDamagedRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -377,7 +377,7 @@
         <td>Bailing</td>
         <td><input type="number" formControlName="reconditioningBailingRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.reconditioningBailingRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -385,7 +385,7 @@
         <td>Fumigation</td>
         <td><input type="number" formControlName="reconditioningFumigationRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.reconditioningFumigationRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -393,7 +393,7 @@
         <td>Phytosanitary Certificate</td>
         <td><input type="number" formControlName="phytosanitaryRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.phytosanitaryRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -401,7 +401,7 @@
         <td>Receiving Block Storage</td>
         <td><input type="number" formControlName="receivingBlockRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.receivingBlockRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -409,7 +409,7 @@
         <td>Block Storage</td>
         <td><input type="number" formControlName="storageBlockRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.storageBlockRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -417,7 +417,7 @@
         <td>Loading Block Storage</td>
         <td><input type="number" formControlName="loadingBlockRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.loadingBlockRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -425,7 +425,7 @@
         <td>Expedited Loading</td>
         <td><input type="number" formControlName="loadingExpeditedRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.loadingExpeditedRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -433,7 +433,7 @@
         <td>Flatbed Loading</td>
         <td><input type="number" formControlName="loadingFlatbedRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.loadingFlatbedRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -441,7 +441,7 @@
         <td>Handling Transit Cotton</td>
         <td><input type="number" formControlName="handlingTransitRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.handlingTransitRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -449,7 +449,7 @@
         <td>Unloading</td>
         <td><input type="number" formControlName="unloadingRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.unloadingRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -457,7 +457,7 @@
         <td>Rehandling</td>
         <td><input type="number" formControlName="rehandlingRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.rehandlingRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -465,7 +465,7 @@
         <td>Rearranging</td>
         <td><input type="number" formControlName="rearrangingRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.rearrangingRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -473,7 +473,7 @@
         <td>Consolidation</td>
         <td><input type="number" formControlName="consolidationRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.consolidationRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -481,7 +481,7 @@
         <td>Surcharge Fee</td>
         <td><input type="number" formControlName="surchargeFee">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.surchargeFee').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -489,7 +489,7 @@
         <td>Matching Tags</td>
         <td><input type="number" formControlName="matchingTagsRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.matchingTagsRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -497,7 +497,7 @@
         <td>Shipping Tags</td>
         <td><input type="number" formControlName="shippingTagsRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.shippingTagsRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -505,7 +505,7 @@
         <td>Extra Shipping Ties</td>
         <td><input type="number" formControlName="shippingExtraTiesRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.shippingExtraTiesRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -513,7 +513,7 @@
         <td>Bolt Seal</td>
         <td><input type="number" formControlName="shippingBoltSealRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.shippingBoltSealRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -521,7 +521,7 @@
         <td>Drayage</td>
         <td><input type="number" formControlName="shippingDrayageRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.shippingDrayageRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -529,7 +529,7 @@
         <td>On-Hold</td>
         <td><input type="number" formControlName="shippingOnHoldRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.shippingOnHoldRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -537,7 +537,7 @@
         <td>Early Shipping Order</td>
         <td><input type="number" formControlName="shippingEarlyOrderRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.shippingEarlyOrderRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -545,7 +545,7 @@
         <td>Change of Shipping Order</td>
         <td><input type="number" formControlName="shippingChangeOrderRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.shippingChangeOrderRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -553,7 +553,7 @@
         <td>Conversion of Shipping Order</td>
         <td><input type="number" formControlName="shippingConversionOrderRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.shippingConversionOrderRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -561,7 +561,7 @@
         <td>Swapping of Shipping Order</td>
         <td><input type="number" formControlName="shippingSwappingOrderRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.shippingSwappingOrderRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -569,7 +569,7 @@
         <td>Resale of Shipping Order</td>
         <td><input type="number" formControlName="shippingResaleOrderRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.shippingResaleOrderRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -577,7 +577,7 @@
         <td>Delayed Pick-Up</td>
         <td><input type="number" formControlName="shippingDelayedPickUpRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.shippingDelayedPickUpRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -585,7 +585,7 @@
         <td>Cancellation of Order</td>
         <td><input type="number" formControlName="shippingCancellationRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.shippingCancellationRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -593,7 +593,7 @@
         <td>Receipt Conversion</td>
         <td><input type="number" formControlName="receiptConversionRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.receiptConversionRate').errors?.invalidNumber">
-              Please enter a valid number.
+            Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>
@@ -601,7 +601,7 @@
         <td>Ranging for Inspection</td>
         <td><input type="number" formControlName="rangingInspectionRate">
           <p class="invalid-feedback" *ngIf="tariffForm.get('miscellaneous.rangingInspectionRate').errors?.invalidNumber">
-              Please enter a valid number.
+              Please enter a valid number between 0-50.
           </p>
         </td>
       </tr>

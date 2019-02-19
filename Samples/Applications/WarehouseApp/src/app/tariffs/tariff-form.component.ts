@@ -29,32 +29,33 @@ function validCurrency (c: AbstractControl): { [key: string]: boolean } | null {
 }
 
 function validDate (c: AbstractControl): { [key: string]: boolean } | null {
-    const begin = c.get('beginDate')
-    const end = c.get('endDate')
-    if (!begin || !end) {
-      return null
-    }
-    return begin.value > end.value ? { invalidDate: true } : null
-  }
-
-  function returnPristine (c: AbstractControl): { [key: string]: boolean } | null {
-    const addressType = c.get('addressType').value
-    const addressLine1 = c.get('addressLine1').value
-    const addressLine2 = c.get('addressLine2').value
-    const city = c.get('city').value
-    const stateProvince = c.get('stateProvince').value
-    const zipPostalCode = c.get('zipPostalCode').value
-    const country = c.get('country').value
-    if (c.dirty) {
-      // tslint:disable-next-line:max-line-length
-      if (addressType === 'Primary' && addressLine1 === '' && addressLine2 === '' && city === '' && stateProvince === '' && zipPostalCode === '' && country === 'USA') {
-        return {'isDirty': false}
-      } else {
-        return {'isDirty': true}
-      }
-    }
+  const begin = c.get('beginDate')
+  const end = c.get('endDate')
+  if (!begin || !end) {
     return null
   }
+  return begin.value > end.value ? { 'invalidDate': true } : null
+}
+
+function returnPristine (c: AbstractControl): { [key: string]: boolean } | null {
+  const addressType = c.get('addressType').value
+  const addressLine1 = c.get('addressLine1').value
+  const addressLine2 = c.get('addressLine2').value
+  const city = c.get('city').value
+  const stateProvince = c.get('stateProvince').value
+  const zipPostalCode = c.get('zipPostalCode').value
+  const country = c.get('country').value
+  if (c.untouched || c.pristine) {
+    return null
+  } else if (c.dirty) {
+    // tslint:disable-next-line:max-line-length
+    if (addressType === 'Primary' && addressLine1 === '' && addressLine2 === '' && city === '' && stateProvince === '' && zipPostalCode === '' && country === 'USA') {
+      return null
+    } else if (addressLine1 === '' || city === '' || stateProvince === '' || zipPostalCode === '') {
+      return { 'isDirty': true}
+    }
+  }
+}
 
 @Component({
   selector: 'app-tariff-form',
@@ -200,11 +201,11 @@ export class TariffFormComponent implements OnInit {
   patchValues(addressType, addressLine1, addressLine2, city, stateProvince, zipPostalCode, country) {
     return this.builder.group({
       addressType: [addressType],
-      addressLine1: [addressLine1, Validators.required],
+      addressLine1: [addressLine1],
       addressLine2: [addressLine2],
-      city: [city, Validators.required],
-      stateProvince: [stateProvince, Validators.required],
-      zipPostalCode: [zipPostalCode, Validators.required],
+      city: [city],
+      stateProvince: [stateProvince],
+      zipPostalCode: [zipPostalCode],
       country: [country]
     }, {validator: returnPristine})
   }
