@@ -6,8 +6,6 @@ import JSONEditor from 'jsoneditor'
 import { merge } from 'lodash'
 
 import addressSchema from '../shared/addressSchema.json'
-import entitySchema from '../shared/entitySchema.json'
-import generalSchema from '../shared/generalSchema.json'
 
 export type JSONEditorModes = 'tree' | 'view' | 'form' | 'code' | 'text'
 
@@ -19,14 +17,21 @@ export type JSONEditorModes = 'tree' | 'view' | 'form' | 'code' | 'text'
 
 export class JsonEditorComponent implements OnInit {
 
-  @Input() schema
+  @Input() warehouseTariff
+  @Input() entity
+  @Input() general
   @Input() json
 
-  jsonEditor: any
   isLoad = false
   isChangeSchema = false
-  warehouseTariffSchema: any
-  tariffJson: any
+
+  jsonEditor
+  tariffJson
+  warehouseTariffSchema
+  entitySchema
+  generalSchema
+
+  addressSchema = addressSchema
   addressJson = {
     'address': [{
       'addressType': '',
@@ -38,10 +43,6 @@ export class JsonEditorComponent implements OnInit {
       'country': ''
     }]
   }
-
-  entitySchema = entitySchema
-  generalSchema = generalSchema
-  addressSchema = addressSchema
 
   @Output() jsonChange = new EventEmitter<any>()
 
@@ -55,7 +56,7 @@ export class JsonEditorComponent implements OnInit {
       modes: ['tree', 'code', 'text'],
       schema: this.warehouseTariffSchema,
       schemaRefs: {
-        '#/definitions/rateAmount': this.schema.definitions.rateAmount,
+        '#/definitions/rateAmount': this.warehouseTariffSchema.definitions.rateAmount,
         'entitySchema.json#/definitions/entity': this.entitySchema.definitions.entity,
         'generalSchema.json#/definitions/name': this.generalSchema.definitions.name,
         'generalSchema.json#/definitions/addressFullText': this.generalSchema.definitions.addressFullText,
@@ -80,8 +81,9 @@ export class JsonEditorComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.entitySchema)
-    this.warehouseTariffSchema = this.schema
+    this.warehouseTariffSchema = this.warehouseTariff
+    this.entitySchema = this.entity
+    this.generalSchema = this.general
     this.tariffJson = this.json
     this.jsonEditor = new JSONEditor(this.jsonEditorElem.nativeElement, this.setOptions(), this.tariffJson)
     this.jsonEditor.expandAll()

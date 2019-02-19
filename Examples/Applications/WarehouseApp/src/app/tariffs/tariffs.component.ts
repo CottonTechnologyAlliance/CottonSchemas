@@ -2,9 +2,9 @@ import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angu
 
 
 import { JsonEditorComponent } from '../json-editor/json-editor.component'
+import { SchemaService } from '../shared/schema.service'
 
 import { Warehouse } from '../shared/warehouse.model'
-import warehouseTariffSchema from '../shared/warehouseTariffSchema.json'
 
 @Component({
   selector: 'app-tariffs',
@@ -26,21 +26,28 @@ export class TariffsComponent implements OnInit {
 
   warehouseCert: string
 
-  warehouseTariffSchema = warehouseTariffSchema
+  warehouseTariffSchema
+  entitySchema
+  generalSchema
 
   tariffsJson
 
   @ViewChild(JsonEditorComponent) jsonEditorComponent: JsonEditorComponent
+
+  constructor(private service: SchemaService) {}
 
   ngOnInit() {
 
     this.tariffsJson = this.warehouse.tariffs
 
     console.log(this.warehouse)
-    console.log(this.warehouseTariffSchema)
 
     this.warehouse.tariffs.warehouseIdentity.entityName = this.warehouse.name
     this.warehouse.tariffs.warehouseIdentity.entityType.warehouseCode = this.warehouse.code
+
+    this.getTariffSchema()
+    this.getEntitySchema()
+    this.getGeneralSchema()
   }
 
   onClickEditTariffForm(e) {
@@ -75,11 +82,37 @@ export class TariffsComponent implements OnInit {
     this.tariffsJson = this.warehouse.tariffs
   }
 
+  getTariffSchema() {
+    this.service.getTariffSchema()
+      .subscribe(data => {
+        this.warehouseTariffSchema = data
+        console.log(this.warehouseTariffSchema)
+      })
+  }
+
+  getEntitySchema() {
+    this.service.getEntitySchema()
+      .subscribe(data => {
+        this.entitySchema = data
+        console.log(this.entitySchema)
+      }
+    )
+  }
+
+  getGeneralSchema() {
+    this.service.getGeneralSchema()
+      .subscribe(data => {
+        this.generalSchema = data
+        console.log(this.generalSchema)
+      }
+    )
+  }
+
   jsonChange(json) {
     this.tariffsJson = JSON.parse(JSON.stringify(json))
-    console.log(this.warehouse.tariffs)
     this.warehouse.tariffs = this.tariffsJson
-    console.log(this.warehouse.tariffs)
+    this.warehouse.name = this.warehouse.tariffs.warehouseIdentity.entityName
+    this.warehouse.code = this.warehouse.tariffs.warehouseIdentity.entityType.warehouseCode
     this.isSchemaEdit = false
     this.isForm = true
   }

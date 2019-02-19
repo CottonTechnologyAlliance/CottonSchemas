@@ -8,6 +8,7 @@ import { AppComponent } from './app.component'
 
 import { TariffFormComponent, TariffsComponent, WarehouseComponent, WarehouseFormComponent, WarehouseListComponent } from './index'
 import { JsonEditorComponent } from './json-editor/json-editor.component'
+import { SchemaService } from './shared/schema.service'
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { JsonEditorComponent } from './json-editor/json-editor.component'
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [SchemaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
