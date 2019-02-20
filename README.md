@@ -29,7 +29,7 @@
 
 #### Other Helpful Sites
 
-##### Guides for understanding JSON Schema:
+##### Guides for JSON Schema:
 * [JSON Schema](https://json-schema.org/)
 * [Understanding JSON Schema](https://json-schema.org/understanding-json-schema/index.html)
 
