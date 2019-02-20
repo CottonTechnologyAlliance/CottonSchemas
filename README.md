@@ -21,7 +21,7 @@
 * [SharePoint](https://theseam2.sharepoint.com/sites/cta/SitePages/Home.aspx)
 
 #### Warehouse Tariff Sample Application
-* [WarehouseApp](https://ipfs.theseam.io/ipfs/QmYMz57LuTA3bWGxnQUDxr39JmXYTxCaXEHmTDdGqzW4Fe/#/)
+* [WarehouseApp](https://ipfs.theseam.io/ipfs/QmaT7Ye2kNMpTaBCabPgmPbws2eXJvTTxG8vxCafisef1L/#/)
 
 #### JSON Schema Validators
 * [JSON Editor](https://jsoneditoronline.org/)
