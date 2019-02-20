@@ -107,7 +107,3 @@ export class Warehouse {
     }
   }
 }
-
-
-// Need to fix schemas:
-  // addressType, numberType, definitions ref, possible schema ids
