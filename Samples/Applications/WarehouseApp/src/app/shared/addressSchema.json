@@ -1,0 +1,51 @@
+{
+  "$id": "addressSchema.json",
+	"title": "Address",
+	"type": "object",
+	"properties": {
+    "address": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "addressType": {
+            "type": "string",
+            "enum": ["Primary", "Mailing"],
+            "default": "Primary"
+          },
+          "addressLine1": {
+            "type": "string",
+            "minLength": 1
+          },
+          "addressLine2": {
+            "type": "string",
+            "minLength": 1
+          },
+          "city": {
+            "type": "string",
+            "minLength": 1
+          },
+          "stateProvince": {
+            "type": "string",
+            "minLength": 1
+          },
+          "zipPostalCode": {
+            "type": "string",
+            "minLength": 1
+          },
+          "country": {
+            "type": "string",
+            "minLength": 1,
+            "default": "USA"
+          }
+        },
+        "required": [
+          "addressLine1",
+          "city",
+          "stateProvince",
+          "zipPostalCode"
+        ]
+      }
+    }
+  }
+}

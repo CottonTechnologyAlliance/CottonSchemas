@@ -1,0 +1,20 @@
+<script src="https://bgrins.github.io/filereader.js/filereader.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2014-11-29/FileSaver.min.js"></script>
+
+<div class="tableContainer">
+  <div style="display: inline-block">
+    <button (click)="onClickChangeSchema($event)">Change Schema</button>
+    <select *ngIf="isChangeSchema" (change)="changeSchema($event)">
+      <option value="" disabled selected style="display: none">Schemas</option>
+      <option value="tariff">Warehouse Tariff</option>
+      <option value="address">Address</option>
+    </select>
+  </div>
+  <div class="json-editor-container" #jsonEditorElem>
+      <p *ngIf="isLoad"><input type="file" id="loadDocument" (change)="onLoadDocument($event)"></p>
+  </div>
+  <button style="float: left" (click)="onClickImport()">Import</button>
+  <button style="float: left" (click)="onClickExport()">Export</button>
+  <button style="float: right" (click)="onClickSave()">Save</button>
+  <button style="float: right" (click)="onClickBack()">Back</button>
+</div>

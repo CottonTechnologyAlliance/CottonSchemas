@@ -1,0 +1,17 @@
+<h1>Warehouse Tariffs</h1>
+<div class="pageHeader">
+  This sample application models how a schema can be integrated into a simple web app and used for data collection, integration, and validation. The application uses JSON Editor for json integration and schema validation.<br>
+  The CTA Warehouse Tariff Schema was used as a model for the application and can be referenced <a href="https://github.com/CottonTechnologyAlliance/CottonSchemas/blob/master/Schemas/Warehouse%20Tariff/warehouseTariffSchema.json">here</a>.
+</div>
+
+<div class="container">
+  <div>
+    <app-warehouse *ngFor="let warehouse of warehouses; index as i" [warehouse]="warehouse" [i]="i"></app-warehouse>
+  </div>
+
+  <div *ngIf="isVisible">
+      <p><app-warehouse-form (warehouseAdded)="warehouseAdded($event)"></app-warehouse-form></p>
+  </div>
+
+  <button (click)="onClickAdd($event)">Add</button>
+</div>

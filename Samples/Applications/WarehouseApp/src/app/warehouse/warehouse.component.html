@@ -1,0 +1,27 @@
+<div #{{i}} class="container">
+  <div>
+    <p class="warehouseName">{{warehouse.name}}</p>
+    <p class="warehouseCode">{{warehouse.code}}</p>
+    <button (click)="onClickEdit($event)">Edit</button>
+    <div class="divider"></div>
+    <button (click)="onClickDelete($event)">Delete</button>
+    <div class="divider"></div>
+    <button (click)="onClickForm($event)">Form</button>
+  </div>
+
+  <div class="tempContainer" *ngIf="isEditVisible">
+    <form [formGroup]="warehouseEditForm" (ngSubmit)="onSubmitEdit()">
+      <div>
+        <input type="text" formControlName="name" placeholder="{{warehouse.name}}">
+      </div>
+      <div>
+        <input type="text" formControlName="code" placeholder="{{warehouse.code}}">
+      </div>
+      <button type="submit" class="tempButton">Save</button>
+    </form>
+  </div>
+
+  <div *ngIf="isFormVisible">
+    <p><app-tariffs [warehouse]="warehouse" (isNotForm)="isNotForm($event)"></app-tariffs></p>
+  </div>
+</div>

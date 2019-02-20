@@ -1,0 +1,26 @@
+{
+  "beautify.language": {
+    "js": {
+      "filename": [".jshintrc", ".jsbeautifyrc"]
+    },
+    "css": ["css", "scss"],
+    "html": ["htm", "html"]
+  },
+  // Set the default
+  "editor.formatOnSave": false,
+  // Enable per-language
+  "[javascript]": {
+      "editor.formatOnSave": false
+    },
+  "[typescript]": {
+      "editor.formatOnSave": false
+    },
+  "tslint.autoFixOnSave": [
+    "ordered-imports",
+    "semicolon"
+  ],
+  // "tslint.trace.server": "verbose",
+  "tslint.exclude": [
+    "**/src/assets/**/*.js"
+  ]
+}

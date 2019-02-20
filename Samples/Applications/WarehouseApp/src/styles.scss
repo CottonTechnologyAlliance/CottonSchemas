@@ -1,0 +1,203 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~jsoneditor/dist/jsoneditor.min.css';
+
+body {
+  font-family: "aktiv-grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: darkgray;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+}
+
+p {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.pageHeader {
+  font-size: 18px;
+  text-align: center;
+  padding: 10px;
+  margin-left: 300px;
+  margin-right:  300px;
+  border-style: solid;
+  border-radius: 11px;
+  border-color: #df3227;
+  background-color: white
+}
+
+.container {
+  position: relative;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.tempContainer {
+  position: relative;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 15px;
+
+}
+
+.divider{
+  width: 5px;
+  height :auto;
+  display: inline-block;
+}
+
+button {
+  color: #df3227;
+  background-color: white;
+  font-size: 11px;
+	font-weight: bold;
+	padding: 0px 15px;
+	line-height: 25px;
+	height: auto;
+	display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 11px 0;
+  border-color: #df3227;
+  transition: 0.3s ease-in-out;
+  outline: none;
+  position: relative;
+}
+
+button:hover {
+  color: white;
+  background-color: #df3227;
+}
+
+.tempButton {
+  margin-top: 10px;
+  line-height: 18px;
+  padding: 0px 10px;
+  font-size: 10px
+}
+
+input {
+  color: #df3227;
+  font-weight: 600;
+  text-align: center;
+}
+
+table {
+  table-layout: fixed;
+  text-align: center;
+  background-color: white;
+  width: 100%;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #df3227;
+}
+
+.tableContainer {
+  text-align: center;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 10000;
+}
+
+th {
+  font-size: 20px;
+  font-style: bold;
+  border-bottom: 3px solid black;
+  padding-top: 15px;
+  margin-bottom: 5px;
+}
+
+.th2 {
+  font-size: 15px;
+  border: none;
+  padding-top: 5px;
+}
+
+.invalid-feedback {
+  color: red;
+  display: block;
+  position: relative;
+  margin: 3px;
+  font-size: 10px
+}
+
+::-webkit-input-placeholder {
+  font-style: italic;
+  text-align: center;
+}
+:-moz-placeholder {
+  font-style: italic;
+  text-align: center;
+}
+::-moz-placeholder {
+  font-style: italic;
+  text-align: center;
+}
+:-ms-input-placeholder {
+  font-style: italic;
+  text-align: center;
+}
+
+.json-editor-container {
+  table-layout: fixed;
+  text-align: center;
+  background-color: white;
+  width: 100%;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #df3227;
+}
+
+.jsoneditor-tree {
+  border: hidden;
+}
+
+div.jsoneditor-tree div.jsoneditor-tree-inner {
+  padding-bottom: 50px;
+}
+
+div.jsoneditor.jsoneditor-mode-code {
+  table-layout: fixed;
+  text-align: center;
+  width: 100%
+}
+
+div.jsoneditor-field {
+  border-radius: 5px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #df3227;
+}
+
+div.jsoneditor-value.jsoneditor-string, div.jsoneditor-value.jsoneditor-number, div.jsoneditor-value.jsoneditor-boolean, div.jsoneditor-value.jsoneditor-object, div.jsoneditor-value.jsoneditor-array {
+  border-radius: 5px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+}
+
+.jsoneditor-separator {
+  border: hidden;
+}
+
+.jsoneditor-search {
+  border: hidden;
+}
+
+div.jsoneditor td {
+  border: hidden;
+}
+
+.jsoneditor-text-errors td {
+  word-wrap: break-word;
+}
+
+.ace-jsoneditor, textarea.jsoneditor-text {
+  min-height: 400px;
+}

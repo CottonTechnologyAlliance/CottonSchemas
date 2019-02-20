@@ -1,0 +1,14 @@
+
+  <form [formGroup]="warehouseForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Warehouse Name: </label>
+      <input type="text" formControlName="name" />
+    </div>
+    <div>
+      <label for="code">Warehouse Code: </label>
+      <input type="text" formControlName="code" />
+    </div>
+    <button type="submit">Save</button>
+  </form>
+
+
