@@ -36,7 +36,9 @@ Once the inputs are valid the form can be saved, and the warehouse tariff table 
 ![](/Images/form-table-update.PNG)
 
 Moving on to the main feature of the application. Clicking the “Edit Schema” button at the bottom of the table pulls up a json editor. It is pre-populated with whatever data is currently bound to that warehouse, but just as with the form all values can be edited from this component. There are several features within the editor to assist with schema validation and editing data. At the top of the editor is a blue bar that allows the user to expand or collapse data fields as well as change the view of the data. Clicking “Tree” (as can be seen in the picture below) pulls up a drop-down list of different view options. Tree view has been set to the default view in this case, but that setting can be modified according to the user’s preference. An example of Code view is provided below.  
-  
+<br/>
+![](/Images/editor-tree.PNG)  
+<br/>
 ![](/Images/editor-code.PNG)
 
 Because the editor sets the schema as soon as it’s pulled up, validation occurs immediately with pre-populated data and when any field is edited or changed. Error messages are located in-line in both tree and code views. An error icon pops up next to any invalid field and hovering over the icon allows the user to see what the error is.  
@@ -47,9 +49,7 @@ Additionally, the editor in this application has been designed so that data chan
 <br/>
 ![](/Images/editor-submit-error.PNG)
 
-Two other features included from this screen are the “Import” and “Export” buttons. “Import” allows the user to import a locally stored json file into the editor. For instance, if a warehouse has a json file that already has all their tariff information, they can import this file and the data fields will be updated automatically rather than the user having to type in all the values. Clicking on Import brings up a choose file option at the top of the editor.  
-<br/>
-![](/Images/editor-tree.PNG)  
+Two other features included from this screen are the “Import” and “Export” buttons. “Import” allows the user to import a locally stored json file into the editor. For instance, if a warehouse has a json file that already has all their tariff information, they can import this file and the data fields will be updated automatically rather than the user having to type in all the values. Clicking on Import brings up a choose file option at the top of the editor.    
 <br/>
 ![](/Images/editor-choose-file.PNG)
 
