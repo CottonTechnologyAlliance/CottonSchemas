@@ -29,20 +29,3 @@ export class WarehouseFormComponent implements OnInit {
     this.warehouseForm.reset()
   }
 }
-
-
-       // Form Builder
-    // this.warehouseForm = this.fb.group({
-    //   name: [''],
-    //   code: ['']
-    // })
-          // returns whole form structure
-    // this.warehouseForm.value
-          // returns specific value for that form control
-    // this.warehouseForm.get('code').value
-          // sets values for everything in form
-    // this.warehouseForm.setValue({ name: 'somthing', code: 'something'})
-          // sets one value in form
-    // this.warehouseForm.patchValue({ name: 'somthing' })
-          // Can be used in console to monitor object values ($0) means current selection, could also use querySelector etc as parameter
-    // ng.probe($0).componentInstance.warehouse

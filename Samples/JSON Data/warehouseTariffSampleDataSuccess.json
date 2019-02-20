@@ -48,7 +48,8 @@
 		"compressionExtraRate": 4.50
 	},
 	"warehouseMarking": {
-		"markingRate": 0.40
+		"markingRate": 0.40,
+		"markingExtraRate": 0.50
 	},
 	"warehouseClassing": {
 		"samplingShipmentRate": 4.25,
@@ -61,7 +62,6 @@
 		"weighingAndSamplingRate": 7.50
 	},
 	"miscellaneous": {
-		"markingExtraRate": 0.50,
 		"samplingDeliveryRate": 5.00,
 		"weighingSheetsRate": 0.75,
 		"loadingFlatbedRate": 1.00,

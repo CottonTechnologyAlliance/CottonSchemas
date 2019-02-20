@@ -1,51 +1,45 @@
 # CottonSchemas
 
-#### Main repository for Cotton related JSON schemas
+  
 
----
-## Link to SharePoint Project
+#### Main repository for Cotton-related JSON schemas.
 
-* [SharePoint](https://theseam2.sharepoint.com/sites/cta/Shared%20Documents/Forms/AllItems.aspx?viewpath=%2Fsites%2Fcta%2FShared%20Documents%2FForms%2FAllItems.aspx)
+  
 
-## Quick Note before beginning
+* Schemas are based on data standards formed through the Cotton Technology Alliance. Definitions for these standards can be found at the CTA [SharePoint](https://theseam2.sharepoint.com/sites/cta/SitePages/Home.aspx) site.
+  
 
-* Below are instruction for working with Git repositories from the command line. For those who would rather use a GUI for pull/push/merge, there are plent options available - see below for an abbreviated list.  The process will work the same, but for executing each step, check the GUI client's documentation for help.
-  * [SourceTree](https://www.sourcetreeapp.com/)
-  * [GitHub Desktop](https://desktop.github.com/)
-  * [TortoiseGit](https://tortoisegit.org/) - windows only.
-  * [GitKraken](https://www.gitkraken.com/)
-  * See [here](https://git-scm.com/download/gui/windows) for a more complete list.
 
----
+## Additional Information
 
-## To begin collaboration
+ * Guides for collaborating with the repository, styling JSON, and validating JSON can be found under [Documentation](https://github.com/CottonTechnologyAlliance/CottonSchemas/tree/master/Documentation).
 
-### Clone the repository
-
+### Resources
 ---
 
-* Fork this repository by clicking **Fork** in the upper right corner.
-  * This will create a copy of the current repository under your github user account.
-* Clone the forked repository
-  * To get the cloned repository URL, click the **Clone or Download** button. An example (**NOTE**: be sure to replace _myusername_ with your github account name): ```git clone https://github.com/myusername/CottonSchemas.git```
+#### Cotton Technology Alliance SharePoint - Documentation and Data Dictionaries
+* [SharePoint](https://theseam2.sharepoint.com/sites/cta/SitePages/Home.aspx)
 
-### Merging changes from your repository to the main repository (CottonTechnology/CottonSchemas)
+#### Warehouse Tariff Sample Application
+* [WarehouseApp](https://ipfs.theseam.io/ipfs/QmYMz57LuTA3bWGxnQUDxr39JmXYTxCaXEHmTDdGqzW4Fe/#/)
 
----
+#### JSON Schema Validators
+* [JSON Editor](https://jsoneditoronline.org/)
+* [JSON Schema Validator](https://www.jsonschemavalidator.net/)
 
-#### Create pull request
+#### Other Helpful Sites
 
-* Be sure the desired changes have been committed to your GitHub accounts forked repository:
-  * First, make any changes you deem appropriate.
-  * ```git add .``` - tells Git to track all your changes.
-  * ```git commit -m 'Your message'``` - commits changes to your local repository.
-  * ```git push -u origin master``` - pushes changes to the remote repository under your GitHub user account.
-* In GitHub, go to your account's **CottonSchemas** repository, choose the tab labeled **Pull Requests** and click the **New pull request** button in the right-corner of the tab.
-* Select and review your changes, then click **Create pull request** to finalize.
+##### Guides for understanding JSON Schema:
+* [JSON Schema](https://json-schema.org/)
+* [Understanding JSON Schema](https://json-schema.org/understanding-json-schema/index.html)
 
-#### Merge pull request into **CottonTechnologyAlliance/CottonSchemas** repository
+##### Spec Documentation for JSON:
+* [JSON.org](https://www.json.org/)
 
-* See [GitHub Reference](https://help.github.com/articles/merging-a-pull-request/) for specifics.
-* If you are a member of the organization repository, then click the **Pull requests** tab.
-* Choose the pull request you would like to merge.
-* Select **Merge pull request** and click **Confirm Merge**.
+##### More Information on JSON:
+* [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)
+
+##### National Information Exchange Model - Help with Data Standards
+* [NIEM Movement](https://beta.movement.niem.gov/#/)
+* [NIEM JSON](http://niem.github.io/json/reference/json-schema/)
+* [NIEM Schema Generator](https://tools.niem.gov/niemtools/ssgt/SSGT-GetNamespace.iepd?namespaceKey=o1-15)

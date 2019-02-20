@@ -1,22 +1,18 @@
 {
-	"entityIdentity": {
-		"entityWarehouse": {
-			"entityID": 1,
-			"entityName": "Test Warehouse",
-			"entityAddress": {
-				"primaryAddress": {
-					"addressLine1": "1234 abc ln.",
-					"city": "Memphis",
-					"stateProvince": "TN",
-					"zipPostalCode": "38111",
-					"country": "United States"
-				}
-			},
-			"entityType": {
-				"warehouseCode": 123456,				//wrong value type -- has to be entered as string "123456"
-				"warehouseLicense": "1-1234",
-				"warehouseCert": false
-			}
+	"warehouseIdentity": {
+		"entityID": 1,
+		"entityName": "Test Warehouse",
+		"entityAddress": {
+			"addressLine1": "1234 abc ln.",
+			"city": "Memphis",
+			"stateProvince": "TN",
+			"zipPostalCode": "38111",
+			"country": "United States"
+		},
+		"entityType": {
+			"warehouseCode": 123456,				//wrong value type -- has to be entered as string "123456"
+			"warehouseLicense": "1-1234",
+			"warehouseCert": false
 		}
 	},
 	"currency": {
