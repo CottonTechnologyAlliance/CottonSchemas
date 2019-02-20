@@ -6,11 +6,11 @@ export class SchemaService {
   constructor (private http: HttpClient) {}
 
   // tslint:disable-next-line:max-line-length
-  tariffSchemaUrl = 'https://raw.githubusercontent.com/KristiLofton/CottonSchemas/master/Schemas/Warehouse%20Tariff/warehouseTariffSchema.json'
+  tariffSchemaUrl = 'https://raw.githubusercontent.com/CottonTechnologyAlliance/CottonSchemas/master/Schemas/Warehouse%20Tariff/warehouseTariffSchema.json'
 
-  entitySchemaUrl = 'https://raw.githubusercontent.com/KristiLofton/CottonSchemas/master/Schemas/Common/entitySchema.json'
+  entitySchemaUrl = 'https://raw.githubusercontent.com/CottonTechnologyAlliance/CottonSchemas/master/Schemas/Common/entitySchema.json'
 
-  generalSchemaUrl = 'https://raw.githubusercontent.com/KristiLofton/CottonSchemas/master/Schemas/Common/generalSchema.json'
+  generalSchemaUrl = 'https://raw.githubusercontent.com/CottonTechnologyAlliance/CottonSchemas/master/Schemas/Common/generalSchema.json'
 
   getTariffSchema() {
     return this.http.get(this.tariffSchemaUrl)
