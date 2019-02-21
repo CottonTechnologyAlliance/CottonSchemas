@@ -1,0 +1,45 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "$id": "https://cottontechnologyalliance.github.io/schemas/MarketClose/marketClose.json",
+    "description": "Market close information for a commodity",
+    "type": "object",
+    "properties": {
+        "tickerSymbol": {
+            "title": "Ticker Symbol",
+            "description": "Ticker Symbol for this market close item",
+            "type": "string"
+        },
+        "closeDate": {
+            "title": "Market Close Date",
+            "description": "The date of the market close.",
+            "type": "string",
+            "format": "date"
+        },
+        "closePrice": {
+            "title": "Market Close Price",
+            "description": "The market close price",
+            "type": "number"
+        },
+        "change": {
+            "title": "Price Change",
+            "description": "Price change for the previous trading session",
+            "type": "number"
+        },
+        "currencyCode": {
+            "title": "Currency Code",
+            "description": "The currency code for this commodity.",
+            "$ref": "#/definitions/CurrencyCodeSimpleType"
+        }
+    },
+
+    "required": [
+        "tickerSymbol", "closeDate", "closePrice", "change", "currencyCode"
+    ],
+
+    "definitions": {
+        "CurrencyCodeSimpleType": {
+            "description": "A data type for a currency that qualifies a monetary amount.",
+            "enum": ["EUR","GBP","USD", "CNY"]
+        }
+    }
+}
